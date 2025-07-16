@@ -18,3 +18,9 @@ footer {
   display: flex;
   justify-content: space-around;
 }
+
+h1,
+h2,
+h3 {
+  text-align: center;
+}
