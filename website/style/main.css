@@ -1,0 +1,20 @@
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 3%;
+}
+.headerImg {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 100%;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+}
+footer {
+  display: flex;
+  justify-content: space-around;
+}
