@@ -39,3 +39,7 @@ h3 {
 .fullImg {
   width: 100%;
 }
+
+.wip {
+  background-color: red;
+}
