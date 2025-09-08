@@ -1,6 +1,6 @@
 {
-  "_client-mKHjiBUN.js": {
-    "file": "assets/client-mKHjiBUN.js",
+  "_client-DyfkJ2Kl.js": {
+    "file": "assets/client-DyfkJ2Kl.js",
     "name": "client",
     "isDynamicEntry": true,
     "imports": [
@@ -8,12 +8,12 @@
     ]
   },
   "index.html": {
-    "file": "assets/app-CGM4ThYv.js",
+    "file": "assets/app-fK2gKzIs.js",
     "name": "app",
     "src": "index.html",
     "isEntry": true,
     "dynamicImports": [
-      "_client-mKHjiBUN.js",
+      "_client-DyfkJ2Kl.js",
       "src/pages/Home.tsx",
       "src/pages/Boards/Boards.tsx",
       "src/pages/SIP/SIP.tsx"
@@ -35,7 +35,7 @@
     "src": "src/assets/images/uat-logo.png"
   },
   "src/pages/Boards/Boards.tsx": {
-    "file": "assets/Boards-D1264Uqs.js",
+    "file": "assets/Boards-BFou9Teb.js",
     "name": "Boards",
     "src": "src/pages/Boards/Boards.tsx",
     "isDynamicEntry": true,
@@ -44,7 +44,7 @@
     ]
   },
   "src/pages/Home.tsx": {
-    "file": "assets/Home-BfNpDoGx.js",
+    "file": "assets/Home-Dr3cNqwA.js",
     "name": "Home",
     "src": "src/pages/Home.tsx",
     "isDynamicEntry": true,
@@ -53,7 +53,7 @@
     ]
   },
   "src/pages/SIP/SIP.tsx": {
-    "file": "assets/SIP-DI9Vx3H4.js",
+    "file": "assets/SIP-hMqjFHSn.js",
     "name": "SIP",
     "src": "src/pages/SIP/SIP.tsx",
     "isDynamicEntry": true,
