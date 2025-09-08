@@ -1,13 +1,9 @@
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, Outlet } from "react-router-dom";
 import "@/style/main.css";
-import Home from "@/pages/Home";
-import Boards from "@/pages/Boards/Boards";
-import SIP from "@/pages/SIP/SIP";
 
 import profileImg from "@/assets/images/profile.jpg";
 import uatLogo from "@/assets/images/uat-logo.png";
-import Boards_ACS from "./pages/Boards/ACS/Boards_ACS";
-import Boards_NE from "./pages/Boards/NE/Boards_NE";
+
 export default function App() {
   return (
     <div>
@@ -23,13 +19,7 @@ export default function App() {
         <a href="/Projects/">Projects</a>
       </nav>
       <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/Boards" element={<Boards />} />
-          <Route path="/SIP" element={<SIP />} />
-          <Route path="/Boards/ACS" element={<Boards_ACS />} />
-          <Route path="/Boards/NE" element={<Boards_NE />} />
-        </Routes>
+        <Outlet />
       </main>
 
       <footer>
