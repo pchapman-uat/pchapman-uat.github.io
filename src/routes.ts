@@ -12,8 +12,8 @@ export const routes = [
     Component: App,
     children: [
       { path: "/", Component: Home },
-      { path: "Boards", Component: Boards },
-      { path: "SIP", Component: SIP },
+      { path: "Boards/", Component: Boards },
+      { path: "SIP/", Component: SIP },
     ],
   },
 ];
