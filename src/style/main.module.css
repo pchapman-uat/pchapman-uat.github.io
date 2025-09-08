@@ -1,0 +1,25 @@
+/* Move to module.css */
+
+.pdfContainer {
+  width: 100%;
+  height: 75vh;
+  overflow: hidden;
+}
+.pdfContainer iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.fullImg {
+  width: 100%;
+}
+
+.wip {
+  background-color: red;
+}
+
+section#links > div {
+  display: flex;
+  justify-content: space-around;
+}
