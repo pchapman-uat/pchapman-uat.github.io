@@ -1,0 +1,84 @@
+{
+  "_client-mKHjiBUN.js": {
+    "file": "assets/client-mKHjiBUN.js",
+    "name": "client",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html"
+    ]
+  },
+  "index.html": {
+    "file": "assets/app-CGM4ThYv.js",
+    "name": "app",
+    "src": "index.html",
+    "isEntry": true,
+    "dynamicImports": [
+      "_client-mKHjiBUN.js",
+      "src/pages/Home.tsx",
+      "src/pages/Boards/Boards.tsx",
+      "src/pages/SIP/SIP.tsx"
+    ],
+    "css": [
+      "assets/app-D0d8G-0-.css"
+    ],
+    "assets": [
+      "assets/profile-CZRwpCbT.jpg",
+      "assets/uat-logo-TDp51N1T.png"
+    ]
+  },
+  "src/assets/images/profile.jpg": {
+    "file": "assets/profile-CZRwpCbT.jpg",
+    "src": "src/assets/images/profile.jpg"
+  },
+  "src/assets/images/uat-logo.png": {
+    "file": "assets/uat-logo-TDp51N1T.png",
+    "src": "src/assets/images/uat-logo.png"
+  },
+  "src/pages/Boards/Boards.tsx": {
+    "file": "assets/Boards-D1264Uqs.js",
+    "name": "Boards",
+    "src": "src/pages/Boards/Boards.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html"
+    ]
+  },
+  "src/pages/Home.tsx": {
+    "file": "assets/Home-BfNpDoGx.js",
+    "name": "Home",
+    "src": "src/pages/Home.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html"
+    ]
+  },
+  "src/pages/SIP/SIP.tsx": {
+    "file": "assets/SIP-DI9Vx3H4.js",
+    "name": "SIP",
+    "src": "src/pages/SIP/SIP.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html"
+    ],
+    "css": [
+      "assets/SIP-DaaxOZfp.css"
+    ],
+    "assets": [
+      "assets/mobSF-0.2.0-alpha.1-B52HQnmm.png",
+      "assets/MobSF-0.2.0-alpha.1-rcG-MBvE.pdf",
+      "assets/SIP311-Project_Proposal-PChapman-(Version_2)-C7INTMSA.pdf"
+    ]
+  },
+  "src/pages/SIP/assets/documents/MobSF-0.2.0-alpha.1.pdf": {
+    "file": "assets/MobSF-0.2.0-alpha.1-rcG-MBvE.pdf",
+    "src": "src/pages/SIP/assets/documents/MobSF-0.2.0-alpha.1.pdf"
+  },
+  "src/pages/SIP/assets/documents/SIP311-Project_Proposal-PChapman-(Version_2).pdf": {
+    "file": "assets/SIP311-Project_Proposal-PChapman-(Version_2)-C7INTMSA.pdf",
+    "src": "src/pages/SIP/assets/documents/SIP311-Project_Proposal-PChapman-(Version_2).pdf"
+  },
+  "src/pages/SIP/assets/images/mobSF-0.2.0-alpha.1.png": {
+    "file": "assets/mobSF-0.2.0-alpha.1-B52HQnmm.png",
+    "src": "src/pages/SIP/assets/images/mobSF-0.2.0-alpha.1.png"
+  }
+}
