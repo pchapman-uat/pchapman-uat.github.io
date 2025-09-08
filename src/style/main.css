@@ -41,14 +41,7 @@ header > img {
   object-fit: cover;
   border-radius: 100%;
 }
-nav {
-  display: flex;
-  justify-content: space-around;
-  background-color: var(--section-color);
-  padding: var(--section-padding);
-  margin: var(--section-margin);
-  border-radius: var(--section-radius);
-}
+
 footer > p {
   display: flex;
   justify-content: space-around;

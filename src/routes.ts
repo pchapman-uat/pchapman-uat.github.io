@@ -20,4 +20,12 @@ export const routes = [
       { path: "SIP/", Component: SIP },
     ],
   },
-];
+] as const;
+
+type ExtractChildPaths<T> = T extends readonly {
+  children: readonly { path: infer P }[];
+}[]
+  ? P
+  : never;
+
+export type RoutePaths = ExtractChildPaths<typeof routes>;

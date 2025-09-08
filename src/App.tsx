@@ -1,8 +1,17 @@
 import { Routes, Route, Link, Outlet } from "react-router-dom";
 import "@/style/main.css";
-
+import Navigation, { NavigationItem as NavItem } from "./elements/Navigation";
 import profileImg from "@/assets/images/profile.jpg";
 import uatLogo from "@/assets/images/uat-logo.png";
+
+const NavigationItems: NavItem[] = [
+  new NavItem("Home", "/"),
+  new NavItem("Boards", "Boards/", [
+    new NavItem("ACS", "Boards/ACS/"),
+    new NavItem("NE", "Boards/NE/"),
+  ]),
+  new NavItem("SIP", "SIP/", [new NavItem("NE", "Boards/NE/")]),
+];
 
 export default function App() {
   return (
@@ -12,12 +21,7 @@ export default function App() {
         <h1>Preston Chapman</h1>
         <img src={uatLogo} alt="University of Advancing Technology Logo" />
       </header>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/Boards/">Boards</a>
-        <a href="/SIP/">SIP</a>
-        <a href="/Projects/">Projects</a>
-      </nav>
+      <Navigation items={NavigationItems} />
       <main>
         <Outlet />
       </main>
