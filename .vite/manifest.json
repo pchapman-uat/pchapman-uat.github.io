@@ -1,6 +1,6 @@
 {
-  "_client-CmOokjqV.js": {
-    "file": "assets/client-CmOokjqV.js",
+  "_client-Bco65OEa.js": {
+    "file": "assets/client-Bco65OEa.js",
     "name": "client",
     "isDynamicEntry": true,
     "imports": [
@@ -8,12 +8,12 @@
     ]
   },
   "index.html": {
-    "file": "assets/app-CPEubHIb.js",
+    "file": "assets/app-C9kFiNC2.js",
     "name": "app",
     "src": "index.html",
     "isEntry": true,
     "dynamicImports": [
-      "_client-CmOokjqV.js",
+      "_client-Bco65OEa.js",
       "src/pages/Home.tsx",
       "src/pages/Boards/Boards.tsx",
       "src/pages/Boards/ACS/Boards_ACS.tsx",
@@ -37,7 +37,7 @@
     "src": "src/assets/images/uat-logo.png"
   },
   "src/pages/Boards/ACS/Boards_ACS.tsx": {
-    "file": "assets/Boards_ACS-CCC2WMw3.js",
+    "file": "assets/Boards_ACS-d0yd8qPl.js",
     "name": "Boards_ACS",
     "src": "src/pages/Boards/ACS/Boards_ACS.tsx",
     "isDynamicEntry": true,
@@ -46,7 +46,7 @@
     ]
   },
   "src/pages/Boards/Boards.tsx": {
-    "file": "assets/Boards-PDaqh-lV.js",
+    "file": "assets/Boards-DjT0fNrS.js",
     "name": "Boards",
     "src": "src/pages/Boards/Boards.tsx",
     "isDynamicEntry": true,
@@ -55,7 +55,7 @@
     ]
   },
   "src/pages/Boards/NE/Boards_NE.tsx": {
-    "file": "assets/Boards_NE-Mckx3Lr6.js",
+    "file": "assets/Boards_NE-C6CPEchB.js",
     "name": "Boards_NE",
     "src": "src/pages/Boards/NE/Boards_NE.tsx",
     "isDynamicEntry": true,
@@ -64,7 +64,7 @@
     ]
   },
   "src/pages/Home.tsx": {
-    "file": "assets/Home-BQg827_w.js",
+    "file": "assets/Home-Gl_vgTj1.js",
     "name": "Home",
     "src": "src/pages/Home.tsx",
     "isDynamicEntry": true,
@@ -73,7 +73,7 @@
     ]
   },
   "src/pages/SIP/SIP.tsx": {
-    "file": "assets/SIP-BSVtDe83.js",
+    "file": "assets/SIP-TNKsFEdx.js",
     "name": "SIP",
     "src": "src/pages/SIP/SIP.tsx",
     "isDynamicEntry": true,
