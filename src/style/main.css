@@ -8,6 +8,7 @@
   --section-margin: 10px;
   --section-radius: 20px;
 }
+
 html {
   min-height: 100%;
   margin: 0;
@@ -34,7 +35,7 @@ header {
   justify-content: space-around;
   padding: 3%;
 }
-.headerImg {
+header > img {
   height: 100px;
   width: 100px;
   object-fit: cover;
@@ -69,29 +70,7 @@ section {
   margin: var(--section-margin);
   border-radius: var(--section-radius);
 }
-.pdf-container {
-  width: 100%;
-  height: 75vh;
-  overflow: hidden;
-}
-.pdf-container iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-}
 
-.fullImg {
-  width: 100%;
-}
-
-.wip {
-  background-color: red;
-}
 a {
   color: rgb(0, 78, 204);
-}
-
-section#links > div {
-  display: flex;
-  justify-content: space-around;
 }

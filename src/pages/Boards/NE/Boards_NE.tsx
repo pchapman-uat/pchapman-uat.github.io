@@ -1,23 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Preston Chapman | Boards - Network Engineering</title>
-    <link rel="stylesheet" href="/style/main.css" />
-  </head>
-  <body>
-    <h1>Network Engineering</h1>
-    <nav>
-      <a href="/Boards/">Boards</a>
-      <a href="/SIP/">SIP</a>
-      <a href="/Projects/">Projects</a>
-    </nav>
-    <nav>
-      <a href="../ACS/">Advancing Computer Science</a>
-      <a href="../NE/">Network Engineering</a>
-    </nav>
-    <main>
+export default function Boards_NE() {
+  return (
+    <div>
       <section id="objectives">
         <h3>Objectives</h3>
         <ol>
@@ -95,18 +78,6 @@
           industry standards.
         </h4>
       </section>
-    </main>
-    <footer>
-      <p>
-        <a href="https://github.com/pchapman-uat/pchapman-uat.github.io"
-          >Source</a
-        >
-        Preston Chapman © 2025.
-        <a
-          href="https://github.com/pchapman-uat/pchapman-uat.github.io/blob/main/LICENSE"
-          >Apache 2.0 License</a
-        >
-      </p>
-    </footer>
-  </body>
-</html>
+    </div>
+  );
+}
