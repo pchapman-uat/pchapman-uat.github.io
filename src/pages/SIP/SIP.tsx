@@ -2,16 +2,16 @@ import Main from "@/style/main.module.css";
 import MobSFReportBanner from "./assets/images/mobSF-0.2.0-alpha.1.png";
 import MobSFReport from "./assets/documents/MobSF-0.2.0-alpha.1.pdf";
 import ProjectProposal from "./assets/documents/SIP311-Project_Proposal-PChapman-(Version_2).pdf";
+import RepoCard from "react-repo-card";
 export default function SIP() {
   return (
     <div>
       <section>
-        {/* FIXME: Does not work in react */}
-        <div
-          className="repo-card"
-          data-repo="pchapman-uat/Foobar-Controler-Mobile"
-          data-theme="dark-theme"
-        ></div>
+        <RepoCard
+          username="pchapman-uat"
+          repository="Foobar-Controler-Mobile"
+          dark
+        />
       </section>
       <section id="links">
         <div>

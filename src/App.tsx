@@ -10,7 +10,7 @@ const NavigationItems: NavItem[] = [
     new NavItem("ACS", "Boards/ACS/"),
     new NavItem("NE", "Boards/NE/"),
   ]),
-  new NavItem("SIP", "SIP/", [new NavItem("NE", "Boards/NE/")]),
+  new NavItem("SIP", "SIP/"),
 ];
 
 export default function App() {
