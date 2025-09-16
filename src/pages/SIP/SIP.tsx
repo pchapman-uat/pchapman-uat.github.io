@@ -4,6 +4,7 @@ import MobSFReport from "./assets/documents/MobSF-0.2.0-alpha.1.pdf";
 import ProjectProposal from "./assets/documents/SIP311-Project_Proposal-PChapman-(Version_2).pdf";
 import { FC, useEffect, useState } from "react";
 import { RepoCardProps } from "react-repo-card";
+import { Head } from "vite-react-ssg";
 
 export default function SIP() {
   const [RepoCard, setRepoCard] = useState<FC<RepoCardProps> | null>(null);
@@ -14,6 +15,9 @@ export default function SIP() {
   }, []);
   return (
     <div>
+      <Head>
+        <title>SIP | Preston Chapman Website</title>
+      </Head>
       <section>
         {RepoCard && (
           <RepoCard

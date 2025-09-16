@@ -1,9 +1,8 @@
-import { Routes, Route, Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import "@/style/main.css";
 import Navigation, { NavigationItem as NavItem } from "./elements/Navigation";
 import profileImg from "@/assets/images/profile.jpg";
 import uatLogo from "@/assets/images/uat-logo.png";
-
 const NavigationItems: NavItem[] = [
   new NavItem("Home", "/"),
   new NavItem("Boards", "Boards/", [
