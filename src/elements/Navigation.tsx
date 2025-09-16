@@ -35,7 +35,7 @@ type NavigationElementProps = {
 };
 function NavigationElement({ item }: NavigationElementProps) {
   const element = (_item: NavigationItem, i: number) => (
-    <a key={"subpage" + i} href={_item.path}>
+    <a key={"subpage" + i} href={"/" + _item.path}>
       {_item.name}
     </a>
   );
