@@ -1,6 +1,11 @@
+import { Head } from "vite-react-ssg";
+
 export default function ACS() {
   return (
     <div>
+      <Head>
+        <title>ACS Boards | Preston Chapman Website</title>
+      </Head>
       <section id="objectives">
         <h3>Objectives</h3>
         <ol>

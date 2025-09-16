@@ -1,3 +1,4 @@
 node_modules
 dist
 .vite-ssg-temp
+.vite-react-ssg-temp

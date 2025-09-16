@@ -2,16 +2,30 @@ import Main from "@/style/main.module.css";
 import MobSFReportBanner from "./assets/images/mobSF-0.2.0-alpha.1.png";
 import MobSFReport from "./assets/documents/MobSF-0.2.0-alpha.1.pdf";
 import ProjectProposal from "./assets/documents/SIP311-Project_Proposal-PChapman-(Version_2).pdf";
+import { FC, useEffect, useState } from "react";
+import { RepoCardProps } from "react-repo-card";
+import { Head } from "vite-react-ssg";
+
 export default function SIP() {
+  const [RepoCard, setRepoCard] = useState<FC<RepoCardProps> | null>(null);
+  useEffect(() => {
+    import("react-repo-card").then((mod) => {
+      setRepoCard(() => mod.default);
+    });
+  }, []);
   return (
     <div>
+      <Head>
+        <title>SIP | Preston Chapman Website</title>
+      </Head>
       <section>
-        {/* FIXME: Does not work in react */}
-        <div
-          className="repo-card"
-          data-repo="pchapman-uat/Foobar-Controler-Mobile"
-          data-theme="dark-theme"
-        ></div>
+        {RepoCard && (
+          <RepoCard
+            username="pchapman-uat"
+            repository="Foobar-Controler-Mobile"
+            dark
+          />
+        )}
       </section>
       <section id="links">
         <div>

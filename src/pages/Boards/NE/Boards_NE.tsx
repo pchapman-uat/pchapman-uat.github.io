@@ -1,6 +1,11 @@
+import { Head } from "vite-react-ssg";
+
 export default function Boards_NE() {
   return (
     <div>
+      <Head>
+        <title>NE Boards | Preston Chapman Website</title>
+      </Head>
       <section id="objectives">
         <h3>Objectives</h3>
         <ol>

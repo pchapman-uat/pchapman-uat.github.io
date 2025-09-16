@@ -1,0 +1,18 @@
+.navigationItem[has-sub-pages="true"] > :not(.navigationSubPages) > a::after {
+  content: "  v";
+}
+
+.navigationSubPages {
+  display: none;
+}
+.navigationItem:hover > .navigationSubPages {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.navigationContainer {
+  background-color: var(--section-color);
+  padding: var(--section-padding);
+  margin: var(--section-margin);
+  border-radius: var(--section-radius);
+}

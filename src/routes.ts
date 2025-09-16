@@ -1,14 +1,14 @@
 // src/routes.ts
 import { lazy } from "react";
 import App from "./App";
+import { RouteRecord } from "vite-react-ssg";
 
 const Home = lazy(() => import("@/pages/Home"));
 const Boards = lazy(() => import("@/pages/Boards/Boards"));
 const Boards_ACS = lazy(() => import("@/pages/Boards/ACS/Boards_ACS"));
 const Boards_NE = lazy(() => import("@/pages/Boards/NE/Boards_NE"));
 const SIP = lazy(() => import("@/pages/SIP/SIP"));
-
-export const routes = [
+const literalRoutes = [
   {
     path: "/",
     Component: App,
@@ -20,4 +20,12 @@ export const routes = [
       { path: "SIP/", Component: SIP },
     ],
   },
-];
+] satisfies RouteRecord[];
+
+type ExtractPaths<T> = T extends readonly {
+  children: readonly { path: infer P }[];
+}[]
+  ? P
+  : never;
+export const routes = literalRoutes as unknown as RouteRecord[];
+export type RoutePaths = ExtractPaths<typeof literalRoutes>;

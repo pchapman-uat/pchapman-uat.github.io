@@ -1,0 +1,15 @@
+nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: lightgray;
+  padding: 5px;
+}
+nav * {
+  flex-grow: 1;
+}
+nav a {
+  display: inline-block;
+  text-align: center;
+  color: var(--text-color);
+  width: 100%;
+}

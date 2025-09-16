@@ -1,6 +1,11 @@
+import { Head } from "vite-react-ssg";
+
 export default function Home() {
   return (
     <div>
+      <Head>
+        <title>Home | Preston Chapman Website</title>
+      </Head>
       <section>
         <p>
           Welcome to my website! This is still work in progress, so be sure to
