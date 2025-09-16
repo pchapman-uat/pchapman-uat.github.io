@@ -5,6 +5,8 @@ import ProjectProposal from "./assets/documents/SIP311-Project_Proposal-PChapman
 import { FC, useEffect, useState } from "react";
 import { RepoCardProps } from "react-repo-card";
 import { Head } from "vite-react-ssg";
+import SIPCss from "@/style/sip.module.css";
+import "@/style/sip.css";
 
 export default function SIP() {
   const [RepoCard, setRepoCard] = useState<FC<RepoCardProps> | null>(null);
@@ -86,6 +88,20 @@ export default function SIP() {
           computer, it can be difficult to control the playback remotely without
           the need for a complicated setup.
         </p>
+      </section>
+      <section id="statistics">
+        <h3>Statistics</h3>
+        <div>
+          <h4>Form</h4>
+          <div className={SIPCss.formContainer}>
+            <iframe
+              width="640px"
+              height="480px"
+              src="https://forms.office.com/r/n0WCKezPuY?embed=true"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
       </section>
       <section id="securityReport">
         <h3>Security Report</h3>
