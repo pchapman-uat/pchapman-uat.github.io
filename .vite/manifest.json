@@ -1,19 +1,27 @@
 {
-  "_client-Bco65OEa.js": {
-    "file": "assets/client-Bco65OEa.js",
+  "_client-FRsQLQ6l.js": {
+    "file": "assets/client-FRsQLQ6l.js",
     "name": "client",
     "isDynamicEntry": true,
     "imports": [
       "index.html"
     ]
   },
+  "_index-BmDa0P92.js": {
+    "file": "assets/index-BmDa0P92.js",
+    "name": "index",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html"
+    ]
+  },
   "index.html": {
-    "file": "assets/app-C9kFiNC2.js",
+    "file": "assets/app-Dsz8YzZc.js",
     "name": "app",
     "src": "index.html",
     "isEntry": true,
     "dynamicImports": [
-      "_client-Bco65OEa.js",
+      "_client-FRsQLQ6l.js",
       "src/pages/Home.tsx",
       "src/pages/Boards/Boards.tsx",
       "src/pages/Boards/ACS/Boards_ACS.tsx",
@@ -21,7 +29,7 @@
       "src/pages/SIP/SIP.tsx"
     ],
     "css": [
-      "assets/app-D0d8G-0-.css"
+      "assets/app-BbGin05v.css"
     ],
     "assets": [
       "assets/profile-CZRwpCbT.jpg",
@@ -37,7 +45,7 @@
     "src": "src/assets/images/uat-logo.png"
   },
   "src/pages/Boards/ACS/Boards_ACS.tsx": {
-    "file": "assets/Boards_ACS-d0yd8qPl.js",
+    "file": "assets/Boards_ACS-solN_nCd.js",
     "name": "Boards_ACS",
     "src": "src/pages/Boards/ACS/Boards_ACS.tsx",
     "isDynamicEntry": true,
@@ -46,7 +54,7 @@
     ]
   },
   "src/pages/Boards/Boards.tsx": {
-    "file": "assets/Boards-DjT0fNrS.js",
+    "file": "assets/Boards-Bz6ub4fX.js",
     "name": "Boards",
     "src": "src/pages/Boards/Boards.tsx",
     "isDynamicEntry": true,
@@ -55,7 +63,7 @@
     ]
   },
   "src/pages/Boards/NE/Boards_NE.tsx": {
-    "file": "assets/Boards_NE-C6CPEchB.js",
+    "file": "assets/Boards_NE-s8dBxM2e.js",
     "name": "Boards_NE",
     "src": "src/pages/Boards/NE/Boards_NE.tsx",
     "isDynamicEntry": true,
@@ -64,7 +72,7 @@
     ]
   },
   "src/pages/Home.tsx": {
-    "file": "assets/Home-Gl_vgTj1.js",
+    "file": "assets/Home-CBoMMz48.js",
     "name": "Home",
     "src": "src/pages/Home.tsx",
     "isDynamicEntry": true,
@@ -73,12 +81,15 @@
     ]
   },
   "src/pages/SIP/SIP.tsx": {
-    "file": "assets/SIP-TNKsFEdx.js",
+    "file": "assets/SIP-NJsYm3DH.js",
     "name": "SIP",
     "src": "src/pages/SIP/SIP.tsx",
     "isDynamicEntry": true,
     "imports": [
       "index.html"
+    ],
+    "dynamicImports": [
+      "_index-BmDa0P92.js"
     ],
     "css": [
       "assets/SIP-DaaxOZfp.css"

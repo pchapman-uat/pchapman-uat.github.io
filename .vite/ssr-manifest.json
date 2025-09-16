@@ -1,4 +1,8 @@
 {
+  "\u0000/home/runner/work/pchapman-uat.github.io/pchapman-uat.github.io/node_modules/invariant/browser.js?commonjs-es-import": [
+    "/assets/profile-CZRwpCbT.jpg",
+    "/assets/uat-logo-TDp51N1T.png"
+  ],
   "\u0000/home/runner/work/pchapman-uat.github.io/pchapman-uat.github.io/node_modules/prop-types/index.js?commonjs-es-import": [
     "/assets/profile-CZRwpCbT.jpg",
     "/assets/uat-logo-TDp51N1T.png"
@@ -8,17 +12,17 @@
     "/assets/uat-logo-TDp51N1T.png"
   ],
   "\u0000/home/runner/work/pchapman-uat.github.io/pchapman-uat.github.io/node_modules/react-dom/cjs/react-dom-client.production.js?commonjs-exports": [
-    "/assets/client-Bco65OEa.js"
+    "/assets/client-FRsQLQ6l.js"
   ],
   "\u0000/home/runner/work/pchapman-uat.github.io/pchapman-uat.github.io/node_modules/react-dom/cjs/react-dom.production.js?commonjs-exports": [
     "/assets/profile-CZRwpCbT.jpg",
     "/assets/uat-logo-TDp51N1T.png"
   ],
   "\u0000/home/runner/work/pchapman-uat.github.io/pchapman-uat.github.io/node_modules/react-dom/client.js?commonjs-es-import": [
-    "/assets/client-Bco65OEa.js"
+    "/assets/client-FRsQLQ6l.js"
   ],
   "\u0000/home/runner/work/pchapman-uat.github.io/pchapman-uat.github.io/node_modules/react-dom/client.js?commonjs-module": [
-    "/assets/client-Bco65OEa.js"
+    "/assets/client-FRsQLQ6l.js"
   ],
   "\u0000/home/runner/work/pchapman-uat.github.io/pchapman-uat.github.io/node_modules/react-dom/index.js?commonjs-es-import": [
     "/assets/profile-CZRwpCbT.jpg",
@@ -27,6 +31,31 @@
   "\u0000/home/runner/work/pchapman-uat.github.io/pchapman-uat.github.io/node_modules/react-dom/index.js?commonjs-module": [
     "/assets/profile-CZRwpCbT.jpg",
     "/assets/uat-logo-TDp51N1T.png"
+  ],
+  "\u0000/home/runner/work/pchapman-uat.github.io/pchapman-uat.github.io/node_modules/react-fast-compare/index.js?commonjs-es-import": [
+    "/assets/profile-CZRwpCbT.jpg",
+    "/assets/uat-logo-TDp51N1T.png"
+  ],
+  "\u0000/home/runner/work/pchapman-uat.github.io/pchapman-uat.github.io/node_modules/react-repo-card/dist/hooks/colors.js?commonjs-exports": [
+    "/assets/index-BmDa0P92.js"
+  ],
+  "\u0000/home/runner/work/pchapman-uat.github.io/pchapman-uat.github.io/node_modules/react-repo-card/dist/hooks/emojis.js?commonjs-exports": [
+    "/assets/index-BmDa0P92.js"
+  ],
+  "\u0000/home/runner/work/pchapman-uat.github.io/pchapman-uat.github.io/node_modules/react-repo-card/dist/hooks/fetch.js?commonjs-exports": [
+    "/assets/index-BmDa0P92.js"
+  ],
+  "\u0000/home/runner/work/pchapman-uat.github.io/pchapman-uat.github.io/node_modules/react-repo-card/dist/hooks/index.js?commonjs-exports": [
+    "/assets/index-BmDa0P92.js"
+  ],
+  "\u0000/home/runner/work/pchapman-uat.github.io/pchapman-uat.github.io/node_modules/react-repo-card/dist/hooks/repo.js?commonjs-exports": [
+    "/assets/index-BmDa0P92.js"
+  ],
+  "\u0000/home/runner/work/pchapman-uat.github.io/pchapman-uat.github.io/node_modules/react-repo-card/dist/index.js?commonjs-es-import": [
+    "/assets/index-BmDa0P92.js"
+  ],
+  "\u0000/home/runner/work/pchapman-uat.github.io/pchapman-uat.github.io/node_modules/react-repo-card/dist/index.js?commonjs-exports": [
+    "/assets/index-BmDa0P92.js"
   ],
   "\u0000/home/runner/work/pchapman-uat.github.io/pchapman-uat.github.io/node_modules/react/cjs/react-jsx-runtime.production.js?commonjs-exports": [
     "/assets/profile-CZRwpCbT.jpg",
@@ -53,10 +82,14 @@
     "/assets/uat-logo-TDp51N1T.png"
   ],
   "\u0000/home/runner/work/pchapman-uat.github.io/pchapman-uat.github.io/node_modules/scheduler/cjs/scheduler.production.js?commonjs-exports": [
-    "/assets/client-Bco65OEa.js"
+    "/assets/client-FRsQLQ6l.js"
   ],
   "\u0000/home/runner/work/pchapman-uat.github.io/pchapman-uat.github.io/node_modules/scheduler/index.js?commonjs-module": [
-    "/assets/client-Bco65OEa.js"
+    "/assets/client-FRsQLQ6l.js"
+  ],
+  "\u0000/home/runner/work/pchapman-uat.github.io/pchapman-uat.github.io/node_modules/shallowequal/index.js?commonjs-es-import": [
+    "/assets/profile-CZRwpCbT.jpg",
+    "/assets/uat-logo-TDp51N1T.png"
   ],
   "\u0000commonjsHelpers.js": [
     "/assets/profile-CZRwpCbT.jpg",
@@ -78,6 +111,10 @@
     "/assets/profile-CZRwpCbT.jpg",
     "/assets/uat-logo-TDp51N1T.png"
   ],
+  "node_modules/invariant/browser.js": [
+    "/assets/profile-CZRwpCbT.jpg",
+    "/assets/uat-logo-TDp51N1T.png"
+  ],
   "node_modules/prop-types/factoryWithThrowingShims.js": [
     "/assets/profile-CZRwpCbT.jpg",
     "/assets/uat-logo-TDp51N1T.png"
@@ -91,18 +128,40 @@
     "/assets/uat-logo-TDp51N1T.png"
   ],
   "node_modules/react-dom/cjs/react-dom-client.production.js": [
-    "/assets/client-Bco65OEa.js"
+    "/assets/client-FRsQLQ6l.js"
   ],
   "node_modules/react-dom/cjs/react-dom.production.js": [
     "/assets/profile-CZRwpCbT.jpg",
     "/assets/uat-logo-TDp51N1T.png"
   ],
   "node_modules/react-dom/client.js": [
-    "/assets/client-Bco65OEa.js"
+    "/assets/client-FRsQLQ6l.js"
   ],
   "node_modules/react-dom/index.js": [
     "/assets/profile-CZRwpCbT.jpg",
     "/assets/uat-logo-TDp51N1T.png"
+  ],
+  "node_modules/react-fast-compare/index.js": [
+    "/assets/profile-CZRwpCbT.jpg",
+    "/assets/uat-logo-TDp51N1T.png"
+  ],
+  "node_modules/react-repo-card/dist/hooks/colors.js": [
+    "/assets/index-BmDa0P92.js"
+  ],
+  "node_modules/react-repo-card/dist/hooks/emojis.js": [
+    "/assets/index-BmDa0P92.js"
+  ],
+  "node_modules/react-repo-card/dist/hooks/fetch.js": [
+    "/assets/index-BmDa0P92.js"
+  ],
+  "node_modules/react-repo-card/dist/hooks/index.js": [
+    "/assets/index-BmDa0P92.js"
+  ],
+  "node_modules/react-repo-card/dist/hooks/repo.js": [
+    "/assets/index-BmDa0P92.js"
+  ],
+  "node_modules/react-repo-card/dist/index.js": [
+    "/assets/index-BmDa0P92.js"
   ],
   "node_modules/react-router-dom/dist/index.js": [
     "/assets/profile-CZRwpCbT.jpg",
@@ -129,10 +188,17 @@
     "/assets/uat-logo-TDp51N1T.png"
   ],
   "node_modules/scheduler/cjs/scheduler.production.js": [
-    "/assets/client-Bco65OEa.js"
+    "/assets/client-FRsQLQ6l.js"
   ],
   "node_modules/scheduler/index.js": [
-    "/assets/client-Bco65OEa.js"
+    "/assets/client-FRsQLQ6l.js"
+  ],
+  "node_modules/shallowequal/index.js": [
+    "/assets/profile-CZRwpCbT.jpg",
+    "/assets/uat-logo-TDp51N1T.png"
+  ],
+  "node_modules/string-replace-to-array/string-replace-to-array.js": [
+    "/assets/index-BmDa0P92.js"
   ],
   "node_modules/vite-react-ssg/dist/index.mjs": [
     "/assets/profile-CZRwpCbT.jpg",
@@ -170,45 +236,49 @@
     "/assets/profile-CZRwpCbT.jpg",
     "/assets/uat-logo-TDp51N1T.png"
   ],
+  "src/elements/Navigation.tsx": [
+    "/assets/profile-CZRwpCbT.jpg",
+    "/assets/uat-logo-TDp51N1T.png"
+  ],
   "src/index.ts": [
     "/assets/profile-CZRwpCbT.jpg",
     "/assets/uat-logo-TDp51N1T.png"
   ],
   "src/pages/Boards/ACS/Boards_ACS.tsx": [
-    "/assets/Boards_ACS-d0yd8qPl.js"
+    "/assets/Boards_ACS-solN_nCd.js"
   ],
   "src/pages/Boards/Boards.tsx": [
-    "/assets/Boards-DjT0fNrS.js"
+    "/assets/Boards-Bz6ub4fX.js"
   ],
   "src/pages/Boards/NE/Boards_NE.tsx": [
-    "/assets/Boards_NE-C6CPEchB.js"
+    "/assets/Boards_NE-s8dBxM2e.js"
   ],
   "src/pages/Home.tsx": [
-    "/assets/Home-Gl_vgTj1.js"
+    "/assets/Home-CBoMMz48.js"
   ],
   "src/pages/SIP/SIP.tsx": [
-    "/assets/SIP-TNKsFEdx.js",
+    "/assets/SIP-NJsYm3DH.js",
     "/assets/SIP-DaaxOZfp.css",
     "/assets/mobSF-0.2.0-alpha.1-B52HQnmm.png",
     "/assets/MobSF-0.2.0-alpha.1-rcG-MBvE.pdf",
     "/assets/SIP311-Project_Proposal-PChapman-(Version_2)-C7INTMSA.pdf"
   ],
   "src/pages/SIP/assets/documents/MobSF-0.2.0-alpha.1.pdf": [
-    "/assets/SIP-TNKsFEdx.js",
+    "/assets/SIP-NJsYm3DH.js",
     "/assets/SIP-DaaxOZfp.css",
     "/assets/mobSF-0.2.0-alpha.1-B52HQnmm.png",
     "/assets/MobSF-0.2.0-alpha.1-rcG-MBvE.pdf",
     "/assets/SIP311-Project_Proposal-PChapman-(Version_2)-C7INTMSA.pdf"
   ],
   "src/pages/SIP/assets/documents/SIP311-Project_Proposal-PChapman-(Version_2).pdf": [
-    "/assets/SIP-TNKsFEdx.js",
+    "/assets/SIP-NJsYm3DH.js",
     "/assets/SIP-DaaxOZfp.css",
     "/assets/mobSF-0.2.0-alpha.1-B52HQnmm.png",
     "/assets/MobSF-0.2.0-alpha.1-rcG-MBvE.pdf",
     "/assets/SIP311-Project_Proposal-PChapman-(Version_2)-C7INTMSA.pdf"
   ],
   "src/pages/SIP/assets/images/mobSF-0.2.0-alpha.1.png": [
-    "/assets/SIP-TNKsFEdx.js",
+    "/assets/SIP-NJsYm3DH.js",
     "/assets/SIP-DaaxOZfp.css",
     "/assets/mobSF-0.2.0-alpha.1-B52HQnmm.png",
     "/assets/MobSF-0.2.0-alpha.1-rcG-MBvE.pdf",
@@ -223,10 +293,18 @@
     "/assets/uat-logo-TDp51N1T.png"
   ],
   "src/style/main.module.css": [
-    "/assets/SIP-TNKsFEdx.js",
+    "/assets/SIP-NJsYm3DH.js",
     "/assets/SIP-DaaxOZfp.css",
     "/assets/mobSF-0.2.0-alpha.1-B52HQnmm.png",
     "/assets/MobSF-0.2.0-alpha.1-rcG-MBvE.pdf",
     "/assets/SIP311-Project_Proposal-PChapman-(Version_2)-C7INTMSA.pdf"
+  ],
+  "src/style/navigation.css": [
+    "/assets/profile-CZRwpCbT.jpg",
+    "/assets/uat-logo-TDp51N1T.png"
+  ],
+  "src/style/navigation.module.css": [
+    "/assets/profile-CZRwpCbT.jpg",
+    "/assets/uat-logo-TDp51N1T.png"
   ]
 }
