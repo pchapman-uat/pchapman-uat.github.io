@@ -2,16 +2,26 @@ import Main from "@/style/main.module.css";
 import MobSFReportBanner from "./assets/images/mobSF-0.2.0-alpha.1.png";
 import MobSFReport from "./assets/documents/MobSF-0.2.0-alpha.1.pdf";
 import ProjectProposal from "./assets/documents/SIP311-Project_Proposal-PChapman-(Version_2).pdf";
-import RepoCard from "react-repo-card";
+import { FC, useEffect, useState } from "react";
+import { RepoCardProps } from "react-repo-card";
+
 export default function SIP() {
+  const [RepoCard, setRepoCard] = useState<FC<RepoCardProps> | null>(null);
+  useEffect(() => {
+    import("react-repo-card").then((mod) => {
+      setRepoCard(() => mod.default);
+    });
+  }, []);
   return (
     <div>
       <section>
-        <RepoCard
-          username="pchapman-uat"
-          repository="Foobar-Controler-Mobile"
-          dark
-        />
+        {RepoCard && (
+          <RepoCard
+            username="pchapman-uat"
+            repository="Foobar-Controler-Mobile"
+            dark
+          />
+        )}
       </section>
       <section id="links">
         <div>
