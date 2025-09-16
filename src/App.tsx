@@ -4,7 +4,7 @@ import Navigation, { NavigationItem as NavItem } from "./elements/Navigation";
 import profileImg from "@/assets/images/profile.jpg";
 import uatLogo from "@/assets/images/uat-logo.png";
 const NavigationItems: NavItem[] = [
-  new NavItem("Home", "/"),
+  new NavItem("Home", ""),
   new NavItem("Boards", "Boards/", [
     new NavItem("ACS", "Boards/ACS/"),
     new NavItem("NE", "Boards/NE/"),
