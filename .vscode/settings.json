@@ -12,5 +12,6 @@
         ".vscode-insiders",
         ".github",
         ".gitignore"
-    ]
+    ],
+    "liveServer.settings.root": "/dist"
 }
