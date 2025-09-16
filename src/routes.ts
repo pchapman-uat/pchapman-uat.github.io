@@ -20,7 +20,7 @@ const literalRoutes = [
       { path: "SIP/", Component: SIP },
     ],
   },
-] satisfies RouteRecord[];
+] as const;
 
 type ExtractPaths<T> = T extends readonly {
   children: readonly { path: infer P }[];
@@ -28,4 +28,5 @@ type ExtractPaths<T> = T extends readonly {
   ? P
   : never;
 export const routes = literalRoutes as unknown as RouteRecord[];
-export type RoutePaths = ExtractPaths<typeof literalRoutes>;
+type AllRoutePaths = ExtractPaths<typeof literalRoutes> | "";
+export type RoutePaths = Exclude<AllRoutePaths, "/">;
