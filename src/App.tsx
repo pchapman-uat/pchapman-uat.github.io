@@ -10,6 +10,7 @@ const NavigationItems: NavItem[] = [
     new NavItem("NE", "Boards/NE/"),
   ]),
   new NavItem("SIP", "SIP/"),
+  new NavItem("Projects", "Projects/"),
 ];
 
 export default function App() {

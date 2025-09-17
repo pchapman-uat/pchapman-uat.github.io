@@ -1,0 +1,21 @@
+.projectContainer {
+  width: 200px;
+  height: 200px;
+  margin: 5px;
+  background-color: var(--section-color);
+  padding: 10px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.projectLogo {
+  width: 20px;
+  height: 20px;
+}
+
+.projectLogosContainer {
+  display: flex;
+  justify-content: space-around;
+}
