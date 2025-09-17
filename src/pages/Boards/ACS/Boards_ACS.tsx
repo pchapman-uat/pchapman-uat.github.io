@@ -7,12 +7,12 @@ export default function ACS() {
         <title>ACS Boards | Preston Chapman Website</title>
       </Head>
       <section id="objectives">
-        <h3>Objectives</h3>
+        <h3>Advancing Computer Science Objectives</h3>
         <ol>
           <li>
             <a href="#objective1">
-              Follow a software development process to analyze a problem and to
-              design, build and test software solutions.
+              Document the software development process to analyze a problem and
+              to design, build, and test software solutions
             </a>
           </li>
           <li>
@@ -26,29 +26,29 @@ export default function ACS() {
           </li>
           <li>
             <a href="#objective4">
-              Design and implement software solutions for mobile devices,
-              embedded systems and/or multiple platforms.
+              Design and implement software solutions for multiple platforms
+              including mobile devices.
             </a>
           </li>
           <li>
             <a href="#objective5">
-              Document the planning and development of software applications
-              using industry-standard tools, techniques and processes.
+              Design, develop, and maintain object-oriented software solutions
+              utilizing inheritance, encapsulation, polymorphism, and
+              abstraction.
             </a>
           </li>
           <li>
             <a href="#objective6">
-              Within software solutions, describe, implement and analyze data
-              structure techniques such as lists, trees, hash tables and graphs,
-              along with sorting and searching algorithms.
+              Within software solutions, describe, implement, and analyze data
+              structure techniques.
             </a>
           </li>
         </ol>
       </section>
       <section id="objective1">
         <h4>
-          Follow a software development process to analyze a problem and to
-          design, build and test software solutions.
+          Document the software development process to analyze a problem and to
+          design, build, and test software solutions
         </h4>
       </section>
       <section id="objective2">
@@ -57,35 +57,35 @@ export default function ACS() {
           programming language and development environment.
         </h4>
         <p>
-          I have worked in a multitude of different languages, ranging from
+          {"I have worked in a multitude of different languages, ranging from "}
           <a
             target="_blank"
             href="https://github.com/pchapman-uat?tab=repositories&q=&type=&language=javascript&sort="
           >
             JavaScript
           </a>
-          ,
+          {", "}
           <a
             target="_blank"
             href="https://github.com/pchapman-uat?tab=repositories&q=&type=&language=java&sort="
           >
             Java
           </a>
-          ,
+          {", "}
           <a
             target="_blank"
             href="https://github.com/pchapman-uat?tab=repositories&q=&type=&language=c%2B%2B&sort="
           >
             C++
           </a>
-          ,
+          {", "}
           <a
             target="_blank"
             href="https://github.com/pchapman-uat?tab=repositories&q=&type=&language=python&sort="
           >
             Python
           </a>
-          and more!
+          {" and more!"}
         </p>
         <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=pchapman-uat&theme=vue-dark&show_icons=true&hide_border=true&layout=compact" />
       </section>
@@ -94,21 +94,20 @@ export default function ACS() {
       </section>
       <section id="objective4">
         <h4>
-          Design and implement software solutions for mobile devices, embedded
-          systems and/or multiple platforms.
+          Design and implement software solutions for multiple platforms
+          including mobile devices.
         </h4>
       </section>
       <section id="objective5">
         <h4>
-          Document the planning and development of software applications using
-          industry-standard tools, techniques and processes.
+          Design, develop, and maintain object-oriented software solutions
+          utilizing inheritance, encapsulation, polymorphism, and abstraction.
         </h4>
       </section>
       <section id="objective6">
         <h4>
-          Within software solutions, describe, implement and analyze data
-          structure techniques such as lists, trees, hash tables and graphs,
-          along with sorting and searching algorithms.
+          Within software solutions, describe, implement, and analyze data
+          structure techniques.
         </h4>
       </section>
     </div>
