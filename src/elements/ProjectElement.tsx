@@ -1,5 +1,5 @@
 import { ProjectLinkType, ProjectObj } from "@/classes/Projects";
-import ProjectElementCSS from "@/style/project.element.module.css";
+import ProjectElementCSS from "@/style/projects.element.module.css";
 import { ProjectLink } from "@/classes/Projects";
 
 import GithubSVG from "@/assets/logos/github/github-mark.svg?react";
@@ -23,7 +23,7 @@ function GetLogo(
   }
 }
 
-function ProjectLinkElement({ type, url }: ProjectLink) {
+export function ProjectLinkElement({ type, url }: ProjectLink) {
   const Logo = GetLogo(type);
   return (
     <div>

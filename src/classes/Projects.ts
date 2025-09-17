@@ -1,3 +1,4 @@
+import { extractGitHubUserRepo } from "@/helpers/extractUrl";
 import projectRoutes from "@/projectRoutes";
 import { RouteRecord } from "vite-react-ssg";
 
@@ -7,6 +8,7 @@ export class ProjectObj {
   readonly ASSIGNMENT_NAME: string;
   readonly LINKS: ProjectLink[];
   readonly ROUTE: RouteRecord;
+  readonly GITHUB: { user: string; repo: string } | null;
   constructor(
     name: string,
     class_id: string,
@@ -19,6 +21,9 @@ export class ProjectObj {
     this.ASSIGNMENT_NAME = assignment_name;
     this.LINKS = links;
     this.ROUTE = route;
+    this.GITHUB = extractGitHubUserRepo(
+      this.LINKS.filter((item) => item.type === "github")[0].url
+    );
   }
   get href() {
     return this.ROUTE.path;

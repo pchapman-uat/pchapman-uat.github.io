@@ -21,7 +21,7 @@ const MartianSafari = lazy(
 );
 const ProjectRoutes = {
   JavaReminders: {
-    path: "JavaReminders/",
+    path: "JavaReminders",
     Component: JavaReminders,
   },
   GPACalculator: {
