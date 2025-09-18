@@ -1,4 +1,4 @@
-.projectContainer {
+.project {
   width: 200px;
   height: 200px;
   margin: 5px;
@@ -16,6 +16,15 @@
 }
 
 .projectLogosContainer {
+  display: flex;
+  justify-content: space-around;
+}
+.projectsContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.shields {
   display: flex;
   justify-content: space-around;
 }

@@ -3,8 +3,8 @@
     "tasks": [
         {
             "label": "Vite Build",
-            "type": "npm",
-            "script": "build"
+            "type": "shell",
+            "command": "Remove-Item -Recurse -Force dist; npm run build"
         },
         {
             "label": "Validate",

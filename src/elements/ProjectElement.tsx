@@ -1,10 +1,11 @@
 import React from "react";
 import { ProjectLinkType, ProjectObj } from "@/classes/Projects";
-import ProjectElementCSS from "@/style/projects.element.module.css";
+import ProjectElementCSS from "@/style/projects.module.css";
 import { ProjectLink } from "@/classes/Projects";
 
 import GithubSVG from "@/assets/logos/github/github-mark.svg?react";
 import InternetSVG from "@/assets/logos/internet.svg?react";
+import "@/style/projects.css";
 export type ProjectElementParams = {
   project: ProjectObj;
 };
@@ -36,7 +37,7 @@ export function ProjectLinkElement({ type, url }: ProjectLink) {
 }
 export default function ProjectElement({ project }: ProjectElementParams) {
   return (
-    <div className={ProjectElementCSS.projectContainer}>
+    <div className={ProjectElementCSS.project}>
       <h4>
         <a href={project.href}>{project.NAME}</a>
       </h4>

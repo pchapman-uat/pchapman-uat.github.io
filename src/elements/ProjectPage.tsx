@@ -2,7 +2,7 @@ import React from "react";
 import { FC, ReactNode, useEffect, useState } from "react";
 import { ProjectObj } from "@/classes/Projects";
 import Shield from "./Shield";
-import ProjectPageCSS from "@/style/projects.page.module.css";
+import ProjectCSS from "@/style/projects.module.css";
 import { ProjectLinkElement } from "./ProjectElement";
 import { RepoCardProps } from "react-repo-card";
 export type ProjectPageParams = {
@@ -20,7 +20,7 @@ export default function ProjectPage({ project, children }: ProjectPageParams) {
   return (
     <>
       <h3>{project.NAME}</h3>
-      <div className={ProjectPageCSS.shields}>
+      <div className={ProjectCSS.shields}>
         {project.LINKS.map((item, i) => (
           <ProjectLinkElement
             type={item.type}
@@ -38,7 +38,7 @@ export default function ProjectPage({ project, children }: ProjectPageParams) {
           />
         )}
       </section>
-      <div className={ProjectPageCSS.shields}>
+      <div className={ProjectCSS.shields}>
         {project.GITHUB && (
           <>
             <Shield type="github/stars" param={project.GITHUB} />
