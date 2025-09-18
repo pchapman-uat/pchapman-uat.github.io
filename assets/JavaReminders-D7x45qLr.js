@@ -1,0 +1,1 @@
+import{j as r}from"./app-BdXxEiT2.js";import{a}from"./ProjectElement-Ba-Cv5gp.js";import{P as e}from"./ProjectPage-DZS7peuj.js";function s(){return r.jsx(e,{project:a.JavaReminders})}export{s as default};

@@ -1,0 +1,1 @@
+import{j as r}from"./app-BdXxEiT2.js";import{a}from"./ProjectElement-Ba-Cv5gp.js";import{P as t}from"./ProjectPage-DZS7peuj.js";const o=a.MartianSafari;function f(){return r.jsx(t,{project:o})}export{f as default};

@@ -1,0 +1,1 @@
+import{j as e,P as o}from"./app-BdXxEiT2.js";import{A as s,P as a}from"./ProjectElement-Ba-Cv5gp.js";function n(){return e.jsx(e.Fragment,{children:e.jsx("div",{className:o.projectsContainer,children:s.map((r,t)=>e.jsx(a,{project:r},"project"+t))})})}export{n as default};

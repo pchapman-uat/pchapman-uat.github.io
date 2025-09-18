@@ -1,14 +1,39 @@
 {
-  "_client-BIOUsLLm.js": {
-    "file": "assets/client-BIOUsLLm.js",
+  "_ProjectElement-Ba-Cv5gp.js": {
+    "file": "assets/ProjectElement-Ba-Cv5gp.js",
+    "name": "ProjectElement",
+    "imports": [
+      "index.html"
+    ],
+    "css": [
+      "assets/ProjectElement-tn0RQdqM.css"
+    ]
+  },
+  "_ProjectElement-tn0RQdqM.css": {
+    "file": "assets/ProjectElement-tn0RQdqM.css",
+    "src": "_ProjectElement-tn0RQdqM.css"
+  },
+  "_ProjectPage-DZS7peuj.js": {
+    "file": "assets/ProjectPage-DZS7peuj.js",
+    "name": "ProjectPage",
+    "imports": [
+      "index.html",
+      "_ProjectElement-Ba-Cv5gp.js"
+    ],
+    "dynamicImports": [
+      "_index-fIG_Y88-.js"
+    ]
+  },
+  "_client-D6R9ahAZ.js": {
+    "file": "assets/client-D6R9ahAZ.js",
     "name": "client",
     "isDynamicEntry": true,
     "imports": [
       "index.html"
     ]
   },
-  "_index-C7khm_vm.js": {
-    "file": "assets/index-C7khm_vm.js",
+  "_index-fIG_Y88-.js": {
+    "file": "assets/index-fIG_Y88-.js",
     "name": "index",
     "isDynamicEntry": true,
     "imports": [
@@ -16,20 +41,27 @@
     ]
   },
   "index.html": {
-    "file": "assets/app-uplTcGM-.js",
+    "file": "assets/app-BdXxEiT2.js",
     "name": "app",
     "src": "index.html",
     "isEntry": true,
     "dynamicImports": [
-      "_client-BIOUsLLm.js",
+      "_client-D6R9ahAZ.js",
+      "src/pages/Projects/pages/JavaReminders.tsx",
+      "src/pages/Projects/pages/GPACalculator.tsx",
+      "src/pages/Projects/pages/ClockingManager.tsx",
+      "src/pages/Projects/pages/OBSFoobarFusion.tsx",
+      "src/pages/Projects/pages/RPGSimulator.tsx",
+      "src/pages/Projects/pages/MartianSafari.tsx",
       "src/pages/Home.tsx",
       "src/pages/Boards/Boards.tsx",
-      "src/pages/Boards/ACS/Boards_ACS.tsx",
-      "src/pages/Boards/NE/Boards_NE.tsx",
-      "src/pages/SIP/SIP.tsx"
+      "src/pages/Boards/ACS/BoardsACS.tsx",
+      "src/pages/Boards/NE/BoardsNE.tsx",
+      "src/pages/SIP/SIP.tsx",
+      "src/pages/Projects/ProjectsHome.tsx"
     ],
     "css": [
-      "assets/app-BbGin05v.css"
+      "assets/app-C2cxh2VD.css"
     ],
     "assets": [
       "assets/profile-CZRwpCbT.jpg",
@@ -44,17 +76,17 @@
     "file": "assets/uat-logo-TDp51N1T.png",
     "src": "src/assets/images/uat-logo.png"
   },
-  "src/pages/Boards/ACS/Boards_ACS.tsx": {
-    "file": "assets/Boards_ACS-D3Oysdul.js",
-    "name": "Boards_ACS",
-    "src": "src/pages/Boards/ACS/Boards_ACS.tsx",
+  "src/pages/Boards/ACS/BoardsACS.tsx": {
+    "file": "assets/BoardsACS-C4qT1xiG.js",
+    "name": "BoardsACS",
+    "src": "src/pages/Boards/ACS/BoardsACS.tsx",
     "isDynamicEntry": true,
     "imports": [
       "index.html"
     ]
   },
   "src/pages/Boards/Boards.tsx": {
-    "file": "assets/Boards-CXNQwpkK.js",
+    "file": "assets/Boards-C9ixBbNd.js",
     "name": "Boards",
     "src": "src/pages/Boards/Boards.tsx",
     "isDynamicEntry": true,
@@ -62,17 +94,17 @@
       "index.html"
     ]
   },
-  "src/pages/Boards/NE/Boards_NE.tsx": {
-    "file": "assets/Boards_NE-uL3Q-RLG.js",
-    "name": "Boards_NE",
-    "src": "src/pages/Boards/NE/Boards_NE.tsx",
+  "src/pages/Boards/NE/BoardsNE.tsx": {
+    "file": "assets/BoardsNE-QoZog7pA.js",
+    "name": "BoardsNE",
+    "src": "src/pages/Boards/NE/BoardsNE.tsx",
     "isDynamicEntry": true,
     "imports": [
       "index.html"
     ]
   },
   "src/pages/Home.tsx": {
-    "file": "assets/Home-DDvdO3n6.js",
+    "file": "assets/Home-BaSXcoSC.js",
     "name": "Home",
     "src": "src/pages/Home.tsx",
     "isDynamicEntry": true,
@@ -80,8 +112,84 @@
       "index.html"
     ]
   },
+  "src/pages/Projects/ProjectsHome.tsx": {
+    "file": "assets/ProjectsHome-C3kvbHM5.js",
+    "name": "ProjectsHome",
+    "src": "src/pages/Projects/ProjectsHome.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_ProjectElement-Ba-Cv5gp.js"
+    ]
+  },
+  "src/pages/Projects/pages/ClockingManager.tsx": {
+    "file": "assets/ClockingManager-CMMmrudw.js",
+    "name": "ClockingManager",
+    "src": "src/pages/Projects/pages/ClockingManager.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_ProjectElement-Ba-Cv5gp.js",
+      "_ProjectPage-DZS7peuj.js"
+    ]
+  },
+  "src/pages/Projects/pages/GPACalculator.tsx": {
+    "file": "assets/GPACalculator-Bj9peAMq.js",
+    "name": "GPACalculator",
+    "src": "src/pages/Projects/pages/GPACalculator.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_ProjectElement-Ba-Cv5gp.js",
+      "_ProjectPage-DZS7peuj.js"
+    ]
+  },
+  "src/pages/Projects/pages/JavaReminders.tsx": {
+    "file": "assets/JavaReminders-D7x45qLr.js",
+    "name": "JavaReminders",
+    "src": "src/pages/Projects/pages/JavaReminders.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_ProjectElement-Ba-Cv5gp.js",
+      "_ProjectPage-DZS7peuj.js"
+    ]
+  },
+  "src/pages/Projects/pages/MartianSafari.tsx": {
+    "file": "assets/MartianSafari-L2HrOzbN.js",
+    "name": "MartianSafari",
+    "src": "src/pages/Projects/pages/MartianSafari.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_ProjectElement-Ba-Cv5gp.js",
+      "_ProjectPage-DZS7peuj.js"
+    ]
+  },
+  "src/pages/Projects/pages/OBSFoobarFusion.tsx": {
+    "file": "assets/OBSFoobarFusion-BSXfUAct.js",
+    "name": "OBSFoobarFusion",
+    "src": "src/pages/Projects/pages/OBSFoobarFusion.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_ProjectElement-Ba-Cv5gp.js",
+      "_ProjectPage-DZS7peuj.js"
+    ]
+  },
+  "src/pages/Projects/pages/RPGSimulator.tsx": {
+    "file": "assets/RPGSimulator-C1IKLkD1.js",
+    "name": "RPGSimulator",
+    "src": "src/pages/Projects/pages/RPGSimulator.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_ProjectElement-Ba-Cv5gp.js",
+      "_ProjectPage-DZS7peuj.js"
+    ]
+  },
   "src/pages/SIP/SIP.tsx": {
-    "file": "assets/SIP-BjorHhnA.js",
+    "file": "assets/SIP-BW3XHqM4.js",
     "name": "SIP",
     "src": "src/pages/SIP/SIP.tsx",
     "isDynamicEntry": true,
@@ -89,10 +197,10 @@
       "index.html"
     ],
     "dynamicImports": [
-      "_index-C7khm_vm.js"
+      "_index-fIG_Y88-.js"
     ],
     "css": [
-      "assets/SIP-DaaxOZfp.css"
+      "assets/SIP-COecg4NZ.css"
     ],
     "assets": [
       "assets/mobSF-0.2.0-alpha.1-B52HQnmm.png",
