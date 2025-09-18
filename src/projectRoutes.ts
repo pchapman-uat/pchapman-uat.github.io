@@ -1,4 +1,4 @@
-import { Component, lazy } from "react";
+import { lazy } from "react";
 
 const JavaReminders = lazy(
   () => import("@/pages/Projects/pages/JavaReminders")
@@ -13,7 +13,7 @@ const OBSFoobarFusion = lazy(
   () => import("@/pages/Projects/pages/OBSFoobarFusion")
 );
 const RPG_Simulator = lazy(
-  () => import("@/pages/Projects/pages/RPG_Simulator")
+  () => import("@/pages/Projects/pages/RPGSimulator")
 );
 
 const MartianSafari = lazy(

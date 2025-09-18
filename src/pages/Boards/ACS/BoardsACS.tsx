@@ -61,6 +61,7 @@ export default function ACS() {
           <a
             target="_blank"
             href="https://github.com/pchapman-uat?tab=repositories&q=&type=&language=javascript&sort="
+            rel="noreferrer"
           >
             JavaScript
           </a>
@@ -68,6 +69,7 @@ export default function ACS() {
           <a
             target="_blank"
             href="https://github.com/pchapman-uat?tab=repositories&q=&type=&language=java&sort="
+            rel="noreferrer"
           >
             Java
           </a>
@@ -75,6 +77,7 @@ export default function ACS() {
           <a
             target="_blank"
             href="https://github.com/pchapman-uat?tab=repositories&q=&type=&language=c%2B%2B&sort="
+            rel="noreferrer"
           >
             C++
           </a>
@@ -82,6 +85,7 @@ export default function ACS() {
           <a
             target="_blank"
             href="https://github.com/pchapman-uat?tab=repositories&q=&type=&language=python&sort="
+            rel="noreferrer"
           >
             Python
           </a>

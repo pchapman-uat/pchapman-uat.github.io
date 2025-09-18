@@ -1,4 +1,6 @@
-.navigationItem[has-sub-pages="true"] > :not(.navigationSubPages) > a::after {
+.navigationItem[data-has-sub-pages="true"]
+  > :not(.navigationSubPages)
+  > a::after {
   content: "  v";
 }
 

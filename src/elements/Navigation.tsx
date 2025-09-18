@@ -1,16 +1,16 @@
 import { AllPaths } from "@/routes";
 import NavigationCSS from "@/style/navigation.module.css";
-import { useState } from "react";
+import React from "react";
 
 import "@/style/navigation.css";
 export class NavigationItem {
-  public readonly name: string;
-  public readonly path: AllPaths;
-  public readonly children: NavigationItem[] = [];
+  public readonly NAME: string;
+  public readonly PATH: AllPaths;
+  public readonly CHILDREN: NavigationItem[] = [];
   constructor(name: string, path: AllPaths, children: NavigationItem[] = []) {
-    this.name = name;
-    this.path = path;
-    this.children = children;
+    this.NAME = name;
+    this.PATH = path;
+    this.CHILDREN = children;
   }
 }
 
@@ -35,18 +35,18 @@ type NavigationElementProps = {
 };
 function NavigationElement({ item }: NavigationElementProps) {
   const element = (_item: NavigationItem, i: number) => (
-    <a key={"subpage" + i} href={"/" + _item.path}>
-      {_item.name}
+    <a key={"subpage" + i} href={"/" + _item.PATH}>
+      {_item.NAME}
     </a>
   );
   return (
     <div
       className={NavigationCSS.navigationItem}
-      has-sub-pages={item.children.length > 0 ? "true" : "false"}
+      data-has-sub-pages={item.CHILDREN.length > 0}
     >
       <div>{element(item, 0)}</div>
       <div className={NavigationCSS.navigationSubPages}>
-        {item.children.map((item, i) => element(item, i))}
+        {item.CHILDREN.map((item, i) => element(item, i))}
       </div>
     </div>
   );

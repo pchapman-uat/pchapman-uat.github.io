@@ -6,8 +6,8 @@ import projectRoutes, { ProjectRoutesArr } from "./projectRoutes";
 
 const Home = lazy(() => import("@/pages/Home"));
 const Boards = lazy(() => import("@/pages/Boards/Boards"));
-const Boards_ACS = lazy(() => import("@/pages/Boards/ACS/Boards_ACS"));
-const Boards_NE = lazy(() => import("@/pages/Boards/NE/Boards_NE"));
+const Boards_ACS = lazy(() => import("@/pages/Boards/ACS/BoardsACS"));
+const Boards_NE = lazy(() => import("@/pages/Boards/NE/BoardsNE"));
 const SIP = lazy(() => import("@/pages/SIP/SIP"));
 const ProjectsHome = lazy(() => import("@/pages/Projects/ProjectsHome"));
 

@@ -1,6 +1,6 @@
 import { extractGitHubUserRepo } from "@/helpers/extractUrl";
 import projectRoutes from "@/projectRoutes";
-import { rootRoutes, routes } from "@/routes";
+import { rootRoutes } from "@/routes";
 import { RouteRecord } from "vite-react-ssg";
 
 export class ProjectObj {

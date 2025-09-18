@@ -18,6 +18,7 @@ export function extractGitHubUserRepo(
 
     return { user, repo };
   } catch (e) {
+    console.error(e);
     return null;
   }
 }

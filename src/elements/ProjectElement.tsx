@@ -1,3 +1,4 @@
+import React from "react";
 import { ProjectLinkType, ProjectObj } from "@/classes/Projects";
 import ProjectElementCSS from "@/style/projects.element.module.css";
 import { ProjectLink } from "@/classes/Projects";
