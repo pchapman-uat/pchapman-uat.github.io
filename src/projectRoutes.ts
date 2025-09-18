@@ -21,27 +21,27 @@ const MartianSafari = lazy(
 );
 const ProjectRoutes = {
   JavaReminders: {
-    path: "JavaReminders",
+    path: "JavaReminders/",
     Component: JavaReminders,
   },
   GPACalculator: {
-    path: "GPACalculator",
+    path: "GPACalculator/",
     Component: GPACalculator,
   },
   ClockingManager: {
-    path: "ClockingManager",
+    path: "ClockingManager/",
     Component: ClockingManager,
   },
   OBSFoobarFusion: {
-    path: "OBSFoobarFusion",
+    path: "OBSFoobarFusion/",
     Component: OBSFoobarFusion,
   },
   RPG_Simulator: {
-    path: "RPG_Simulator",
+    path: "RPG_Simulator/",
     Component: RPG_Simulator,
   },
   MartianSafari: {
-    path: "MartianSafari",
+    path: "MartianSafari/",
     Component: MartianSafari,
   },
 } as const;
