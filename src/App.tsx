@@ -1,3 +1,4 @@
+import React from "react";
 import { Outlet } from "react-router-dom";
 import "@/style/main.css";
 import Navigation, { NavigationItem as NavItem } from "./elements/Navigation";
@@ -10,6 +11,7 @@ const NavigationItems: NavItem[] = [
     new NavItem("NE", "Boards/NE/"),
   ]),
   new NavItem("SIP", "SIP/"),
+  new NavItem("Projects", "Projects/"),
 ];
 
 export default function App() {
