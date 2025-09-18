@@ -1,5 +1,6 @@
 import { extractGitHubUserRepo } from "@/helpers/extractUrl";
 import projectRoutes from "@/projectRoutes";
+import { rootRoutes, routes } from "@/routes";
 import { RouteRecord } from "vite-react-ssg";
 
 export class ProjectObj {
@@ -7,14 +8,14 @@ export class ProjectObj {
   readonly CLASS_ID: string;
   readonly ASSIGNMENT_NAME: string;
   readonly LINKS: ProjectLink[];
-  readonly ROUTE: RouteRecord;
+  readonly ROUTE: RouteRecord | string;
   readonly GITHUB: { user: string; repo: string } | null;
   constructor(
     name: string,
     class_id: string,
     assignment_name: string,
     links: ProjectLink[],
-    route: RouteRecord
+    route: RouteRecord | string
   ) {
     this.NAME = name;
     this.CLASS_ID = class_id;
@@ -26,7 +27,8 @@ export class ProjectObj {
     );
   }
   get href() {
-    return this.ROUTE.path;
+    if (typeof this.ROUTE === "string") return this.ROUTE;
+    else return this.ROUTE.path;
   }
 }
 export type ProjectLinkType = "github" | "website" | "video" | "other";
@@ -34,7 +36,7 @@ export interface ProjectLink {
   type: ProjectLinkType;
   url: string;
 }
-const PROJECTS = {
+const PROJECTS: Record<string, ProjectObj> = {
   JavaReminders: new ProjectObj(
     "Java Reminders",
     "CSC203",
@@ -93,6 +95,22 @@ const PROJECTS = {
       },
     ],
     projectRoutes.MartianSafari
+  ),
+  SIP: new ProjectObj(
+    "Foobar Controller Mobile",
+    "SIP311/405",
+    "Student Innovation Project",
+    [
+      {
+        type: "github",
+        url: "https://github.com/pchapman-uat/Foobar-Controler-Mobile",
+      },
+      {
+        type: "other",
+        url: "https://github.com/pchapman-uat/Foobar-Controler-Mobile/wiki",
+      },
+    ],
+    "/" + rootRoutes.SIP.path
   ),
 };
 

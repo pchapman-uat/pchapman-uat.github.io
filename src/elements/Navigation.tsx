@@ -1,13 +1,13 @@
-import { RoutePaths } from "@/routes";
+import { AllPaths } from "@/routes";
 import NavigationCSS from "@/style/navigation.module.css";
 import { useState } from "react";
 
 import "@/style/navigation.css";
 export class NavigationItem {
   public readonly name: string;
-  public readonly path: RoutePaths;
+  public readonly path: AllPaths;
   public readonly children: NavigationItem[] = [];
-  constructor(name: string, path: RoutePaths, children: NavigationItem[] = []) {
+  constructor(name: string, path: AllPaths, children: NavigationItem[] = []) {
     this.name = name;
     this.path = path;
     this.children = children;

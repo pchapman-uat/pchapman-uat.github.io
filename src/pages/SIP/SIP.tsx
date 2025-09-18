@@ -106,7 +106,7 @@ export default function SIP() {
       <section id="securityReport">
         <h3>Security Report</h3>
         <p>
-          Bellow is a security report of the application as of release
+          Below is a security report of the application as of release
           "0.2.0-alpha-1"
         </p>
         <img className={Main.fullImg} src={MobSFReportBanner} />

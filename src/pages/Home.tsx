@@ -15,7 +15,7 @@ export default function Home() {
       <section id="aboutMe">
         <h3>About Me</h3>
         <p>
-          I am currently on my 6th out of 7 semesters here at UAT, I am the
+          I am currently on 7th and final semester here at UAT, I am the
           programming and mathematics Tutor, enjoy playing games, and I code a
           whole lot in my spare time. I always want to create something new no
           matter how small. I also host servers locally on my machines to listen
