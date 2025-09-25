@@ -3,15 +3,27 @@
   > a::after {
   content: "  v";
 }
+.navigationItem[data-has-sub-pages="true"]:hover
+  > :not(.navigationSubPages)
+  > a::after {
+  content: "  ^";
+}
+.navigationItem {
+  position: relative;
+}
 
 .navigationSubPages {
-  display: none;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
 }
+
 .navigationItem:hover > .navigationSubPages {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+  max-height: 500px;
+  opacity: 1;
 }
+
 .navigationContainer {
   background-color: var(--section-color);
   padding: var(--section-padding);
