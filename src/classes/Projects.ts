@@ -1,4 +1,4 @@
-import { extractGitHubUserRepo } from "@/helpers/extractUrl";
+import { extractGitHubUserRepo } from "@/helpers/helpers";
 import projectRoutes from "@/projectRoutes";
 import { rootRoutes } from "@/routes";
 import { RouteRecord } from "vite-react-ssg";
