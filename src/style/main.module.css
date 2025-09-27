@@ -23,3 +23,32 @@ section#links > div {
   display: flex;
   justify-content: space-around;
 }
+
+.content {
+  margin: 2rem;
+  z-index: 1;
+}
+
+.parallax {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-image: linear-gradient(
+    45deg,
+    var(--background-light),
+    var(--background-dark)
+  );
+}
+
+.parallax > * {
+  position: absolute;
+  bottom: 0;
+}
+
+.parallaxWave {
+  mix-blend-mode: color-burn;
+  opacity: 0.2;
+}

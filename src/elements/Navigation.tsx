@@ -19,15 +19,15 @@ interface NavigationProps {
 }
 export default function Navigation({ items }: NavigationProps) {
   return (
-    <div className={NavigationCSS.navigationContainer}>
-      <nav>
+    <nav>
+      <div className={NavigationCSS.navigationContainer}>
         {items.map((item, i) => (
           <div key={"page-" + i}>
             <NavigationElement item={item} />
           </div>
         ))}
-      </nav>
-    </div>
+      </div>
+    </nav>
   );
 }
 type NavigationElementProps = {

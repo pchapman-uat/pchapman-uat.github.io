@@ -25,8 +25,7 @@
 }
 
 .navigationContainer {
-  background-color: var(--section-color);
-  padding: var(--section-padding);
-  margin: var(--section-margin);
-  border-radius: var(--section-radius);
+  display: flex;
+  justify-content: space-around;
+  padding: 5px;
 }

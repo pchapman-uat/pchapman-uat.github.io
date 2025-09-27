@@ -4,6 +4,10 @@ import "@/style/main.css";
 import Navigation, { NavigationItem as NavItem } from "./elements/Navigation";
 import profileImg from "@/assets/images/profile.jpg";
 import uatLogo from "@/assets/images/uat-logo.png";
+import { useScroll, animated } from "@react-spring/web";
+import MainCSS from "@/style/main.module.css";
+import WavePath from "./elements/Wave";
+
 const NavigationItems: NavItem[] = [
   new NavItem("Home", ""),
   new NavItem("Boards", "Boards/", [
@@ -15,29 +19,54 @@ const NavigationItems: NavItem[] = [
 ];
 
 export default function App() {
+  const { scrollY } = useScroll();
   return (
-    <div>
-      <header>
-        <img src={profileImg} alt="Preston Chapman Profile Picture" />
-        <h1>Preston Chapman</h1>
-        <img src={uatLogo} alt="University of Advancing Technology Logo" />
-      </header>
-      <Navigation items={NavigationItems} />
-      <main>
-        <Outlet />
-      </main>
+    <>
+      <div className={MainCSS.parallax}>
+        <WavePath
+          time={scrollY}
+          className={MainCSS.parallaxWave}
+          speed={0.02}
+        />
+        <WavePath
+          time={scrollY}
+          height={800}
+          className={MainCSS.parallaxWave}
+          speed={0.01}
+          offset={5}
+        />
+        <WavePath
+          time={scrollY}
+          height={1600}
+          className={MainCSS.parallaxWave}
+          speed={0.005}
+          offset={8}
+        />
+      </div>
 
-      <footer>
-        <p>
-          <a href="https://github.com/pchapman-uat/pchapman-uat.github.io">
-            Source
-          </a>
-          Preston Chapman © 2025.
-          <a href="https://github.com/pchapman-uat/pchapman-uat.github.io/blob/main/LICENSE">
-            Apache 2.0 License
-          </a>
-        </p>
-      </footer>
-    </div>
+      <div className={MainCSS.content}>
+        <header>
+          <img src={profileImg} alt="Preston Chapman Profile Picture" />
+          <h1>Preston Chapman</h1>
+          <img src={uatLogo} alt="University of Advancing Technology Logo" />
+        </header>
+        <Navigation items={NavigationItems} />
+        <main>
+          <Outlet />
+        </main>
+
+        <footer>
+          <p>
+            <a href="https://github.com/pchapman-uat/pchapman-uat.github.io">
+              Source
+            </a>
+            Preston Chapman © 2025.
+            <a href="https://github.com/pchapman-uat/pchapman-uat.github.io/blob/main/LICENSE">
+              Apache 2.0 License
+            </a>
+          </p>
+        </footer>
+      </div>
+    </>
   );
 }

@@ -17,6 +17,7 @@
   "license": "ISC",
   "homepage": "https://pchapman-uat.github.io",
   "dependencies": {
+    "@react-spring/web": "^10.0.3",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-repo-card": "^2.0.1"
