@@ -12,6 +12,7 @@ export class ProjectObj {
   readonly ROUTE: RouteRecord | string;
   readonly GITHUB: { user: string; repo: string } | null;
   readonly TAGS: ProjectTag[];
+  languages: Record<string, number> | undefined;
   constructor(
     name: string,
     class_id: string,
@@ -34,7 +35,33 @@ export class ProjectObj {
     if (typeof this.ROUTE === "string") return this.ROUTE;
     else return this.ROUTE.path;
   }
+  private get githubAPI() {
+    if (!this.GITHUB) return null;
+    return `https://api.github.com/repos/${this.GITHUB.user}/${this.GITHUB.repo}`;
+  }
+  async repoLanguages(): Promise<Record<string, number>> {
+    if (this.languages) return this.languages;
+    const url = this.githubAPI;
+    if (!this.githubAPI) throw new Error("No Github Repo attached to Project");
+    const response = await fetch(url + "/languages");
+
+    if (!response.ok) throw new Error("Failed to fetch GitHub languages");
+
+    const json = await response.json();
+    console.log(json);
+    this.languages = this.sortLanguages(json);
+    return this.languages;
+  }
+
+  private sortLanguages(
+    languages: Record<string, number>
+  ): Record<string, number> {
+    return Object.fromEntries(
+      Object.entries(languages).sort(([, a], [, b]) => b - a)
+    );
+  }
 }
+
 export type ProjectLinkType = "github" | "website" | "video" | "other";
 
 export interface ProjectLink {

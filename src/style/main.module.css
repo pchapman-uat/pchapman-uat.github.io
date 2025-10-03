@@ -52,3 +52,11 @@ section#links > div {
   mix-blend-mode: color-burn;
   opacity: 0.2;
 }
+.divider {
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background-color: var(--background-dark);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
