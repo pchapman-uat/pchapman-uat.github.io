@@ -1,8 +1,9 @@
 {
-  "_ProjectElement-Ba-Cv5gp.js": {
-    "file": "assets/ProjectElement-Ba-Cv5gp.js",
+  "_ProjectElement-eDqIJ8LE.js": {
+    "file": "assets/ProjectElement-eDqIJ8LE.js",
     "name": "ProjectElement",
     "imports": [
+      "_helpers-CjS5R6qi.js",
       "index.html"
     ],
     "css": [
@@ -13,27 +14,31 @@
     "file": "assets/ProjectElement-tn0RQdqM.css",
     "src": "_ProjectElement-tn0RQdqM.css"
   },
-  "_ProjectPage-DZS7peuj.js": {
-    "file": "assets/ProjectPage-DZS7peuj.js",
+  "_ProjectPage-BOKMMb28.js": {
+    "file": "assets/ProjectPage-BOKMMb28.js",
     "name": "ProjectPage",
     "imports": [
       "index.html",
-      "_ProjectElement-Ba-Cv5gp.js"
+      "_ProjectElement-eDqIJ8LE.js"
     ],
     "dynamicImports": [
-      "_index-fIG_Y88-.js"
+      "_index-DBfUMMqV.js"
     ]
   },
-  "_client-D6R9ahAZ.js": {
-    "file": "assets/client-D6R9ahAZ.js",
+  "_client-DH7TU_P5.js": {
+    "file": "assets/client-DH7TU_P5.js",
     "name": "client",
     "isDynamicEntry": true,
     "imports": [
       "index.html"
     ]
   },
-  "_index-fIG_Y88-.js": {
-    "file": "assets/index-fIG_Y88-.js",
+  "_helpers-CjS5R6qi.js": {
+    "file": "assets/helpers-CjS5R6qi.js",
+    "name": "helpers"
+  },
+  "_index-DBfUMMqV.js": {
+    "file": "assets/index-DBfUMMqV.js",
     "name": "index",
     "isDynamicEntry": true,
     "imports": [
@@ -41,12 +46,12 @@
     ]
   },
   "index.html": {
-    "file": "assets/app-BdXxEiT2.js",
+    "file": "assets/app-De5DMUEH.js",
     "name": "app",
     "src": "index.html",
     "isEntry": true,
     "dynamicImports": [
-      "_client-D6R9ahAZ.js",
+      "_client-DH7TU_P5.js",
       "src/pages/Projects/pages/JavaReminders.tsx",
       "src/pages/Projects/pages/GPACalculator.tsx",
       "src/pages/Projects/pages/ClockingManager.tsx",
@@ -61,7 +66,7 @@
       "src/pages/Projects/ProjectsHome.tsx"
     ],
     "css": [
-      "assets/app-C2cxh2VD.css"
+      "assets/app-DlzQIKdz.css"
     ],
     "assets": [
       "assets/profile-CZRwpCbT.jpg",
@@ -77,7 +82,7 @@
     "src": "src/assets/images/uat-logo.png"
   },
   "src/pages/Boards/ACS/BoardsACS.tsx": {
-    "file": "assets/BoardsACS-C4qT1xiG.js",
+    "file": "assets/BoardsACS-CukJNyx_.js",
     "name": "BoardsACS",
     "src": "src/pages/Boards/ACS/BoardsACS.tsx",
     "isDynamicEntry": true,
@@ -86,7 +91,7 @@
     ]
   },
   "src/pages/Boards/Boards.tsx": {
-    "file": "assets/Boards-C9ixBbNd.js",
+    "file": "assets/Boards-Dfa9dFlS.js",
     "name": "Boards",
     "src": "src/pages/Boards/Boards.tsx",
     "isDynamicEntry": true,
@@ -95,7 +100,7 @@
     ]
   },
   "src/pages/Boards/NE/BoardsNE.tsx": {
-    "file": "assets/BoardsNE-QoZog7pA.js",
+    "file": "assets/BoardsNE-GHoxifY1.js",
     "name": "BoardsNE",
     "src": "src/pages/Boards/NE/BoardsNE.tsx",
     "isDynamicEntry": true,
@@ -104,7 +109,7 @@
     ]
   },
   "src/pages/Home.tsx": {
-    "file": "assets/Home-BaSXcoSC.js",
+    "file": "assets/Home-Dp1v57J4.js",
     "name": "Home",
     "src": "src/pages/Home.tsx",
     "isDynamicEntry": true,
@@ -113,99 +118,109 @@
     ]
   },
   "src/pages/Projects/ProjectsHome.tsx": {
-    "file": "assets/ProjectsHome-C3kvbHM5.js",
+    "file": "assets/ProjectsHome-tNwKLjab.js",
     "name": "ProjectsHome",
     "src": "src/pages/Projects/ProjectsHome.tsx",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
-      "_ProjectElement-Ba-Cv5gp.js"
+      "_ProjectElement-eDqIJ8LE.js",
+      "_helpers-CjS5R6qi.js"
     ]
   },
   "src/pages/Projects/pages/ClockingManager.tsx": {
-    "file": "assets/ClockingManager-CMMmrudw.js",
+    "file": "assets/ClockingManager-BNBg5i2-.js",
     "name": "ClockingManager",
     "src": "src/pages/Projects/pages/ClockingManager.tsx",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
-      "_ProjectElement-Ba-Cv5gp.js",
-      "_ProjectPage-DZS7peuj.js"
+      "_ProjectElement-eDqIJ8LE.js",
+      "_ProjectPage-BOKMMb28.js",
+      "_helpers-CjS5R6qi.js"
     ]
   },
   "src/pages/Projects/pages/GPACalculator.tsx": {
-    "file": "assets/GPACalculator-Bj9peAMq.js",
+    "file": "assets/GPACalculator-Bg6KU47w.js",
     "name": "GPACalculator",
     "src": "src/pages/Projects/pages/GPACalculator.tsx",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
-      "_ProjectElement-Ba-Cv5gp.js",
-      "_ProjectPage-DZS7peuj.js"
+      "_ProjectElement-eDqIJ8LE.js",
+      "_ProjectPage-BOKMMb28.js",
+      "_helpers-CjS5R6qi.js"
     ]
   },
   "src/pages/Projects/pages/JavaReminders.tsx": {
-    "file": "assets/JavaReminders-D7x45qLr.js",
+    "file": "assets/JavaReminders-CM6__DbJ.js",
     "name": "JavaReminders",
     "src": "src/pages/Projects/pages/JavaReminders.tsx",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
-      "_ProjectElement-Ba-Cv5gp.js",
-      "_ProjectPage-DZS7peuj.js"
+      "_ProjectElement-eDqIJ8LE.js",
+      "_ProjectPage-BOKMMb28.js",
+      "_helpers-CjS5R6qi.js"
     ]
   },
   "src/pages/Projects/pages/MartianSafari.tsx": {
-    "file": "assets/MartianSafari-L2HrOzbN.js",
+    "file": "assets/MartianSafari-BcxRmkeK.js",
     "name": "MartianSafari",
     "src": "src/pages/Projects/pages/MartianSafari.tsx",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
-      "_ProjectElement-Ba-Cv5gp.js",
-      "_ProjectPage-DZS7peuj.js"
+      "_ProjectElement-eDqIJ8LE.js",
+      "_ProjectPage-BOKMMb28.js",
+      "_helpers-CjS5R6qi.js"
     ]
   },
   "src/pages/Projects/pages/OBSFoobarFusion.tsx": {
-    "file": "assets/OBSFoobarFusion-BSXfUAct.js",
+    "file": "assets/OBSFoobarFusion-iMI3dkZk.js",
     "name": "OBSFoobarFusion",
     "src": "src/pages/Projects/pages/OBSFoobarFusion.tsx",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
-      "_ProjectElement-Ba-Cv5gp.js",
-      "_ProjectPage-DZS7peuj.js"
+      "_ProjectElement-eDqIJ8LE.js",
+      "_ProjectPage-BOKMMb28.js",
+      "_helpers-CjS5R6qi.js"
     ]
   },
   "src/pages/Projects/pages/RPGSimulator.tsx": {
-    "file": "assets/RPGSimulator-C1IKLkD1.js",
+    "file": "assets/RPGSimulator-CIohEvsI.js",
     "name": "RPGSimulator",
     "src": "src/pages/Projects/pages/RPGSimulator.tsx",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
-      "_ProjectElement-Ba-Cv5gp.js",
-      "_ProjectPage-DZS7peuj.js"
+      "_ProjectElement-eDqIJ8LE.js",
+      "_ProjectPage-BOKMMb28.js",
+      "_helpers-CjS5R6qi.js"
     ]
   },
   "src/pages/SIP/SIP.tsx": {
-    "file": "assets/SIP-BW3XHqM4.js",
+    "file": "assets/SIP-DIXYGDmf.js",
     "name": "SIP",
     "src": "src/pages/SIP/SIP.tsx",
     "isDynamicEntry": true,
     "imports": [
-      "index.html"
+      "index.html",
+      "_helpers-CjS5R6qi.js"
     ],
     "dynamicImports": [
-      "_index-fIG_Y88-.js"
+      "_index-DBfUMMqV.js"
     ],
     "css": [
-      "assets/SIP-COecg4NZ.css"
+      "assets/SIP-C6bppWYm.css"
     ],
     "assets": [
       "assets/mobSF-0.2.0-alpha.1-B52HQnmm.png",
       "assets/MobSF-0.2.0-alpha.1-rcG-MBvE.pdf",
-      "assets/SIP311-Project_Proposal-PChapman-(Version_2)-C7INTMSA.pdf"
+      "assets/SIP311-Project_Proposal-PChapman-(Version_2)-C7INTMSA.pdf",
+      "assets/Library-DTAYyln0.jpg",
+      "assets/NowPlaying-DGkFitzi.jpg"
     ]
   },
   "src/pages/SIP/assets/documents/MobSF-0.2.0-alpha.1.pdf": {
@@ -215,6 +230,14 @@
   "src/pages/SIP/assets/documents/SIP311-Project_Proposal-PChapman-(Version_2).pdf": {
     "file": "assets/SIP311-Project_Proposal-PChapman-(Version_2)-C7INTMSA.pdf",
     "src": "src/pages/SIP/assets/documents/SIP311-Project_Proposal-PChapman-(Version_2).pdf"
+  },
+  "src/pages/SIP/assets/images/demo/v0.3.0/Library.jpg": {
+    "file": "assets/Library-DTAYyln0.jpg",
+    "src": "src/pages/SIP/assets/images/demo/v0.3.0/Library.jpg"
+  },
+  "src/pages/SIP/assets/images/demo/v0.3.0/NowPlaying.jpg": {
+    "file": "assets/NowPlaying-DGkFitzi.jpg",
+    "src": "src/pages/SIP/assets/images/demo/v0.3.0/NowPlaying.jpg"
   },
   "src/pages/SIP/assets/images/mobSF-0.2.0-alpha.1.png": {
     "file": "assets/mobSF-0.2.0-alpha.1-B52HQnmm.png",

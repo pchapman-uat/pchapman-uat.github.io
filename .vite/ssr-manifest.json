@@ -12,17 +12,17 @@
     "/assets/uat-logo-TDp51N1T.png"
   ],
   "\u0000/home/runner/work/pchapman-uat.github.io/pchapman-uat.github.io/node_modules/react-dom/cjs/react-dom-client.production.js?commonjs-exports": [
-    "/assets/client-D6R9ahAZ.js"
+    "/assets/client-DH7TU_P5.js"
   ],
   "\u0000/home/runner/work/pchapman-uat.github.io/pchapman-uat.github.io/node_modules/react-dom/cjs/react-dom.production.js?commonjs-exports": [
     "/assets/profile-CZRwpCbT.jpg",
     "/assets/uat-logo-TDp51N1T.png"
   ],
   "\u0000/home/runner/work/pchapman-uat.github.io/pchapman-uat.github.io/node_modules/react-dom/client.js?commonjs-es-import": [
-    "/assets/client-D6R9ahAZ.js"
+    "/assets/client-DH7TU_P5.js"
   ],
   "\u0000/home/runner/work/pchapman-uat.github.io/pchapman-uat.github.io/node_modules/react-dom/client.js?commonjs-module": [
-    "/assets/client-D6R9ahAZ.js"
+    "/assets/client-DH7TU_P5.js"
   ],
   "\u0000/home/runner/work/pchapman-uat.github.io/pchapman-uat.github.io/node_modules/react-dom/index.js?commonjs-es-import": [
     "/assets/profile-CZRwpCbT.jpg",
@@ -37,25 +37,25 @@
     "/assets/uat-logo-TDp51N1T.png"
   ],
   "\u0000/home/runner/work/pchapman-uat.github.io/pchapman-uat.github.io/node_modules/react-repo-card/dist/hooks/colors.js?commonjs-exports": [
-    "/assets/index-fIG_Y88-.js"
+    "/assets/index-DBfUMMqV.js"
   ],
   "\u0000/home/runner/work/pchapman-uat.github.io/pchapman-uat.github.io/node_modules/react-repo-card/dist/hooks/emojis.js?commonjs-exports": [
-    "/assets/index-fIG_Y88-.js"
+    "/assets/index-DBfUMMqV.js"
   ],
   "\u0000/home/runner/work/pchapman-uat.github.io/pchapman-uat.github.io/node_modules/react-repo-card/dist/hooks/fetch.js?commonjs-exports": [
-    "/assets/index-fIG_Y88-.js"
+    "/assets/index-DBfUMMqV.js"
   ],
   "\u0000/home/runner/work/pchapman-uat.github.io/pchapman-uat.github.io/node_modules/react-repo-card/dist/hooks/index.js?commonjs-exports": [
-    "/assets/index-fIG_Y88-.js"
+    "/assets/index-DBfUMMqV.js"
   ],
   "\u0000/home/runner/work/pchapman-uat.github.io/pchapman-uat.github.io/node_modules/react-repo-card/dist/hooks/repo.js?commonjs-exports": [
-    "/assets/index-fIG_Y88-.js"
+    "/assets/index-DBfUMMqV.js"
   ],
   "\u0000/home/runner/work/pchapman-uat.github.io/pchapman-uat.github.io/node_modules/react-repo-card/dist/index.js?commonjs-es-import": [
-    "/assets/index-fIG_Y88-.js"
+    "/assets/index-DBfUMMqV.js"
   ],
   "\u0000/home/runner/work/pchapman-uat.github.io/pchapman-uat.github.io/node_modules/react-repo-card/dist/index.js?commonjs-exports": [
-    "/assets/index-fIG_Y88-.js"
+    "/assets/index-DBfUMMqV.js"
   ],
   "\u0000/home/runner/work/pchapman-uat.github.io/pchapman-uat.github.io/node_modules/react/cjs/react-jsx-runtime.production.js?commonjs-exports": [
     "/assets/profile-CZRwpCbT.jpg",
@@ -82,10 +82,10 @@
     "/assets/uat-logo-TDp51N1T.png"
   ],
   "\u0000/home/runner/work/pchapman-uat.github.io/pchapman-uat.github.io/node_modules/scheduler/cjs/scheduler.production.js?commonjs-exports": [
-    "/assets/client-D6R9ahAZ.js"
+    "/assets/client-DH7TU_P5.js"
   ],
   "\u0000/home/runner/work/pchapman-uat.github.io/pchapman-uat.github.io/node_modules/scheduler/index.js?commonjs-module": [
-    "/assets/client-D6R9ahAZ.js"
+    "/assets/client-DH7TU_P5.js"
   ],
   "\u0000/home/runner/work/pchapman-uat.github.io/pchapman-uat.github.io/node_modules/shallowequal/index.js?commonjs-es-import": [
     "/assets/profile-CZRwpCbT.jpg",
@@ -104,6 +104,26 @@
     "/assets/uat-logo-TDp51N1T.png"
   ],
   "index.html": [
+    "/assets/profile-CZRwpCbT.jpg",
+    "/assets/uat-logo-TDp51N1T.png"
+  ],
+  "node_modules/@react-spring/animated/dist/react-spring_animated.modern.mjs": [
+    "/assets/profile-CZRwpCbT.jpg",
+    "/assets/uat-logo-TDp51N1T.png"
+  ],
+  "node_modules/@react-spring/core/dist/react-spring_core.modern.mjs": [
+    "/assets/profile-CZRwpCbT.jpg",
+    "/assets/uat-logo-TDp51N1T.png"
+  ],
+  "node_modules/@react-spring/rafz/dist/react-spring_rafz.modern.mjs": [
+    "/assets/profile-CZRwpCbT.jpg",
+    "/assets/uat-logo-TDp51N1T.png"
+  ],
+  "node_modules/@react-spring/shared/dist/react-spring_shared.modern.mjs": [
+    "/assets/profile-CZRwpCbT.jpg",
+    "/assets/uat-logo-TDp51N1T.png"
+  ],
+  "node_modules/@react-spring/web/dist/react-spring_web.modern.mjs": [
     "/assets/profile-CZRwpCbT.jpg",
     "/assets/uat-logo-TDp51N1T.png"
   ],
@@ -128,14 +148,14 @@
     "/assets/uat-logo-TDp51N1T.png"
   ],
   "node_modules/react-dom/cjs/react-dom-client.production.js": [
-    "/assets/client-D6R9ahAZ.js"
+    "/assets/client-DH7TU_P5.js"
   ],
   "node_modules/react-dom/cjs/react-dom.production.js": [
     "/assets/profile-CZRwpCbT.jpg",
     "/assets/uat-logo-TDp51N1T.png"
   ],
   "node_modules/react-dom/client.js": [
-    "/assets/client-D6R9ahAZ.js"
+    "/assets/client-DH7TU_P5.js"
   ],
   "node_modules/react-dom/index.js": [
     "/assets/profile-CZRwpCbT.jpg",
@@ -146,22 +166,22 @@
     "/assets/uat-logo-TDp51N1T.png"
   ],
   "node_modules/react-repo-card/dist/hooks/colors.js": [
-    "/assets/index-fIG_Y88-.js"
+    "/assets/index-DBfUMMqV.js"
   ],
   "node_modules/react-repo-card/dist/hooks/emojis.js": [
-    "/assets/index-fIG_Y88-.js"
+    "/assets/index-DBfUMMqV.js"
   ],
   "node_modules/react-repo-card/dist/hooks/fetch.js": [
-    "/assets/index-fIG_Y88-.js"
+    "/assets/index-DBfUMMqV.js"
   ],
   "node_modules/react-repo-card/dist/hooks/index.js": [
-    "/assets/index-fIG_Y88-.js"
+    "/assets/index-DBfUMMqV.js"
   ],
   "node_modules/react-repo-card/dist/hooks/repo.js": [
-    "/assets/index-fIG_Y88-.js"
+    "/assets/index-DBfUMMqV.js"
   ],
   "node_modules/react-repo-card/dist/index.js": [
-    "/assets/index-fIG_Y88-.js"
+    "/assets/index-DBfUMMqV.js"
   ],
   "node_modules/react-router-dom/dist/index.js": [
     "/assets/profile-CZRwpCbT.jpg",
@@ -188,17 +208,17 @@
     "/assets/uat-logo-TDp51N1T.png"
   ],
   "node_modules/scheduler/cjs/scheduler.production.js": [
-    "/assets/client-D6R9ahAZ.js"
+    "/assets/client-DH7TU_P5.js"
   ],
   "node_modules/scheduler/index.js": [
-    "/assets/client-D6R9ahAZ.js"
+    "/assets/client-DH7TU_P5.js"
   ],
   "node_modules/shallowequal/index.js": [
     "/assets/profile-CZRwpCbT.jpg",
     "/assets/uat-logo-TDp51N1T.png"
   ],
   "node_modules/string-replace-to-array/string-replace-to-array.js": [
-    "/assets/index-fIG_Y88-.js"
+    "/assets/index-DBfUMMqV.js"
   ],
   "node_modules/vite-react-ssg/dist/index.mjs": [
     "/assets/profile-CZRwpCbT.jpg",
@@ -237,103 +257,154 @@
     "/assets/uat-logo-TDp51N1T.png"
   ],
   "src/assets/logos/github/github-mark.svg?react": [
-    "/assets/ProjectElement-Ba-Cv5gp.js",
+    "/assets/ProjectElement-eDqIJ8LE.js",
     "/assets/ProjectElement-tn0RQdqM.css"
   ],
   "src/assets/logos/internet.svg?react": [
-    "/assets/ProjectElement-Ba-Cv5gp.js",
+    "/assets/ProjectElement-eDqIJ8LE.js",
     "/assets/ProjectElement-tn0RQdqM.css"
   ],
+  "src/classes/GalleryItem.ts": [
+    "/assets/SIP-DIXYGDmf.js",
+    "/assets/SIP-C6bppWYm.css",
+    "/assets/mobSF-0.2.0-alpha.1-B52HQnmm.png",
+    "/assets/MobSF-0.2.0-alpha.1-rcG-MBvE.pdf",
+    "/assets/SIP311-Project_Proposal-PChapman-(Version_2)-C7INTMSA.pdf",
+    "/assets/Library-DTAYyln0.jpg",
+    "/assets/NowPlaying-DGkFitzi.jpg"
+  ],
   "src/classes/Projects.ts": [
-    "/assets/ProjectElement-Ba-Cv5gp.js",
+    "/assets/ProjectElement-eDqIJ8LE.js",
     "/assets/ProjectElement-tn0RQdqM.css"
+  ],
+  "src/elements/Divider.tsx": [
+    "/assets/ProjectElement-eDqIJ8LE.js",
+    "/assets/ProjectElement-tn0RQdqM.css"
+  ],
+  "src/elements/Gallery.tsx": [
+    "/assets/SIP-DIXYGDmf.js",
+    "/assets/SIP-C6bppWYm.css",
+    "/assets/mobSF-0.2.0-alpha.1-B52HQnmm.png",
+    "/assets/MobSF-0.2.0-alpha.1-rcG-MBvE.pdf",
+    "/assets/SIP311-Project_Proposal-PChapman-(Version_2)-C7INTMSA.pdf",
+    "/assets/Library-DTAYyln0.jpg",
+    "/assets/NowPlaying-DGkFitzi.jpg"
   ],
   "src/elements/Navigation.tsx": [
     "/assets/profile-CZRwpCbT.jpg",
     "/assets/uat-logo-TDp51N1T.png"
   ],
   "src/elements/ProjectElement.tsx": [
-    "/assets/ProjectElement-Ba-Cv5gp.js",
+    "/assets/ProjectElement-eDqIJ8LE.js",
     "/assets/ProjectElement-tn0RQdqM.css"
   ],
   "src/elements/ProjectPage.tsx": [
-    "/assets/ProjectPage-DZS7peuj.js"
+    "/assets/ProjectPage-BOKMMb28.js"
   ],
   "src/elements/Shield.tsx": [
-    "/assets/ProjectPage-DZS7peuj.js"
+    "/assets/ProjectPage-BOKMMb28.js"
   ],
-  "src/helpers/extractUrl.ts": [
-    "/assets/ProjectElement-Ba-Cv5gp.js",
-    "/assets/ProjectElement-tn0RQdqM.css"
+  "src/elements/Wave.tsx": [
+    "/assets/profile-CZRwpCbT.jpg",
+    "/assets/uat-logo-TDp51N1T.png"
+  ],
+  "src/helpers/helpers.ts": [
+    "/assets/helpers-CjS5R6qi.js"
   ],
   "src/index.ts": [
     "/assets/profile-CZRwpCbT.jpg",
     "/assets/uat-logo-TDp51N1T.png"
   ],
   "src/pages/Boards/ACS/BoardsACS.tsx": [
-    "/assets/BoardsACS-C4qT1xiG.js"
+    "/assets/BoardsACS-CukJNyx_.js"
   ],
   "src/pages/Boards/Boards.tsx": [
-    "/assets/Boards-C9ixBbNd.js"
+    "/assets/Boards-Dfa9dFlS.js"
   ],
   "src/pages/Boards/NE/BoardsNE.tsx": [
-    "/assets/BoardsNE-QoZog7pA.js"
+    "/assets/BoardsNE-GHoxifY1.js"
   ],
   "src/pages/Home.tsx": [
-    "/assets/Home-BaSXcoSC.js"
+    "/assets/Home-Dp1v57J4.js"
   ],
   "src/pages/Projects/ProjectsHome.tsx": [
-    "/assets/ProjectsHome-C3kvbHM5.js"
+    "/assets/ProjectsHome-tNwKLjab.js"
   ],
   "src/pages/Projects/ProjectsRoot.tsx": [
     "/assets/profile-CZRwpCbT.jpg",
     "/assets/uat-logo-TDp51N1T.png"
   ],
   "src/pages/Projects/pages/ClockingManager.tsx": [
-    "/assets/ClockingManager-CMMmrudw.js"
+    "/assets/ClockingManager-BNBg5i2-.js"
   ],
   "src/pages/Projects/pages/GPACalculator.tsx": [
-    "/assets/GPACalculator-Bj9peAMq.js"
+    "/assets/GPACalculator-Bg6KU47w.js"
   ],
   "src/pages/Projects/pages/JavaReminders.tsx": [
-    "/assets/JavaReminders-D7x45qLr.js"
+    "/assets/JavaReminders-CM6__DbJ.js"
   ],
   "src/pages/Projects/pages/MartianSafari.tsx": [
-    "/assets/MartianSafari-L2HrOzbN.js"
+    "/assets/MartianSafari-BcxRmkeK.js"
   ],
   "src/pages/Projects/pages/OBSFoobarFusion.tsx": [
-    "/assets/OBSFoobarFusion-BSXfUAct.js"
+    "/assets/OBSFoobarFusion-iMI3dkZk.js"
   ],
   "src/pages/Projects/pages/RPGSimulator.tsx": [
-    "/assets/RPGSimulator-C1IKLkD1.js"
+    "/assets/RPGSimulator-CIohEvsI.js"
   ],
   "src/pages/SIP/SIP.tsx": [
-    "/assets/SIP-BW3XHqM4.js",
-    "/assets/SIP-COecg4NZ.css",
+    "/assets/SIP-DIXYGDmf.js",
+    "/assets/SIP-C6bppWYm.css",
     "/assets/mobSF-0.2.0-alpha.1-B52HQnmm.png",
     "/assets/MobSF-0.2.0-alpha.1-rcG-MBvE.pdf",
-    "/assets/SIP311-Project_Proposal-PChapman-(Version_2)-C7INTMSA.pdf"
+    "/assets/SIP311-Project_Proposal-PChapman-(Version_2)-C7INTMSA.pdf",
+    "/assets/Library-DTAYyln0.jpg",
+    "/assets/NowPlaying-DGkFitzi.jpg"
   ],
   "src/pages/SIP/assets/documents/MobSF-0.2.0-alpha.1.pdf": [
-    "/assets/SIP-BW3XHqM4.js",
-    "/assets/SIP-COecg4NZ.css",
+    "/assets/SIP-DIXYGDmf.js",
+    "/assets/SIP-C6bppWYm.css",
     "/assets/mobSF-0.2.0-alpha.1-B52HQnmm.png",
     "/assets/MobSF-0.2.0-alpha.1-rcG-MBvE.pdf",
-    "/assets/SIP311-Project_Proposal-PChapman-(Version_2)-C7INTMSA.pdf"
+    "/assets/SIP311-Project_Proposal-PChapman-(Version_2)-C7INTMSA.pdf",
+    "/assets/Library-DTAYyln0.jpg",
+    "/assets/NowPlaying-DGkFitzi.jpg"
   ],
   "src/pages/SIP/assets/documents/SIP311-Project_Proposal-PChapman-(Version_2).pdf": [
-    "/assets/SIP-BW3XHqM4.js",
-    "/assets/SIP-COecg4NZ.css",
+    "/assets/SIP-DIXYGDmf.js",
+    "/assets/SIP-C6bppWYm.css",
     "/assets/mobSF-0.2.0-alpha.1-B52HQnmm.png",
     "/assets/MobSF-0.2.0-alpha.1-rcG-MBvE.pdf",
-    "/assets/SIP311-Project_Proposal-PChapman-(Version_2)-C7INTMSA.pdf"
+    "/assets/SIP311-Project_Proposal-PChapman-(Version_2)-C7INTMSA.pdf",
+    "/assets/Library-DTAYyln0.jpg",
+    "/assets/NowPlaying-DGkFitzi.jpg"
+  ],
+  "src/pages/SIP/assets/images/demo/v0.3.0/Library.jpg": [
+    "/assets/SIP-DIXYGDmf.js",
+    "/assets/SIP-C6bppWYm.css",
+    "/assets/mobSF-0.2.0-alpha.1-B52HQnmm.png",
+    "/assets/MobSF-0.2.0-alpha.1-rcG-MBvE.pdf",
+    "/assets/SIP311-Project_Proposal-PChapman-(Version_2)-C7INTMSA.pdf",
+    "/assets/Library-DTAYyln0.jpg",
+    "/assets/NowPlaying-DGkFitzi.jpg"
+  ],
+  "src/pages/SIP/assets/images/demo/v0.3.0/NowPlaying.jpg": [
+    "/assets/SIP-DIXYGDmf.js",
+    "/assets/SIP-C6bppWYm.css",
+    "/assets/mobSF-0.2.0-alpha.1-B52HQnmm.png",
+    "/assets/MobSF-0.2.0-alpha.1-rcG-MBvE.pdf",
+    "/assets/SIP311-Project_Proposal-PChapman-(Version_2)-C7INTMSA.pdf",
+    "/assets/Library-DTAYyln0.jpg",
+    "/assets/NowPlaying-DGkFitzi.jpg"
   ],
   "src/pages/SIP/assets/images/mobSF-0.2.0-alpha.1.png": [
-    "/assets/SIP-BW3XHqM4.js",
-    "/assets/SIP-COecg4NZ.css",
+    "/assets/SIP-DIXYGDmf.js",
+    "/assets/SIP-C6bppWYm.css",
     "/assets/mobSF-0.2.0-alpha.1-B52HQnmm.png",
     "/assets/MobSF-0.2.0-alpha.1-rcG-MBvE.pdf",
-    "/assets/SIP311-Project_Proposal-PChapman-(Version_2)-C7INTMSA.pdf"
+    "/assets/SIP311-Project_Proposal-PChapman-(Version_2)-C7INTMSA.pdf",
+    "/assets/Library-DTAYyln0.jpg",
+    "/assets/NowPlaying-DGkFitzi.jpg"
   ],
   "src/projectRoutes.ts": [
     "/assets/profile-CZRwpCbT.jpg",
@@ -343,16 +414,22 @@
     "/assets/profile-CZRwpCbT.jpg",
     "/assets/uat-logo-TDp51N1T.png"
   ],
+  "src/style/gallery.module.css": [
+    "/assets/SIP-DIXYGDmf.js",
+    "/assets/SIP-C6bppWYm.css",
+    "/assets/mobSF-0.2.0-alpha.1-B52HQnmm.png",
+    "/assets/MobSF-0.2.0-alpha.1-rcG-MBvE.pdf",
+    "/assets/SIP311-Project_Proposal-PChapman-(Version_2)-C7INTMSA.pdf",
+    "/assets/Library-DTAYyln0.jpg",
+    "/assets/NowPlaying-DGkFitzi.jpg"
+  ],
   "src/style/main.css": [
     "/assets/profile-CZRwpCbT.jpg",
     "/assets/uat-logo-TDp51N1T.png"
   ],
   "src/style/main.module.css": [
-    "/assets/SIP-BW3XHqM4.js",
-    "/assets/SIP-COecg4NZ.css",
-    "/assets/mobSF-0.2.0-alpha.1-B52HQnmm.png",
-    "/assets/MobSF-0.2.0-alpha.1-rcG-MBvE.pdf",
-    "/assets/SIP311-Project_Proposal-PChapman-(Version_2)-C7INTMSA.pdf"
+    "/assets/profile-CZRwpCbT.jpg",
+    "/assets/uat-logo-TDp51N1T.png"
   ],
   "src/style/navigation.css": [
     "/assets/profile-CZRwpCbT.jpg",
@@ -363,7 +440,7 @@
     "/assets/uat-logo-TDp51N1T.png"
   ],
   "src/style/projects.css": [
-    "/assets/ProjectElement-Ba-Cv5gp.js",
+    "/assets/ProjectElement-eDqIJ8LE.js",
     "/assets/ProjectElement-tn0RQdqM.css"
   ],
   "src/style/projects.module.css": [
@@ -371,17 +448,21 @@
     "/assets/uat-logo-TDp51N1T.png"
   ],
   "src/style/sip.css": [
-    "/assets/SIP-BW3XHqM4.js",
-    "/assets/SIP-COecg4NZ.css",
+    "/assets/SIP-DIXYGDmf.js",
+    "/assets/SIP-C6bppWYm.css",
     "/assets/mobSF-0.2.0-alpha.1-B52HQnmm.png",
     "/assets/MobSF-0.2.0-alpha.1-rcG-MBvE.pdf",
-    "/assets/SIP311-Project_Proposal-PChapman-(Version_2)-C7INTMSA.pdf"
+    "/assets/SIP311-Project_Proposal-PChapman-(Version_2)-C7INTMSA.pdf",
+    "/assets/Library-DTAYyln0.jpg",
+    "/assets/NowPlaying-DGkFitzi.jpg"
   ],
   "src/style/sip.module.css": [
-    "/assets/SIP-BW3XHqM4.js",
-    "/assets/SIP-COecg4NZ.css",
+    "/assets/SIP-DIXYGDmf.js",
+    "/assets/SIP-C6bppWYm.css",
     "/assets/mobSF-0.2.0-alpha.1-B52HQnmm.png",
     "/assets/MobSF-0.2.0-alpha.1-rcG-MBvE.pdf",
-    "/assets/SIP311-Project_Proposal-PChapman-(Version_2)-C7INTMSA.pdf"
+    "/assets/SIP311-Project_Proposal-PChapman-(Version_2)-C7INTMSA.pdf",
+    "/assets/Library-DTAYyln0.jpg",
+    "/assets/NowPlaying-DGkFitzi.jpg"
   ]
 }
