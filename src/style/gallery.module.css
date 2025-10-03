@@ -1,0 +1,21 @@
+.galleryContainer {
+  display: flex; /* horizontal layout */
+  overflow-x: auto; /* enable horizontal scroll */
+  scroll-snap-type: x mandatory; /* snap to items */
+  width: 100%;
+  height: auto;
+  scroll-behavior: smooth;
+}
+
+.galleryItem {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+}
+
+.galleryImage {
+  display: block;
+  max-width: 50%;
+  height: auto;
+}

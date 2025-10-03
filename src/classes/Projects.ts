@@ -1,4 +1,5 @@
-import { extractGitHubUserRepo } from "@/helpers/extractUrl";
+import { ProjectTag } from "@/elements/ProjectElement";
+import { extractGitHubUserRepo } from "@/helpers/helpers";
 import projectRoutes from "@/projectRoutes";
 import { rootRoutes } from "@/routes";
 import { RouteRecord } from "vite-react-ssg";
@@ -10,12 +11,15 @@ export class ProjectObj {
   readonly LINKS: ProjectLink[];
   readonly ROUTE: RouteRecord | string;
   readonly GITHUB: { user: string; repo: string } | null;
+  readonly TAGS: ProjectTag[];
+  languages: Record<string, number> | undefined;
   constructor(
     name: string,
     class_id: string,
     assignment_name: string,
     links: ProjectLink[],
-    route: RouteRecord | string
+    route: RouteRecord | string,
+    ...tags: ProjectTag[]
   ) {
     this.NAME = name;
     this.CLASS_ID = class_id;
@@ -25,13 +29,41 @@ export class ProjectObj {
     this.GITHUB = extractGitHubUserRepo(
       this.LINKS.filter((item) => item.type === "github")[0].url
     );
+    this.TAGS = tags;
   }
   get href() {
     if (typeof this.ROUTE === "string") return this.ROUTE;
     else return this.ROUTE.path;
   }
+  private get githubAPI() {
+    if (!this.GITHUB) return null;
+    return `https://api.github.com/repos/${this.GITHUB.user}/${this.GITHUB.repo}`;
+  }
+  async repoLanguages(): Promise<Record<string, number>> {
+    if (this.languages) return this.languages;
+    const url = this.githubAPI;
+    if (!this.githubAPI) throw new Error("No Github Repo attached to Project");
+    const response = await fetch(url + "/languages");
+
+    if (!response.ok) throw new Error("Failed to fetch GitHub languages");
+
+    const json = await response.json();
+    console.log(json);
+    this.languages = this.sortLanguages(json);
+    return this.languages;
+  }
+
+  private sortLanguages(
+    languages: Record<string, number>
+  ): Record<string, number> {
+    return Object.fromEntries(
+      Object.entries(languages).sort(([, a], [, b]) => b - a)
+    );
+  }
 }
+
 export type ProjectLinkType = "github" | "website" | "video" | "other";
+
 export interface ProjectLink {
   type: ProjectLinkType;
   url: string;
@@ -42,14 +74,18 @@ const PROJECTS: Record<string, ProjectObj> = {
     "CSC203",
     "Assignment 14.3: Final Project Deliverable",
     [{ type: "github", url: "https://github.com/pchapman-uat/CSC203-Final" }],
-    projectRoutes.JavaReminders
+    projectRoutes.JavaReminders,
+    "application",
+    "GUI"
   ),
   GPACalculator: new ProjectObj(
     "GPA Calculator",
     "CSC235",
     "Assignment 14.1: Final Project : Code Deliverable",
     [{ type: "github", url: "https://github.com/pchapman-uat/CSC235-Final" }],
-    projectRoutes.GPACalculator
+    projectRoutes.GPACalculator,
+    "application",
+    "CLI"
   ),
   ClockingManager: new ProjectObj(
     "Clocking Manager",
@@ -62,7 +98,8 @@ const PROJECTS: Record<string, ProjectObj> = {
       },
       { type: "github", url: "https://github.com/pchapman-uat/CSC230-Final" },
     ],
-    projectRoutes.ClockingManager
+    projectRoutes.ClockingManager,
+    "arduino"
   ),
   OBSFoobarFusion: new ProjectObj(
     "OBS FoobarFusion",
@@ -75,14 +112,20 @@ const PROJECTS: Record<string, ProjectObj> = {
         url: "https://pchapman-uat.github.io/CSC256-Final/home.html",
       },
     ],
-    projectRoutes.OBSFoobarFusion
+    projectRoutes.OBSFoobarFusion,
+    "website",
+    "CLI",
+    "GUI",
+    "node"
   ),
   RPG_Simulator: new ProjectObj(
     "RPG Simulator",
     "CSC263",
     "Final Project",
     [{ type: "github", url: "https://github.com/pchapman-uat/CSC263-Final" }],
-    projectRoutes.RPG_Simulator
+    projectRoutes.RPG_Simulator,
+    "application",
+    "GUI"
   ),
   MartianSafari: new ProjectObj(
     "Martian Safari",
@@ -94,7 +137,8 @@ const PROJECTS: Record<string, ProjectObj> = {
         url: "https://github.com/pchapman-uat/CSC356-Martian-Safari",
       },
     ],
-    projectRoutes.MartianSafari
+    projectRoutes.MartianSafari,
+    "website"
   ),
   SIP: new ProjectObj(
     "Foobar Controller Mobile",
@@ -110,7 +154,10 @@ const PROJECTS: Record<string, ProjectObj> = {
         url: "https://github.com/pchapman-uat/Foobar-Controler-Mobile/wiki",
       },
     ],
-    "/" + rootRoutes.SIP.path
+    "/" + rootRoutes.SIP.path,
+    "node",
+    "mobile",
+    "GUI"
   ),
 };
 

@@ -7,6 +7,10 @@ import { RepoCardProps } from "react-repo-card";
 import { Head } from "vite-react-ssg";
 import SIPCss from "@/style/sip.module.css";
 import "@/style/sip.css";
+import Gallery from "@/elements/Gallery";
+import GalleryItem from "@/classes/GalleryItem";
+import LibraryImage from "./assets/images/demo/v0.3.0/Library.jpg";
+import NowPlayingImage from "./assets/images/demo/v0.3.0/NowPlaying.jpg";
 
 export default function SIP() {
   const [RepoCard, setRepoCard] = useState<FC<RepoCardProps> | null>(null);
@@ -88,6 +92,15 @@ export default function SIP() {
           computer, it can be difficult to control the playback remotely without
           the need for a complicated setup.
         </p>
+      </section>
+      <section id="gallery">
+        <h3>Gallery</h3>
+        <Gallery
+          items={[
+            new GalleryItem("Now Playing", NowPlayingImage),
+            new GalleryItem("Library", LibraryImage),
+          ]}
+        />
       </section>
       <section id="statistics">
         <h3>Statistics</h3>
