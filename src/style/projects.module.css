@@ -1,6 +1,6 @@
 .project {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  min-height: 250px;
   margin: 5px;
   background-color: var(--section-color);
   padding: 10px;
@@ -27,4 +27,52 @@
 .shields {
   display: flex;
   justify-content: space-around;
+}
+
+.tagContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 0.5rem;
+}
+
+.projectTag {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: small;
+  background-color: lightgray;
+  white-space: nowrap;
+}
+
+.projectTag p {
+  margin: 0;
+  vertical-align: middle;
+}
+.website {
+  background-color: lightseagreen;
+}
+.node {
+  background-color: lightgreen;
+}
+.application {
+  background-color: lightcoral;
+}
+.GUI {
+  background-color: lightskyblue;
+}
+.CLI {
+  background-color: lightslategray;
+}
+.mobile {
+  background-color: lightpink;
+}
+.arduino {
+  background-color: lightblue;
+}
+.tagIcon {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
 }

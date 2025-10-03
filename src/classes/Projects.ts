@@ -1,3 +1,4 @@
+import { ProjectTag } from "@/elements/ProjectElement";
 import { extractGitHubUserRepo } from "@/helpers/helpers";
 import projectRoutes from "@/projectRoutes";
 import { rootRoutes } from "@/routes";
@@ -10,12 +11,14 @@ export class ProjectObj {
   readonly LINKS: ProjectLink[];
   readonly ROUTE: RouteRecord | string;
   readonly GITHUB: { user: string; repo: string } | null;
+  readonly TAGS: ProjectTag[];
   constructor(
     name: string,
     class_id: string,
     assignment_name: string,
     links: ProjectLink[],
-    route: RouteRecord | string
+    route: RouteRecord | string,
+    ...tags: ProjectTag[]
   ) {
     this.NAME = name;
     this.CLASS_ID = class_id;
@@ -25,6 +28,7 @@ export class ProjectObj {
     this.GITHUB = extractGitHubUserRepo(
       this.LINKS.filter((item) => item.type === "github")[0].url
     );
+    this.TAGS = tags;
   }
   get href() {
     if (typeof this.ROUTE === "string") return this.ROUTE;
@@ -32,6 +36,7 @@ export class ProjectObj {
   }
 }
 export type ProjectLinkType = "github" | "website" | "video" | "other";
+
 export interface ProjectLink {
   type: ProjectLinkType;
   url: string;
@@ -42,14 +47,18 @@ const PROJECTS: Record<string, ProjectObj> = {
     "CSC203",
     "Assignment 14.3: Final Project Deliverable",
     [{ type: "github", url: "https://github.com/pchapman-uat/CSC203-Final" }],
-    projectRoutes.JavaReminders
+    projectRoutes.JavaReminders,
+    "application",
+    "GUI"
   ),
   GPACalculator: new ProjectObj(
     "GPA Calculator",
     "CSC235",
     "Assignment 14.1: Final Project : Code Deliverable",
     [{ type: "github", url: "https://github.com/pchapman-uat/CSC235-Final" }],
-    projectRoutes.GPACalculator
+    projectRoutes.GPACalculator,
+    "application",
+    "CLI"
   ),
   ClockingManager: new ProjectObj(
     "Clocking Manager",
@@ -62,7 +71,8 @@ const PROJECTS: Record<string, ProjectObj> = {
       },
       { type: "github", url: "https://github.com/pchapman-uat/CSC230-Final" },
     ],
-    projectRoutes.ClockingManager
+    projectRoutes.ClockingManager,
+    "arduino"
   ),
   OBSFoobarFusion: new ProjectObj(
     "OBS FoobarFusion",
@@ -75,14 +85,20 @@ const PROJECTS: Record<string, ProjectObj> = {
         url: "https://pchapman-uat.github.io/CSC256-Final/home.html",
       },
     ],
-    projectRoutes.OBSFoobarFusion
+    projectRoutes.OBSFoobarFusion,
+    "website",
+    "CLI",
+    "GUI",
+    "node"
   ),
   RPG_Simulator: new ProjectObj(
     "RPG Simulator",
     "CSC263",
     "Final Project",
     [{ type: "github", url: "https://github.com/pchapman-uat/CSC263-Final" }],
-    projectRoutes.RPG_Simulator
+    projectRoutes.RPG_Simulator,
+    "application",
+    "GUI"
   ),
   MartianSafari: new ProjectObj(
     "Martian Safari",
@@ -94,7 +110,8 @@ const PROJECTS: Record<string, ProjectObj> = {
         url: "https://github.com/pchapman-uat/CSC356-Martian-Safari",
       },
     ],
-    projectRoutes.MartianSafari
+    projectRoutes.MartianSafari,
+    "website"
   ),
   SIP: new ProjectObj(
     "Foobar Controller Mobile",
@@ -110,7 +127,10 @@ const PROJECTS: Record<string, ProjectObj> = {
         url: "https://github.com/pchapman-uat/Foobar-Controler-Mobile/wiki",
       },
     ],
-    "/" + rootRoutes.SIP.path
+    "/" + rootRoutes.SIP.path,
+    "node",
+    "mobile",
+    "GUI"
   ),
 };
 
