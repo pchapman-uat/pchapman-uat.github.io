@@ -14,8 +14,11 @@ import NowPlayingImage from "./assets/images/demo/v0.3.0/NowPlaying.jpg";
 
 export default function SIP() {
   const [RepoCard, setRepoCard] = useState<FC<RepoCardProps> | null>(null);
+  const [jsEnabled, setJsEnabled] = useState(false);
+
   useEffect(() => {
     import("react-repo-card").then((mod) => {
+      setJsEnabled(true);
       setRepoCard(() => mod.default);
     });
   }, []);
@@ -24,15 +27,17 @@ export default function SIP() {
       <Head>
         <title>SIP | Preston Chapman Website</title>
       </Head>
-      <section>
-        {RepoCard && (
+
+      {RepoCard && (
+        <section>
           <RepoCard
             username="pchapman-uat"
             repository="Foobar-Controler-Mobile"
             dark
           />
-        )}
-      </section>
+        </section>
+      )}
+
       <section id="links">
         <div>
           <a href="https://github.com/pchapman-uat/Foobar-Controler-Mobile">

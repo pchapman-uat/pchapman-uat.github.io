@@ -1,13 +1,14 @@
 .project {
   width: 250px;
   min-height: 250px;
-  margin: 5px;
+  margin: 20px;
   background-color: var(--section-color);
   padding: 10px;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  outline: 2px solid white;
 }
 
 .projectLogo {
