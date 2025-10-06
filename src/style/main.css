@@ -65,3 +65,12 @@ a {
 #root {
   position: relative;
 }
+
+table {
+  background-color: var(--section-color);
+  padding: 10px;
+}
+td,
+th {
+  outline: 1px solid white;
+}

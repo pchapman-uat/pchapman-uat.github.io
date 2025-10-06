@@ -1,8 +1,9 @@
+import { useState } from "react";
 import { ALL_PROJECTS } from "@/classes/Projects";
 import JSDiv from "@/elements/JSDiv";
 import ProjectElement from "@/elements/ProjectElement";
 import ProjectCSS from "@/style/projects.module.css";
-import { useEffect, useState } from "react";
+import GithubTable from "@/elements/GithubTable";
 export default function ProjectsHome() {
   const [filter, setFilter] = useState<string>("");
 
@@ -25,6 +26,9 @@ export default function ProjectsHome() {
             )
         )}
       </div>
+      <JSDiv>
+        <GithubTable user="pchapman-uat" />
+      </JSDiv>
     </>
   );
 }
