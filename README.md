@@ -1,4 +1,6 @@
 # Preston Chapman Website
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/pchapman-uat/pchapman-uat.github.io/main.yml)
+![GitHub last commit](https://img.shields.io/github/last-commit/pchapman-uat/pchapman-uat.github.io)
 
 This website is about preston chapman, and the varrious projects they have worked on. This website is programed in React TypeScript, and is built using Vite SSG. To View the website navigate to https://pchapman-uat.github.io/
 
