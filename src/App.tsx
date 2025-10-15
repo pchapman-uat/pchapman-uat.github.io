@@ -4,9 +4,10 @@ import "@/style/main.css";
 import Navigation, { NavigationItem as NavItem } from "./elements/Navigation";
 import profileImg from "@/assets/images/profile.jpg";
 import uatLogo from "@/assets/images/uat-logo.png";
-import { useScroll, animated } from "@react-spring/web";
+import { useScroll } from "@react-spring/web";
 import MainCSS from "@/style/main.module.css";
 import WavePath from "./elements/Wave";
+import { Head } from "vite-react-ssg";
 
 const NavigationItems: NavItem[] = [
   new NavItem("Home", ""),

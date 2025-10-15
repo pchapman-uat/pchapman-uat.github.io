@@ -13,6 +13,7 @@ export class ProjectObj {
   readonly GITHUB: { user: string; repo: string } | null;
   readonly TAGS: ProjectTag[];
   languages: Record<string, number> | undefined;
+  filters: string[] = [];
   constructor(
     name: string,
     class_id: string,
@@ -30,6 +31,8 @@ export class ProjectObj {
       this.LINKS.filter((item) => item.type === "github")[0].url
     );
     this.TAGS = tags;
+    this.filters.push(...tags);
+    this.filters.push(name, class_id, assignment_name);
   }
   get href() {
     if (typeof this.ROUTE === "string") return this.ROUTE;
@@ -50,6 +53,8 @@ export class ProjectObj {
     const json = await response.json();
     console.log(json);
     this.languages = this.sortLanguages(json);
+    this.filters.push(...Object.keys(this.languages));
+    console.warn("Done");
     return this.languages;
   }
 
@@ -59,6 +64,14 @@ export class ProjectObj {
     return Object.fromEntries(
       Object.entries(languages).sort(([, a], [, b]) => b - a)
     );
+  }
+  public contains(val: string | undefined): boolean {
+    console.log(this.filters);
+    if (!val) return true;
+    for (const item of this.filters) {
+      if (item.includes(val)) return true;
+    }
+    return false;
   }
 }
 
