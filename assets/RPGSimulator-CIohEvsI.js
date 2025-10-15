@@ -1,1 +1,0 @@
-import{j as r}from"./app-De5DMUEH.js";import{a as o}from"./ProjectElement-eDqIJ8LE.js";import{P as t}from"./ProjectPage-BOKMMb28.js";import"./helpers-CjS5R6qi.js";function p(){return r.jsx(t,{project:o.RPG_Simulator})}export{p as default};

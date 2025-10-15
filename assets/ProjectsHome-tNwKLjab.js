@@ -1,1 +1,0 @@
-import{j as r,P as o}from"./app-De5DMUEH.js";import{A as s,P as a}from"./ProjectElement-eDqIJ8LE.js";import"./helpers-CjS5R6qi.js";function c(){return r.jsx(r.Fragment,{children:r.jsx("div",{className:o.projectsContainer,children:s.map((e,t)=>r.jsx(a,{project:e},"project"+t))})})}export{c as default};
