@@ -12,14 +12,13 @@ import GalleryItem from "@/classes/GalleryItem";
 import LibraryImage from "./assets/images/demo/v0.3.0/Library.jpg";
 import NowPlayingImage from "./assets/images/demo/v0.3.0/NowPlaying.jpg";
 import Link from "@/elements/Link";
+import JSDiv from "@/elements/JSDiv";
 
 export default function SIP() {
   const [RepoCard, setRepoCard] = useState<FC<RepoCardProps> | null>(null);
-  const [jsEnabled, setJsEnabled] = useState(false);
 
   useEffect(() => {
     import("react-repo-card").then((mod) => {
-      setJsEnabled(true);
       setRepoCard(() => mod.default);
     });
   }, []);
@@ -29,16 +28,17 @@ export default function SIP() {
         <title>SIP | Preston Chapman Website</title>
       </Head>
 
-      {RepoCard && (
-        <section>
-          <RepoCard
-            username="pchapman-uat"
-            repository="Foobar-Controler-Mobile"
-            dark
-          />
-        </section>
-      )}
-
+      <JSDiv>
+        {RepoCard && (
+          <section>
+            <RepoCard
+              username="pchapman-uat"
+              repository="Foobar-Controler-Mobile"
+              dark
+            />
+          </section>
+        )}
+      </JSDiv>
       <section id="links">
         <div>
           <Link href="https://github.com/pchapman-uat/Foobar-Controler-Mobile">

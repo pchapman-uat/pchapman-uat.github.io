@@ -1,4 +1,3 @@
-import { JSX } from "react";
 import Link from "./Link";
 
 type BoardsPageProps<T extends readonly string[]> = {

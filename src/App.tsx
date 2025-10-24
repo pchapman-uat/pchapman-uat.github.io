@@ -7,7 +7,6 @@ import uatLogo from "@/assets/images/uat-logo.png";
 import { useScroll } from "@react-spring/web";
 import MainCSS from "@/style/main.module.css";
 import WavePath from "./elements/Wave";
-import { Head } from "vite-react-ssg";
 import Link from "./elements/Link";
 
 const NavigationItems: NavItem[] = [

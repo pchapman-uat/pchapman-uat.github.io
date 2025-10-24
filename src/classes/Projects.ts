@@ -2,7 +2,6 @@ import { ValidLinkHref } from "@/elements/Link";
 import { ProjectTag } from "@/elements/ProjectElement";
 import { extractGitHubUserRepo } from "@/helpers/helpers";
 import projectRoutes from "@/projectRoutes";
-import { rootRoutes } from "@/routes";
 import { RouteRecord } from "vite-react-ssg";
 interface ProjectClass {
   id: string;

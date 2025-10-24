@@ -43,7 +43,7 @@ export default function ProjectElement({ project }: ProjectElementParams) {
       <div className={ProjectCSS.tagContainer}>
         {languages &&
           Object.entries(languages).map(([lang]) => (
-            <LanguageTagElement tag={lang} key={lang} />
+            <LanguageTagElement tag={lang as LanguageTag} key={lang} />
           ))}
       </div>
 
@@ -155,7 +155,7 @@ type BaseTagElementParams<T extends TagType> = {
 };
 
 type TagElementParams<T extends keyof TagType> = {
-  tag: string;
+  tag: T;
 };
 function TagElementBase<T extends TagType>({
   tag,

@@ -8,12 +8,10 @@ export interface GalleryProps {
 }
 export default function Gallery({ items }: GalleryProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [scrollPos, setScrollPos] = useState(0);
   const [index, setIndex] = useState(0);
 
   const handleScroll = () => {
     if (containerRef.current) {
-      setScrollPos(containerRef.current.scrollLeft);
       const maxScrollLeft =
         containerRef.current!.scrollWidth - containerRef.current!.clientWidth;
       setIndex(

@@ -9,7 +9,7 @@ interface WavePathProps<T = SpringValue<number> | number> {
   cycles?: number;
 }
 
-interface FullWavepathProps extends WavePathProps<SpringValue<number>> {
+interface FullWavePathProps extends WavePathProps<SpringValue<number>> {
   color?: string;
   speed?: number;
   className?: string;
@@ -26,7 +26,7 @@ export default function WavePath({
   speed = 1,
   className,
   offset = 0,
-}: FullWavepathProps) {
+}: FullWavePathProps) {
   const AnimatedPath = animated.path;
 
   const d =
@@ -68,9 +68,9 @@ function Path({
       Math.sin((x / width) * cycles * 2 * Math.PI + time) * amplitude;
     path += `L${x} ${y} `;
   }
-  const lastY =
-    height / 2 +
-    Math.sin((width / width) * cycles * 2 * Math.PI + time) * amplitude;
-  path += `L${width} ${height} L0 ${height} Z`;
+  // const lastY =
+  //   height / 2 +
+  //   Math.sin((width / width) * cycles * 2 * Math.PI + time) * amplitude;
+  // path += `L${width} ${height} L0 ${height} Z`;
   return path;
 }
