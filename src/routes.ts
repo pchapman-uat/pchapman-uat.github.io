@@ -10,7 +10,8 @@ const Boards_ACS = lazy(() => import("@/pages/Boards/ACS/BoardsACS"));
 const Boards_NE = lazy(() => import("@/pages/Boards/NE/BoardsNE"));
 const SIP = lazy(() => import("@/pages/SIP/SIP"));
 const ProjectsHome = lazy(() => import("@/pages/Projects/ProjectsHome"));
-export const paths = {
+
+const routes = {
   root: {
     home: "/",
     sip: "SIP/",
@@ -24,6 +25,8 @@ export const paths = {
     },
   },
 } as const;
+
+export default routes;
 
 export const boardsRoutes = {
   ACS: { path: "ACS/", Component: Boards_ACS },
@@ -40,24 +43,24 @@ export const literalRoutes = [
     path: "/",
     Component: App,
     children: [
-      { path: paths.root.home, Component: Home },
-      { path: paths.root.sip, Component: SIP },
+      { path: routes.root.home, Component: Home },
+      { path: routes.root.sip, Component: SIP },
       {
-        path: paths.root.boards.root,
+        path: routes.root.boards.root,
         children: [
           { path: "", Component: Boards },
           {
-            path: paths.root.boards.acs.replace(paths.root.boards.root, ""),
+            path: routes.root.boards.acs.replace(routes.root.boards.root, ""),
             Component: Boards_ACS,
           },
           {
-            path: paths.root.boards.ne.replace(paths.root.boards.root, ""),
+            path: routes.root.boards.ne.replace(routes.root.boards.root, ""),
             Component: Boards_NE,
           },
         ],
       },
       {
-        path: paths.root.projects.root,
+        path: routes.root.projects.root,
         Component: ProjectsRoot,
         children: [{ path: "", Component: ProjectsHome }, ...ProjectRoutesArr],
       },
@@ -65,7 +68,7 @@ export const literalRoutes = [
   },
 ] as const;
 
-export const routes = literalRoutes as unknown as RouteRecord[];
+export const routesArr = literalRoutes as unknown as RouteRecord[];
 type JoinPaths<Parent extends string, Child extends string> = Parent extends
   | ""
   | "/"

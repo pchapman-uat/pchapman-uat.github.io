@@ -2,8 +2,10 @@ import Shield from "@/elements/Shield";
 import { Head } from "vite-react-ssg";
 import "@/style/boards.css";
 import BoardsCSS from "@/style/boards.module.css";
-import Logo, { ClickableLogo } from "@/elements/Logo";
+import { ClickableLogo } from "@/elements/Logo";
 import Link from "@/elements/Link";
+import { boards } from "@/constants";
+import PROJECTS from "@/classes/Projects";
 export default function ACS() {
   return (
     <div>
@@ -13,53 +15,18 @@ export default function ACS() {
       <section id="objectives">
         <h2>Advancing Computer Science Objectives</h2>
         <ol>
-          <li>
-            <Link href="#objective1">
-              Document the software development process to analyze a problem and
-              to design, build, and test software solutions
-            </Link>
-          </li>
-          <li>
-            <Link href="#objective2">
-              Demonstrate software development skills using more than one
-              programming language and development environment.
-            </Link>
-          </li>
-          <li>
-            <Link href="#objective3">Implement data-driven solutions.</Link>
-          </li>
-          <li>
-            <Link href="#objective4">
-              Design and implement software solutions for multiple platforms
-              including mobile devices.
-            </Link>
-          </li>
-          <li>
-            <Link href="#objective5">
-              Design, develop, and maintain object-oriented software solutions
-              utilizing inheritance, encapsulation, polymorphism, and
-              abstraction.
-            </Link>
-          </li>
-          <li>
-            <Link href="#objective6">
-              Within software solutions, describe, implement, and analyze data
-              structure techniques.
-            </Link>
-          </li>
+          {boards.objectives.map((objective, index) => (
+            <li key={"objective-" + index}>
+              <Link href={`#objective${index + 1}`}>{objective}</Link>
+            </li>
+          ))}
         </ol>
       </section>
       <section id="objective1">
-        <h3>
-          Document the software development process to analyze a problem and to
-          design, build, and test software solutions
-        </h3>
+        <h3>{boards.objectives[0]}</h3>
       </section>
       <section id="objective2">
-        <h3>
-          Demonstrate software development skills using more than one
-          programming language and development environment.
-        </h3>
+        <h3>{boards.objectives[1]}</h3>
         <p>
           {"I have worked in a multitude of different languages, ranging from "}
           <Link
@@ -98,9 +65,12 @@ export default function ACS() {
         <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=pchapman-uat&theme=vue-dark&show_icons=true&hide_border=true&layout=compact" />
       </section>
       <section id="objective3">
-        <h3>Implement data-driven solutions.</h3>
+        <h3>{boards.objectives[2]}</h3>
         <div>
-          <h4>CSC263-Final | RPG Simulator</h4>
+          <h4>
+            {PROJECTS.RPG_Simulator.NAME} | {PROJECTS.RPG_Simulator.CLASS.id}
+          </h4>
+          <h5>{PROJECTS.RPG_Simulator.CLASS.name}</h5>
           <div className={BoardsCSS.shieldsDiv}>
             <Shield
               type="github/release"
@@ -111,18 +81,8 @@ export default function ACS() {
               param={{ user: "pchapman-uat", repo: "CSC263-Final" }}
             />
           </div>
-          <p>
-            This project is a standard Role Playing Game (RPG) simulator. The
-            user will be able to choose their name, color, and difficulty, then
-            they will fight a variety of enemies. The more waves you complete
-            the higher your score will be. All scores are added to a local
-            database, allowing you to see your ranking.
-          </p>
-          <p>
-            This project uses SQLite 3 to store the high-score data. This allows
-            for a large amount of data to be stored, and quickly retrieved by
-            using a local SQL based Database.
-          </p>
+          <p>{PROJECTS.RPG_Simulator.DESCRIPTIONS[0]}</p>
+          <p>{PROJECTS.RPG_Simulator.DESCRIPTIONS[1]}</p>
           <div>
             <div className={BoardsCSS.iconsDiv}>
               <ClickableLogo
@@ -144,10 +104,7 @@ export default function ACS() {
         </div>
       </section>
       <section id="objective4">
-        <h3>
-          Design and implement software solutions for multiple platforms
-          including mobile devices.
-        </h3>
+        <h3>{boards.objectives[3]}</h3>
         <div>
           <h4>PDS300/400 | I AM the DJ </h4>
           <p>
@@ -169,16 +126,10 @@ export default function ACS() {
         </div>
       </section>
       <section id="objective5">
-        <h3>
-          Design, develop, and maintain object-oriented software solutions
-          utilizing inheritance, encapsulation, polymorphism, and abstraction.
-        </h3>
+        <h3>{boards.objectives[4]}</h3>
       </section>
       <section id="objective6">
-        <h3>
-          Within software solutions, describe, implement, and analyze data
-          structure techniques.
-        </h3>
+        <h3>{boards.objectives[5]}</h3>
       </section>
     </div>
   );

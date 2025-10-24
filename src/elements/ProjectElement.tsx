@@ -32,7 +32,7 @@ export default function ProjectElement({ project }: ProjectElementParams) {
         <Link href={project.href}>{project.NAME}</Link>
       </h4>
       <p>
-        {project.CLASS_ID} - {project.ASSIGNMENT_NAME}
+        {project.CLASS.id} - {project.ASSIGNMENT.name}
       </p>
       <div className={ProjectCSS.tagContainer}>
         {project.TAGS.map((item) => (
