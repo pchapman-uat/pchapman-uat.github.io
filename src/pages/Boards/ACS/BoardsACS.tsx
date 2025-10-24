@@ -1,32 +1,19 @@
 import Shield from "@/elements/Shield";
-import { Head } from "vite-react-ssg";
 import "@/style/boards.css";
 import BoardsCSS from "@/style/boards.module.css";
 import { ClickableLogo } from "@/elements/Logo";
 import Link from "@/elements/Link";
 import { boards } from "@/constants";
 import PROJECTS from "@/classes/Projects";
+import BoardsPage from "@/elements/BoardsPage";
 export default function ACS() {
   return (
-    <div>
-      <Head>
-        <title>ACS Boards | Preston Chapman Website</title>
-      </Head>
-      <section id="objectives">
-        <h2>Advancing Computer Science Objectives</h2>
-        <ol>
-          {boards.objectives.map((objective, index) => (
-            <li key={"objective-" + index}>
-              <Link href={`#objective${index + 1}`}>{objective}</Link>
-            </li>
-          ))}
-        </ol>
-      </section>
-      <section id="objective1">
-        <h3>{boards.objectives[0]}</h3>
-      </section>
-      <section id="objective2">
-        <h3>{boards.objectives[1]}</h3>
+    <BoardsPage
+      major="Advancing Computer Science"
+      objectives={boards.objectives.ACS}
+    >
+      <></>
+      <>
         <p>
           {"I have worked in a multitude of different languages, ranging from "}
           <Link
@@ -63,9 +50,8 @@ export default function ACS() {
           {" and more!"}
         </p>
         <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=pchapman-uat&theme=vue-dark&show_icons=true&hide_border=true&layout=compact" />
-      </section>
-      <section id="objective3">
-        <h3>{boards.objectives[2]}</h3>
+      </>
+      <>
         <div>
           <h4>
             {PROJECTS.RPG_Simulator.NAME} | {PROJECTS.RPG_Simulator.CLASS.id}
@@ -102,9 +88,8 @@ export default function ACS() {
             <Link href="/Projects/RPG_Simulator/">here</Link>
           </p>
         </div>
-      </section>
-      <section id="objective4">
-        <h3>{boards.objectives[3]}</h3>
+      </>
+      <>
         <div>
           <h4>PDS300/400 | I AM the DJ </h4>
           <p>
@@ -124,13 +109,9 @@ export default function ACS() {
             on the Google Play Store.
           </p>
         </div>
-      </section>
-      <section id="objective5">
-        <h3>{boards.objectives[4]}</h3>
-      </section>
-      <section id="objective6">
-        <h3>{boards.objectives[5]}</h3>
-      </section>
-    </div>
+      </>
+      <></>
+      <></>
+    </BoardsPage>
   );
 }
