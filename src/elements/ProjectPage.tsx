@@ -18,16 +18,26 @@ export default function ProjectPage({ project, children }: ProjectPageParams) {
   }, []);
   return (
     <>
-      <h3>{project.NAME}</h3>
-      <div className={ProjectCSS.shields}>
-        {project.LINKS.map((item, i) => (
-          <ProjectLinkElement
-            type={item.type}
-            url={item.url}
-            key={"project-link-" + i}
-          />
-        ))}
-      </div>
+      <section>
+        <h3>{project.NAME}</h3>
+        <div className={ProjectCSS.shields}>
+          {project.LINKS.map((item, i) => (
+            <ProjectLinkElement
+              type={item.type}
+              url={item.url}
+              key={"project-link-" + i}
+            />
+          ))}
+        </div>
+        <div className={ProjectCSS.shields}>
+          {project.GITHUB && (
+            <>
+              <Shield type="github/stars" param={project.GITHUB} />
+              <Shield type="github/languages/top" param={project.GITHUB} />
+            </>
+          )}
+        </div>
+      </section>
       <section>
         {RepoCard && project.GITHUB && (
           <RepoCard
@@ -37,15 +47,6 @@ export default function ProjectPage({ project, children }: ProjectPageParams) {
           />
         )}
       </section>
-      <div className={ProjectCSS.shields}>
-        {project.GITHUB && (
-          <>
-            <Shield type="github/stars" param={project.GITHUB} />
-            <Shield type="github/languages/top" param={project.GITHUB} />
-          </>
-        )}
-      </div>
-
       <div>{children}</div>
     </>
   );
