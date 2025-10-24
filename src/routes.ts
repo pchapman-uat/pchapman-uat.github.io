@@ -10,6 +10,20 @@ const Boards_ACS = lazy(() => import("@/pages/Boards/ACS/BoardsACS"));
 const Boards_NE = lazy(() => import("@/pages/Boards/NE/BoardsNE"));
 const SIP = lazy(() => import("@/pages/SIP/SIP"));
 const ProjectsHome = lazy(() => import("@/pages/Projects/ProjectsHome"));
+export const paths = {
+  root: {
+    home: "/",
+    sip: "SIP/",
+    boards: {
+      root: "Boards/",
+      acs: "Boards/ACS/",
+      ne: "Boards/NE/",
+    },
+    projects: {
+      root: "Projects/",
+    },
+  },
+} as const;
 
 export const boardsRoutes = {
   ACS: { path: "ACS/", Component: Boards_ACS },
@@ -20,22 +34,30 @@ export const rootRoutes = {
   Home: { path: "/", Component: Home },
   SIP: { path: "SIP/", Component: SIP },
 } as const;
-const literalRoutes = [
+
+export const literalRoutes = [
   {
     path: "/",
     Component: App,
     children: [
-      ...Object.values(rootRoutes),
+      { path: paths.root.home, Component: Home },
+      { path: paths.root.sip, Component: SIP },
       {
-        path: "Boards/",
+        path: paths.root.boards.root,
         children: [
           { path: "", Component: Boards },
-          ...Object.values(boardsRoutes),
+          {
+            path: paths.root.boards.acs.replace(paths.root.boards.root, ""),
+            Component: Boards_ACS,
+          },
+          {
+            path: paths.root.boards.ne.replace(paths.root.boards.root, ""),
+            Component: Boards_NE,
+          },
         ],
       },
-
       {
-        path: "Projects/",
+        path: paths.root.projects.root,
         Component: ProjectsRoot,
         children: [{ path: "", Component: ProjectsHome }, ...ProjectRoutesArr],
       },

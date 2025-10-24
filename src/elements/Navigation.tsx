@@ -3,6 +3,7 @@ import NavigationCSS from "@/style/navigation.module.css";
 import React from "react";
 
 import "@/style/navigation.css";
+import Link from "./Link";
 export class NavigationItem {
   public readonly NAME: string;
   public readonly PATH: AllPaths;
@@ -35,9 +36,9 @@ type NavigationElementProps = {
 };
 function NavigationElement({ item }: NavigationElementProps) {
   const element = (_item: NavigationItem, i: number) => (
-    <a key={"subpage" + i} href={"/" + _item.PATH}>
+    <Link key={"subpage" + i} href={("/" + _item.PATH) as `/${AllPaths}`}>
       {_item.NAME}
-    </a>
+    </Link>
   );
   return (
     <div

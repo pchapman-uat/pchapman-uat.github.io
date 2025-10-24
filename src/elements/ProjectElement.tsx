@@ -1,38 +1,23 @@
 import React, { useEffect, useState } from "react";
-import { ProjectLinkType, ProjectObj } from "@/classes/Projects";
+import { ProjectObj } from "@/classes/Projects";
 import ProjectCSS from "@/style/projects.module.css";
 import { ProjectLink } from "@/classes/Projects";
 
-import GithubSVG from "@/assets/logos/github/github-mark.svg?react";
 import InternetSVG from "@/assets/logos/internet.svg?react";
 import "@/style/projects.css";
 import Divider from "./Divider";
+import Logo from "./Logo";
+import Link from "./Link";
 export type ProjectElementParams = {
   project: ProjectObj;
 };
 
-function GetLogo(
-  type: ProjectLinkType
-): React.FC<React.SVGProps<SVGSVGElement>> {
-  switch (type) {
-    case "github":
-      return GithubSVG;
-    case "website":
-      return InternetSVG;
-    case "video":
-      return InternetSVG;
-    case "other":
-      return InternetSVG;
-  }
-}
-
 export function ProjectLinkElement({ type, url }: ProjectLink) {
-  const Logo = GetLogo(type);
   return (
     <div>
-      <a href={url}>
-        <Logo className={ProjectCSS.projectLogo} />
-      </a>
+      <Link href={url}>
+        <Logo type={type} className={ProjectCSS.projectLogo} />
+      </Link>
     </div>
   );
 }
@@ -44,7 +29,7 @@ export default function ProjectElement({ project }: ProjectElementParams) {
   return (
     <div className={ProjectCSS.project}>
       <h4>
-        <a href={project.href}>{project.NAME}</a>
+        <Link href={project.href}>{project.NAME}</Link>
       </h4>
       <p>
         {project.CLASS_ID} - {project.ASSIGNMENT_NAME}

@@ -8,6 +8,7 @@ import { useScroll } from "@react-spring/web";
 import MainCSS from "@/style/main.module.css";
 import WavePath from "./elements/Wave";
 import { Head } from "vite-react-ssg";
+import Link from "./elements/Link";
 
 const NavigationItems: NavItem[] = [
   new NavItem("Home", ""),
@@ -58,13 +59,13 @@ export default function App() {
 
         <footer>
           <p>
-            <a href="https://github.com/pchapman-uat/pchapman-uat.github.io">
+            <Link href="https://github.com/pchapman-uat/pchapman-uat.github.io">
               Source
-            </a>
+            </Link>
             Preston Chapman © 2025.
-            <a href="https://github.com/pchapman-uat/pchapman-uat.github.io/blob/main/LICENSE">
+            <Link href="https://github.com/pchapman-uat/pchapman-uat.github.io/blob/main/LICENSE">
               Apache 2.0 License
-            </a>
+            </Link>
           </p>
         </footer>
       </div>

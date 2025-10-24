@@ -1,0 +1,18 @@
+.shieldsDiv {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  justify-content: space-around;
+}
+
+.iconsDiv {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  justify-content: space-around;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+}

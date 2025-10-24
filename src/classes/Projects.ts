@@ -1,3 +1,4 @@
+import { ValidLinkHref } from "@/elements/Link";
 import { ProjectTag } from "@/elements/ProjectElement";
 import { extractGitHubUserRepo } from "@/helpers/helpers";
 import projectRoutes from "@/projectRoutes";
@@ -35,8 +36,8 @@ export class ProjectObj {
     this.filters.push(name, class_id, assignment_name);
   }
   get href() {
-    if (typeof this.ROUTE === "string") return this.ROUTE;
-    else return this.ROUTE.path;
+    if (typeof this.ROUTE === "string") return this.ROUTE as ValidLinkHref;
+    else return this.ROUTE.path as ValidLinkHref;
   }
   private get githubAPI() {
     if (!this.GITHUB) return null;
@@ -79,7 +80,7 @@ export type ProjectLinkType = "github" | "website" | "video" | "other";
 
 export interface ProjectLink {
   type: ProjectLinkType;
-  url: string;
+  url: `https://${string}`;
 }
 const PROJECTS: Record<string, ProjectObj> = {
   JavaReminders: new ProjectObj(

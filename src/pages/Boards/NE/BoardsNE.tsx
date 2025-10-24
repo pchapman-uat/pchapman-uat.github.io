@@ -1,3 +1,4 @@
+import Link from "@/elements/Link";
 import { Head } from "vite-react-ssg";
 
 export default function Boards_NE() {
@@ -10,40 +11,40 @@ export default function Boards_NE() {
         <h3>Objectives</h3>
         <ol>
           <li>
-            <a href="#objective1">
+            <Link href="#objective1">
               Analyze personal and organizational requirements and design an
               appropriate networking architecture.
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#objective2">
+            <Link href="#objective2">
               Develop cloud solutions emphasizing the benefits of remote
               infrastructure.
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#objective3">
+            <Link href="#objective3">
               Identify networking misconfigurations and determine solutions to
               achieve optimal performance
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#objective4">
+            <Link href="#objective4">
               Demonstrate enterprise network administration through access
               controls, group policy, remote deployment, and backup recovery.
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#objective5">
+            <Link href="#objective5">
               Create networking solutions that incorporate traditional
               networking, IoT, and mobile devices.
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#objective6">
+            <Link href="#objective6">
               Demonstrate security principles within networking solutions based
               on industry standards.
-            </a>
+            </Link>
           </li>
         </ol>
       </section>

@@ -1,5 +1,9 @@
+import Shield from "@/elements/Shield";
 import { Head } from "vite-react-ssg";
-
+import "@/style/boards.css";
+import BoardsCSS from "@/style/boards.module.css";
+import Logo from "@/elements/Logo";
+import Link from "@/elements/Link";
 export default function ACS() {
   return (
     <div>
@@ -7,112 +11,146 @@ export default function ACS() {
         <title>ACS Boards | Preston Chapman Website</title>
       </Head>
       <section id="objectives">
-        <h3>Advancing Computer Science Objectives</h3>
+        <h2>Advancing Computer Science Objectives</h2>
         <ol>
           <li>
-            <a href="#objective1">
+            <Link href="#objective1">
               Document the software development process to analyze a problem and
               to design, build, and test software solutions
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#objective2">
+            <Link href="#objective2">
               Demonstrate software development skills using more than one
               programming language and development environment.
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#objective3">Implement data-driven solutions.</a>
+            <Link href="#objective3">Implement data-driven solutions.</Link>
           </li>
           <li>
-            <a href="#objective4">
+            <Link href="#objective4">
               Design and implement software solutions for multiple platforms
               including mobile devices.
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#objective5">
+            <Link href="#objective5">
               Design, develop, and maintain object-oriented software solutions
               utilizing inheritance, encapsulation, polymorphism, and
               abstraction.
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#objective6">
+            <Link href="#objective6">
               Within software solutions, describe, implement, and analyze data
               structure techniques.
-            </a>
+            </Link>
           </li>
         </ol>
       </section>
       <section id="objective1">
-        <h4>
+        <h3>
           Document the software development process to analyze a problem and to
           design, build, and test software solutions
-        </h4>
+        </h3>
       </section>
       <section id="objective2">
-        <h4>
+        <h3>
           Demonstrate software development skills using more than one
           programming language and development environment.
-        </h4>
+        </h3>
         <p>
           {"I have worked in a multitude of different languages, ranging from "}
-          <a
+          <Link
             target="_blank"
             href="https://github.com/pchapman-uat?tab=repositories&q=&type=&language=javascript&sort="
             rel="noreferrer"
           >
             JavaScript
-          </a>
+          </Link>
           {", "}
-          <a
+          <Link
             target="_blank"
             href="https://github.com/pchapman-uat?tab=repositories&q=&type=&language=java&sort="
             rel="noreferrer"
           >
             Java
-          </a>
+          </Link>
           {", "}
-          <a
+          <Link
             target="_blank"
             href="https://github.com/pchapman-uat?tab=repositories&q=&type=&language=c%2B%2B&sort="
             rel="noreferrer"
           >
             C++
-          </a>
+          </Link>
           {", "}
-          <a
+          <Link
             target="_blank"
             href="https://github.com/pchapman-uat?tab=repositories&q=&type=&language=python&sort="
             rel="noreferrer"
           >
             Python
-          </a>
+          </Link>
           {" and more!"}
         </p>
         <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=pchapman-uat&theme=vue-dark&show_icons=true&hide_border=true&layout=compact" />
       </section>
       <section id="objective3">
-        <h4>Implement data-driven solutions.</h4>
+        <h3>Implement data-driven solutions.</h3>
+        <div>
+          <h4>CSC263-Final | RPG Simulator</h4>
+          <div className={BoardsCSS.shieldsDiv}>
+            <Shield
+              type="github/release"
+              param={{ user: "pchapman-uat", repo: "CSC263-Final" }}
+            />
+            <Shield
+              type="github/languages/top"
+              param={{ user: "pchapman-uat", repo: "CSC263-Final" }}
+            />
+          </div>
+          <p>
+            This project is a standard Role Playing Game (RPG) simulator. The
+            user will be able to choose their name, color, and difficulty, then
+            they will fight a variety of enemies. The more waves you complete
+            the higher your score will be. All scores are added to a local
+            database, allowing you to see your ranking.
+          </p>
+          <p>
+            This project uses SQLite 3 to store the high-score data. This allows
+            for a large amount of data to be stored, and quickly retrieved by
+            using a local SQL based Database.
+          </p>
+          <div>
+            <div className={BoardsCSS.iconsDiv}>
+              <Logo type="github" className={BoardsCSS.icon} />
+            </div>
+          </div>
+          <p>
+            For more information visit the project page{" "}
+            <Link href="/Projects/RPG_Simulator/">here</Link>
+          </p>
+        </div>
       </section>
       <section id="objective4">
-        <h4>
+        <h3>
           Design and implement software solutions for multiple platforms
           including mobile devices.
-        </h4>
+        </h3>
       </section>
       <section id="objective5">
-        <h4>
+        <h3>
           Design, develop, and maintain object-oriented software solutions
           utilizing inheritance, encapsulation, polymorphism, and abstraction.
-        </h4>
+        </h3>
       </section>
       <section id="objective6">
-        <h4>
+        <h3>
           Within software solutions, describe, implement, and analyze data
           structure techniques.
-        </h4>
+        </h3>
       </section>
     </div>
   );

@@ -51,6 +51,17 @@ export default defineConfig([
           ignore: [],
         },
       ],
+      "react/forbid-elements": [
+        "error",
+        {
+          forbid: [
+            {
+              element: "a",
+              message: "Use <Link> component instead of <a>.",
+            },
+          ],
+        },
+      ],
     },
   },
 
