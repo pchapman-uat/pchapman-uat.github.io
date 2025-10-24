@@ -1,3 +1,4 @@
+import Link from "@/elements/Link";
 import { Head } from "vite-react-ssg";
 
 export default function Boards() {
@@ -8,8 +9,8 @@ export default function Boards() {
       </Head>
       <h1>Boards</h1>
       <nav>
-        <a href="./ACS/">Advancing Computer Science</a>
-        <a href="./NE/">Network Engineering</a>
+        <Link href="./ACS/">Advancing Computer Science</Link>
+        <Link href="./NE/">Network Engineering</Link>
       </nav>
       <p>
         Welcome to the boards page, this will go over the requirements and

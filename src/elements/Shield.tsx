@@ -1,7 +1,11 @@
-import React from "react";
 type ShieldParamsMap = {
   "github/stars": { user: string; repo: string };
   "github/languages/top": { user: string; repo: string };
+  "github/release": {
+    user: string;
+    repo: string;
+    include_prereleases?: boolean;
+  };
 };
 
 export type ShieldProps = {
@@ -19,6 +23,12 @@ export default function Shield({ type, param }: ShieldProps) {
       break;
     case "github/languages/top":
       url = `${url}/${type}/${param.user}/${param.repo}`;
+      break;
+    case "github/release":
+      url = `${url}/github/v/release/${param.user}/${param.repo}`;
+      if (param.include_prereleases) url += "?include_prereleases";
+      break;
   }
+
   return <img src={url} />;
 }

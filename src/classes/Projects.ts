@@ -1,30 +1,40 @@
+import { ValidLinkHref } from "@/elements/Link";
 import { ProjectTag } from "@/elements/ProjectElement";
 import { extractGitHubUserRepo } from "@/helpers/helpers";
 import projectRoutes from "@/projectRoutes";
-import { rootRoutes } from "@/routes";
 import { RouteRecord } from "vite-react-ssg";
-
+interface ProjectClass {
+  id: string;
+  name: string;
+}
+interface Assignment {
+  name: string;
+  id: `${number}.${number}` | "Final";
+}
 export class ProjectObj {
   readonly NAME: string;
-  readonly CLASS_ID: string;
-  readonly ASSIGNMENT_NAME: string;
+
+  readonly CLASS: ProjectClass;
+  readonly ASSIGNMENT: Assignment;
   readonly LINKS: ProjectLink[];
   readonly ROUTE: RouteRecord | string;
   readonly GITHUB: { user: string; repo: string } | null;
   readonly TAGS: ProjectTag[];
+  readonly DESCRIPTIONS: string[];
   languages: Record<string, number> | undefined;
   filters: string[] = [];
   constructor(
     name: string,
-    class_id: string,
-    assignment_name: string,
+    _class: ProjectClass,
+    assignment: Assignment,
     links: ProjectLink[],
-    route: RouteRecord | string,
+    route: RouteRecord | ValidLinkHref,
+    descriptions: string[],
     ...tags: ProjectTag[]
   ) {
     this.NAME = name;
-    this.CLASS_ID = class_id;
-    this.ASSIGNMENT_NAME = assignment_name;
+    this.CLASS = _class;
+    this.ASSIGNMENT = assignment;
     this.LINKS = links;
     this.ROUTE = route;
     this.GITHUB = extractGitHubUserRepo(
@@ -32,11 +42,12 @@ export class ProjectObj {
     );
     this.TAGS = tags;
     this.filters.push(...tags);
-    this.filters.push(name, class_id, assignment_name);
+    this.filters.push(name, _class.id, assignment.name);
+    this.DESCRIPTIONS = descriptions;
   }
   get href() {
-    if (typeof this.ROUTE === "string") return this.ROUTE;
-    else return this.ROUTE.path;
+    if (typeof this.ROUTE === "string") return this.ROUTE as ValidLinkHref;
+    else return this.ROUTE.path as ValidLinkHref;
   }
   private get githubAPI() {
     if (!this.GITHUB) return null;
@@ -79,31 +90,36 @@ export type ProjectLinkType = "github" | "website" | "video" | "other";
 
 export interface ProjectLink {
   type: ProjectLinkType;
-  url: string;
+  url: `https://${string}`;
 }
-const PROJECTS: Record<string, ProjectObj> = {
+
+const defineProjects = <T extends Record<string, ProjectObj>>(p: T) => p;
+
+const PROJECTS = defineProjects({
   JavaReminders: new ProjectObj(
     "Java Reminders",
-    "CSC203",
-    "Assignment 14.3: Final Project Deliverable",
+    { id: "CSC203", name: "Java Programming I" },
+    { id: "Final", name: "Final Project Deliverable" },
     [{ type: "github", url: "https://github.com/pchapman-uat/CSC203-Final" }],
     projectRoutes.JavaReminders,
+    [],
     "application",
     "GUI"
   ),
   GPACalculator: new ProjectObj(
     "GPA Calculator",
-    "CSC235",
-    "Assignment 14.1: Final Project : Code Deliverable",
+    { id: "CSC235", name: "Python Programming 1" },
+    { id: "Final", name: "Final Project: Code Deliverable" },
     [{ type: "github", url: "https://github.com/pchapman-uat/CSC235-Final" }],
     projectRoutes.GPACalculator,
+    [],
     "application",
     "CLI"
   ),
   ClockingManager: new ProjectObj(
     "Clocking Manager",
-    "CSC230",
-    "Final: Building an application (Lab 15.1)",
+    { id: "CSC230", name: "Internet of Things" },
+    { id: "Final", name: "Final: Building an application" },
     [
       {
         type: "video",
@@ -112,12 +128,13 @@ const PROJECTS: Record<string, ProjectObj> = {
       { type: "github", url: "https://github.com/pchapman-uat/CSC230-Final" },
     ],
     projectRoutes.ClockingManager,
+    [],
     "arduino"
   ),
   OBSFoobarFusion: new ProjectObj(
     "OBS FoobarFusion",
-    "CSC256",
-    "Assignment 13.1: Final Project Code Deliverable",
+    { id: "CSC256", name: "Designing Website Interfaces " },
+    { id: "Final", name: "Final Project Code Deliverable" },
     [
       { type: "github", url: "https://github.com/pchapman-uat/CSC256-Final" },
       {
@@ -126,6 +143,7 @@ const PROJECTS: Record<string, ProjectObj> = {
       },
     ],
     projectRoutes.OBSFoobarFusion,
+    [],
     "website",
     "CLI",
     "GUI",
@@ -133,17 +151,21 @@ const PROJECTS: Record<string, ProjectObj> = {
   ),
   RPG_Simulator: new ProjectObj(
     "RPG Simulator",
-    "CSC263",
-    "Final Project",
+    { id: "CSC263", name: "Java Programming II" },
+    { id: "Final", name: "Final Project" },
     [{ type: "github", url: "https://github.com/pchapman-uat/CSC263-Final" }],
     projectRoutes.RPG_Simulator,
+    [
+      "This project is a standard Role Playing Game (RPG) simulator. The user will be able to choose their name, color, and difficulty, then they will fight a variety of enemies. The more waves you complete the higher your score will be. All scores are added to a local database, allowing you to see your ranking.",
+      "This project uses SQLite 3 to store the high-score data. This allows for a large amount of data to be stored, and quickly retrieved by using a local SQL based Database.",
+    ],
     "application",
     "GUI"
   ),
   MartianSafari: new ProjectObj(
     "Martian Safari",
-    "CSC356",
-    "Assignment 14.2: Final Project Code",
+    { id: "CSC356", name: "Designing Website Interfaces II" },
+    { id: "Final", name: "Final Project Code" },
     [
       {
         type: "github",
@@ -151,12 +173,13 @@ const PROJECTS: Record<string, ProjectObj> = {
       },
     ],
     projectRoutes.MartianSafari,
+    [],
     "website"
   ),
   SIP: new ProjectObj(
     "Foobar Controller Mobile",
-    "SIP311/405",
-    "Student Innovation Project",
+    { id: "SIP311/405", name: "Student Innovation Project" },
+    { id: "Final", name: "Student Innovation Project" },
     [
       {
         type: "github",
@@ -167,12 +190,13 @@ const PROJECTS: Record<string, ProjectObj> = {
         url: "https://github.com/pchapman-uat/Foobar-Controler-Mobile/wiki",
       },
     ],
-    "/" + rootRoutes.SIP.path,
+    "/SIP/",
+    [],
     "node",
     "mobile",
     "GUI"
   ),
-};
+} as const);
 
 export default PROJECTS;
 

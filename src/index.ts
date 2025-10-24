@@ -1,4 +1,4 @@
 import { ViteReactSSG } from "vite-react-ssg";
-import { routes } from "./routes";
+import { routesArr } from "./routes";
 
-export const createRoot = ViteReactSSG({ routes });
+export const createRoot = ViteReactSSG({ routes: routesArr });

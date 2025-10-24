@@ -12,9 +12,7 @@ const ClockingManager = lazy(
 const OBSFoobarFusion = lazy(
   () => import("@/pages/Projects/pages/OBSFoobarFusion")
 );
-const RPG_Simulator = lazy(
-  () => import("@/pages/Projects/pages/RPGSimulator")
-);
+const RPG_Simulator = lazy(() => import("@/pages/Projects/pages/RPGSimulator"));
 
 const MartianSafari = lazy(
   () => import("@/pages/Projects/pages/MartianSafari")

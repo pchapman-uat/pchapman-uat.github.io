@@ -1,5 +1,4 @@
 import { animated, SpringValue } from "@react-spring/web";
-import React from "react";
 
 interface WavePathProps<T = SpringValue<number> | number> {
   time: T;
@@ -68,6 +67,7 @@ function Path({
       Math.sin((x / width) * cycles * 2 * Math.PI + time) * amplitude;
     path += `L${x} ${y} `;
   }
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const lastY =
     height / 2 +
     Math.sin((width / width) * cycles * 2 * Math.PI + time) * amplitude;

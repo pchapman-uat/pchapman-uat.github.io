@@ -1,19 +1,17 @@
-import React, { useRef, useState } from "react";
 import GalleryItem from "@/classes/GalleryItem";
-import GalleryCSS from "@/style/gallery.module.css";
 import { indexToRange, rangeToIndex } from "@/helpers/helpers";
+import GalleryCSS from "@/style/gallery.module.css";
+import { useRef, useState } from "react";
 
 export interface GalleryProps {
   items: GalleryItem[];
 }
 export default function Gallery({ items }: GalleryProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [scrollPos, setScrollPos] = useState(0);
   const [index, setIndex] = useState(0);
 
   const handleScroll = () => {
     if (containerRef.current) {
-      setScrollPos(containerRef.current.scrollLeft);
       const maxScrollLeft =
         containerRef.current!.scrollWidth - containerRef.current!.clientWidth;
       setIndex(

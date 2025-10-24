@@ -1,5 +1,6 @@
 import { getUserRepos, GithubUserRepo } from "@/classes/GithubRepo";
 import { useEffect, useState } from "react";
+import Link from "./Link";
 
 interface GithubTableProps {
   user: string;
@@ -46,7 +47,7 @@ function TableRow({ item }: TableRowProps) {
         <td key={val + i}>{val}</td>
       ))}
       <td>
-        <a href={item.html_url}>Link</a>
+        <Link href={item.html_url as `https://${string}`}>Link</Link>
       </td>
     </tr>
   );

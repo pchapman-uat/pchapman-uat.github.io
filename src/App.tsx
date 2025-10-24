@@ -1,13 +1,12 @@
-import React from "react";
-import { Outlet } from "react-router-dom";
-import "@/style/main.css";
-import Navigation, { NavigationItem as NavItem } from "./elements/Navigation";
 import profileImg from "@/assets/images/profile.jpg";
 import uatLogo from "@/assets/images/uat-logo.png";
-import { useScroll } from "@react-spring/web";
+import "@/style/main.css";
 import MainCSS from "@/style/main.module.css";
+import { useScroll } from "@react-spring/web";
+import { Outlet } from "react-router-dom";
+import Link from "./elements/Link";
+import Navigation, { NavigationItem as NavItem } from "./elements/Navigation";
 import WavePath from "./elements/Wave";
-import { Head } from "vite-react-ssg";
 
 const NavigationItems: NavItem[] = [
   new NavItem("Home", ""),
@@ -58,13 +57,13 @@ export default function App() {
 
         <footer>
           <p>
-            <a href="https://github.com/pchapman-uat/pchapman-uat.github.io">
+            <Link href="https://github.com/pchapman-uat/pchapman-uat.github.io">
               Source
-            </a>
+            </Link>
             Preston Chapman © 2025.
-            <a href="https://github.com/pchapman-uat/pchapman-uat.github.io/blob/main/LICENSE">
+            <Link href="https://github.com/pchapman-uat/pchapman-uat.github.io/blob/main/LICENSE">
               Apache 2.0 License
-            </a>
+            </Link>
           </p>
         </footer>
       </div>

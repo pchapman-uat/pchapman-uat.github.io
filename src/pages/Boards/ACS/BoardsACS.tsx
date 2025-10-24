@@ -1,119 +1,117 @@
-import { Head } from "vite-react-ssg";
-
+import PROJECTS from "@/classes/Projects";
+import { boards } from "@/constants";
+import BoardsPage from "@/elements/BoardsPage";
+import Link from "@/elements/Link";
+import { ClickableLogo } from "@/elements/Logo";
+import Shield from "@/elements/Shield";
+import "@/style/boards.css";
+import BoardsCSS from "@/style/boards.module.css";
 export default function ACS() {
   return (
-    <div>
-      <Head>
-        <title>ACS Boards | Preston Chapman Website</title>
-      </Head>
-      <section id="objectives">
-        <h3>Advancing Computer Science Objectives</h3>
-        <ol>
-          <li>
-            <a href="#objective1">
-              Document the software development process to analyze a problem and
-              to design, build, and test software solutions
-            </a>
-          </li>
-          <li>
-            <a href="#objective2">
-              Demonstrate software development skills using more than one
-              programming language and development environment.
-            </a>
-          </li>
-          <li>
-            <a href="#objective3">Implement data-driven solutions.</a>
-          </li>
-          <li>
-            <a href="#objective4">
-              Design and implement software solutions for multiple platforms
-              including mobile devices.
-            </a>
-          </li>
-          <li>
-            <a href="#objective5">
-              Design, develop, and maintain object-oriented software solutions
-              utilizing inheritance, encapsulation, polymorphism, and
-              abstraction.
-            </a>
-          </li>
-          <li>
-            <a href="#objective6">
-              Within software solutions, describe, implement, and analyze data
-              structure techniques.
-            </a>
-          </li>
-        </ol>
-      </section>
-      <section id="objective1">
-        <h4>
-          Document the software development process to analyze a problem and to
-          design, build, and test software solutions
-        </h4>
-      </section>
-      <section id="objective2">
-        <h4>
-          Demonstrate software development skills using more than one
-          programming language and development environment.
-        </h4>
+    <BoardsPage
+      major="Advancing Computer Science"
+      objectives={boards.objectives.ACS}
+    >
+      <></>
+      <>
         <p>
           {"I have worked in a multitude of different languages, ranging from "}
-          <a
+          <Link
             target="_blank"
             href="https://github.com/pchapman-uat?tab=repositories&q=&type=&language=javascript&sort="
             rel="noreferrer"
           >
             JavaScript
-          </a>
+          </Link>
           {", "}
-          <a
+          <Link
             target="_blank"
             href="https://github.com/pchapman-uat?tab=repositories&q=&type=&language=java&sort="
             rel="noreferrer"
           >
             Java
-          </a>
+          </Link>
           {", "}
-          <a
+          <Link
             target="_blank"
             href="https://github.com/pchapman-uat?tab=repositories&q=&type=&language=c%2B%2B&sort="
             rel="noreferrer"
           >
             C++
-          </a>
+          </Link>
           {", "}
-          <a
+          <Link
             target="_blank"
             href="https://github.com/pchapman-uat?tab=repositories&q=&type=&language=python&sort="
             rel="noreferrer"
           >
             Python
-          </a>
+          </Link>
           {" and more!"}
         </p>
         <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=pchapman-uat&theme=vue-dark&show_icons=true&hide_border=true&layout=compact" />
-      </section>
-      <section id="objective3">
-        <h4>Implement data-driven solutions.</h4>
-      </section>
-      <section id="objective4">
-        <h4>
-          Design and implement software solutions for multiple platforms
-          including mobile devices.
-        </h4>
-      </section>
-      <section id="objective5">
-        <h4>
-          Design, develop, and maintain object-oriented software solutions
-          utilizing inheritance, encapsulation, polymorphism, and abstraction.
-        </h4>
-      </section>
-      <section id="objective6">
-        <h4>
-          Within software solutions, describe, implement, and analyze data
-          structure techniques.
-        </h4>
-      </section>
-    </div>
+      </>
+      <>
+        <div>
+          <h4>
+            {PROJECTS.RPG_Simulator.NAME} | {PROJECTS.RPG_Simulator.CLASS.id}
+          </h4>
+          <h5>{PROJECTS.RPG_Simulator.CLASS.name}</h5>
+          <div className={BoardsCSS.shieldsDiv}>
+            <Shield
+              type="github/release"
+              param={{ user: "pchapman-uat", repo: "CSC263-Final" }}
+            />
+            <Shield
+              type="github/languages/top"
+              param={{ user: "pchapman-uat", repo: "CSC263-Final" }}
+            />
+          </div>
+          <p>{PROJECTS.RPG_Simulator.DESCRIPTIONS[0]}</p>
+          <p>{PROJECTS.RPG_Simulator.DESCRIPTIONS[1]}</p>
+          <div>
+            <div className={BoardsCSS.iconsDiv}>
+              <ClickableLogo
+                type="github"
+                className={BoardsCSS.icon}
+                onClick={() =>
+                  window.open(
+                    "https://github.com/pchapman-uat/CSC263-Final",
+                    "_blank"
+                  )
+                }
+              />
+            </div>
+          </div>
+          <p>
+            For more information visit the project page{" "}
+            <Link href="/Projects/RPG_Simulator/">here</Link>
+          </p>
+        </div>
+      </>
+      <>
+        <div>
+          <h4>PDS300/400 | I AM the DJ </h4>
+          <p>
+            I AM the DJ is a mobile app for android where users will sign in and
+            look for a DJ event, once they choose an event they can then request
+            a song to play, look at the song history. There are two sides to
+            this application: the Android mobile app, and then the DJ software
+            for Windows.
+          </p>
+          <p>
+            Preston was the Code Lead for this application, where they worked on
+            the Android app, managing the GitHub and Trello, assisted with the
+            Cloud Computing, Transferring, and Server-Side logic.
+          </p>
+          <p>
+            Please note that as of right now the project is no longer available
+            on the Google Play Store.
+          </p>
+        </div>
+      </>
+      <></>
+      <></>
+    </BoardsPage>
   );
 }

@@ -1,6 +1,6 @@
 import { lazy } from "react";
-import App from "./App";
 import { RouteRecord } from "vite-react-ssg";
+import App from "./App";
 import ProjectsRoot from "./pages/Projects/ProjectsRoot";
 import projectRoutes, { ProjectRoutesArr } from "./projectRoutes";
 
@@ -11,6 +11,23 @@ const Boards_NE = lazy(() => import("@/pages/Boards/NE/BoardsNE"));
 const SIP = lazy(() => import("@/pages/SIP/SIP"));
 const ProjectsHome = lazy(() => import("@/pages/Projects/ProjectsHome"));
 
+const routes = {
+  root: {
+    home: "/",
+    sip: "SIP/",
+    boards: {
+      root: "Boards/",
+      acs: "Boards/ACS/",
+      ne: "Boards/NE/",
+    },
+    projects: {
+      root: "Projects/",
+    },
+  },
+} as const;
+
+export default routes;
+
 export const boardsRoutes = {
   ACS: { path: "ACS/", Component: Boards_ACS },
   NE: { path: "NE/", Component: Boards_NE },
@@ -20,22 +37,30 @@ export const rootRoutes = {
   Home: { path: "/", Component: Home },
   SIP: { path: "SIP/", Component: SIP },
 } as const;
-const literalRoutes = [
+
+export const literalRoutes = [
   {
     path: "/",
     Component: App,
     children: [
-      ...Object.values(rootRoutes),
+      { path: routes.root.home, Component: Home },
+      { path: routes.root.sip, Component: SIP },
       {
-        path: "Boards/",
+        path: routes.root.boards.root,
         children: [
           { path: "", Component: Boards },
-          ...Object.values(boardsRoutes),
+          {
+            path: routes.root.boards.acs.replace(routes.root.boards.root, ""),
+            Component: Boards_ACS,
+          },
+          {
+            path: routes.root.boards.ne.replace(routes.root.boards.root, ""),
+            Component: Boards_NE,
+          },
         ],
       },
-
       {
-        path: "Projects/",
+        path: routes.root.projects.root,
         Component: ProjectsRoot,
         children: [{ path: "", Component: ProjectsHome }, ...ProjectRoutesArr],
       },
@@ -43,7 +68,7 @@ const literalRoutes = [
   },
 ] as const;
 
-export const routes = literalRoutes as unknown as RouteRecord[];
+export const routesArr = literalRoutes as unknown as RouteRecord[];
 type JoinPaths<Parent extends string, Child extends string> = Parent extends
   | ""
   | "/"
