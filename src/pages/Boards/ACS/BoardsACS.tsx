@@ -2,7 +2,7 @@ import Shield from "@/elements/Shield";
 import { Head } from "vite-react-ssg";
 import "@/style/boards.css";
 import BoardsCSS from "@/style/boards.module.css";
-import Logo from "@/elements/Logo";
+import Logo, { ClickableLogo } from "@/elements/Logo";
 import Link from "@/elements/Link";
 export default function ACS() {
   return (
@@ -125,7 +125,16 @@ export default function ACS() {
           </p>
           <div>
             <div className={BoardsCSS.iconsDiv}>
-              <Logo type="github" className={BoardsCSS.icon} />
+              <ClickableLogo
+                type="github"
+                className={BoardsCSS.icon}
+                onClick={() =>
+                  window.open(
+                    "https://github.com/pchapman-uat/CSC263-Final",
+                    "_blank"
+                  )
+                }
+              />
             </div>
           </div>
           <p>
@@ -139,6 +148,25 @@ export default function ACS() {
           Design and implement software solutions for multiple platforms
           including mobile devices.
         </h3>
+        <div>
+          <h4>PDS300/400 | I AM the DJ </h4>
+          <p>
+            I AM the DJ is a mobile app for android where users will sign in and
+            look for a DJ event, once they choose an event they can then request
+            a song to play, look at the song history. There are two sides to
+            this application: the Android mobile app, and then the DJ software
+            for Windows.
+          </p>
+          <p>
+            Preston was the Code Lead for this application, where they worked on
+            the Android app, managing the GitHub and Trello, assisted with the
+            Cloud Computing, Transferring, and Server-Side logic.
+          </p>
+          <p>
+            Please note that as of right now the project is no longer available
+            on the Google Play Store.
+          </p>
+        </div>
       </section>
       <section id="objective5">
         <h3>
