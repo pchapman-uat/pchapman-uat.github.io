@@ -1,9 +1,9 @@
-import { useState } from "react";
 import { ALL_PROJECTS } from "@/classes/Projects";
+import GithubTable from "@/elements/GithubTable";
 import JSDiv from "@/elements/JSDiv";
 import ProjectElement from "@/elements/ProjectElement";
 import ProjectCSS from "@/style/projects.module.css";
-import GithubTable from "@/elements/GithubTable";
+import { useState } from "react";
 export default function ProjectsHome() {
   const [filter, setFilter] = useState<string>("");
 

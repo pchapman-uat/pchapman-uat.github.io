@@ -1,13 +1,12 @@
-import React from "react";
-import { Outlet } from "react-router-dom";
-import "@/style/main.css";
-import Navigation, { NavigationItem as NavItem } from "./elements/Navigation";
 import profileImg from "@/assets/images/profile.jpg";
 import uatLogo from "@/assets/images/uat-logo.png";
-import { useScroll } from "@react-spring/web";
+import "@/style/main.css";
 import MainCSS from "@/style/main.module.css";
-import WavePath from "./elements/Wave";
+import { useScroll } from "@react-spring/web";
+import { Outlet } from "react-router-dom";
 import Link from "./elements/Link";
+import Navigation, { NavigationItem as NavItem } from "./elements/Navigation";
+import WavePath from "./elements/Wave";
 
 const NavigationItems: NavItem[] = [
   new NavItem("Home", ""),

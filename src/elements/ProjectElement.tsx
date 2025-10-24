@@ -1,13 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { ProjectObj } from "@/classes/Projects";
+import { ProjectLink, ProjectObj } from "@/classes/Projects";
 import ProjectCSS from "@/style/projects.module.css";
-import { ProjectLink } from "@/classes/Projects";
+import React, { useEffect, useState } from "react";
 
 import InternetSVG from "@/assets/logos/internet.svg?react";
 import "@/style/projects.css";
 import Divider from "./Divider";
-import Logo from "./Logo";
 import Link from "./Link";
+import Logo from "./Logo";
 export type ProjectElementParams = {
   project: ProjectObj;
 };

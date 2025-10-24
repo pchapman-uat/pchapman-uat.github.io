@@ -1,18 +1,18 @@
+import GalleryItem from "@/classes/GalleryItem";
+import Gallery from "@/elements/Gallery";
+import JSDiv from "@/elements/JSDiv";
+import Link from "@/elements/Link";
 import Main from "@/style/main.module.css";
-import MobSFReportBanner from "./assets/images/mobSF-0.2.0-alpha.1.png";
-import MobSFReport from "./assets/documents/MobSF-0.2.0-alpha.1.pdf";
-import ProjectProposal from "./assets/documents/SIP311-Project_Proposal-PChapman-(Version_2).pdf";
-import React, { FC, useEffect, useState } from "react";
+import "@/style/sip.css";
+import SIPCss from "@/style/sip.module.css";
+import { FC, useEffect, useState } from "react";
 import { RepoCardProps } from "react-repo-card";
 import { Head } from "vite-react-ssg";
-import SIPCss from "@/style/sip.module.css";
-import "@/style/sip.css";
-import Gallery from "@/elements/Gallery";
-import GalleryItem from "@/classes/GalleryItem";
+import MobSFReport from "./assets/documents/MobSF-0.2.0-alpha.1.pdf";
+import ProjectProposal from "./assets/documents/SIP311-Project_Proposal-PChapman-(Version_2).pdf";
 import LibraryImage from "./assets/images/demo/v0.3.0/Library.jpg";
 import NowPlayingImage from "./assets/images/demo/v0.3.0/NowPlaying.jpg";
-import Link from "@/elements/Link";
-import JSDiv from "@/elements/JSDiv";
+import MobSFReportBanner from "./assets/images/mobSF-0.2.0-alpha.1.png";
 
 export default function SIP() {
   const [RepoCard, setRepoCard] = useState<FC<RepoCardProps> | null>(null);

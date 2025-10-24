@@ -1,10 +1,9 @@
-import React from "react";
-import { FC, ReactNode, useEffect, useState } from "react";
 import { ProjectObj } from "@/classes/Projects";
-import Shield from "./Shield";
 import ProjectCSS from "@/style/projects.module.css";
-import { ProjectLinkElement } from "./ProjectElement";
+import { FC, ReactNode, useEffect, useState } from "react";
 import { RepoCardProps } from "react-repo-card";
+import { ProjectLinkElement } from "./ProjectElement";
+import Shield from "./Shield";
 export type ProjectPageParams = {
   project: ProjectObj;
   children?: ReactNode;

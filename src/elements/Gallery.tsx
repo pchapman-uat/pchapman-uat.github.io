@@ -1,7 +1,7 @@
-import React, { useRef, useState } from "react";
 import GalleryItem from "@/classes/GalleryItem";
-import GalleryCSS from "@/style/gallery.module.css";
 import { indexToRange, rangeToIndex } from "@/helpers/helpers";
+import GalleryCSS from "@/style/gallery.module.css";
+import { useRef, useState } from "react";
 
 export interface GalleryProps {
   items: GalleryItem[];

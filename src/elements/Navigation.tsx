@@ -1,6 +1,5 @@
 import { AllPaths } from "@/routes";
 import NavigationCSS from "@/style/navigation.module.css";
-import React from "react";
 
 import "@/style/navigation.css";
 import Link from "./Link";

@@ -1,6 +1,6 @@
 import { lazy } from "react";
-import App from "./App";
 import { RouteRecord } from "vite-react-ssg";
+import App from "./App";
 import ProjectsRoot from "./pages/Projects/ProjectsRoot";
 import projectRoutes, { ProjectRoutesArr } from "./projectRoutes";
 

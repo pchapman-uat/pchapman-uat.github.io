@@ -1,11 +1,11 @@
+import PROJECTS from "@/classes/Projects";
+import { boards } from "@/constants";
+import BoardsPage from "@/elements/BoardsPage";
+import Link from "@/elements/Link";
+import { ClickableLogo } from "@/elements/Logo";
 import Shield from "@/elements/Shield";
 import "@/style/boards.css";
 import BoardsCSS from "@/style/boards.module.css";
-import { ClickableLogo } from "@/elements/Logo";
-import Link from "@/elements/Link";
-import { boards } from "@/constants";
-import PROJECTS from "@/classes/Projects";
-import BoardsPage from "@/elements/BoardsPage";
 export default function ACS() {
   return (
     <BoardsPage

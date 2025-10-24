@@ -1,8 +1,8 @@
 import React, { JSX, MouseEventHandler } from "react";
 
-import { ProjectLinkType } from "@/classes/Projects";
 import GithubSVG from "@/assets/logos/github/github-mark.svg?react";
 import InternetSVG from "@/assets/logos/internet.svg?react";
+import { ProjectLinkType } from "@/classes/Projects";
 import MainCSS from "@/style/main.module.css";
 type LogoProps = {
   type: ProjectLinkType;

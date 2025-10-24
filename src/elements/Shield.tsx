@@ -1,4 +1,3 @@
-import React from "react";
 type ShieldParamsMap = {
   "github/stars": { user: string; repo: string };
   "github/languages/top": { user: string; repo: string };

@@ -1,4 +1,3 @@
-import React from "react";
 import { Head } from "vite-react-ssg";
 
 export default function Home() {

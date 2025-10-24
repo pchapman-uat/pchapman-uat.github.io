@@ -1,5 +1,4 @@
 import { animated, SpringValue } from "@react-spring/web";
-import React from "react";
 
 interface WavePathProps<T = SpringValue<number> | number> {
   time: T;
