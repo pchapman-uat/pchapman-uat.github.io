@@ -1,0 +1,1 @@
+import{j as r}from"./app-oIoxtyZE.js";import{P as t}from"./Logo-C9707tL4.js";import{P as o}from"./ProjectPage-CZf93jxy.js";import"./helpers-CjS5R6qi.js";import"./ProjectElement-D7UpCtPd.js";import"./Shield-J7i5pqTC.js";const a=t.MartianSafari;function n(){return r.jsx(o,{project:a})}export{n as default};

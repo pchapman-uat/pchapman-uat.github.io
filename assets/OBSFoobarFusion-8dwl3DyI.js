@@ -1,1 +1,0 @@
-import{j as o}from"./app-DDoQsX0P.js";import{a as r}from"./ProjectElement-wXVM3dn2.js";import{P as t}from"./ProjectPage-BH4pq0ad.js";import"./helpers-CjS5R6qi.js";function e(){return o.jsx(t,{project:r.OBSFoobarFusion})}export{e as default};

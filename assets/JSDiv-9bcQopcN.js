@@ -1,0 +1,1 @@
+import{r as t,j as r}from"./app-oIoxtyZE.js";function u(){return r.jsx("p",{children:"Please enable JS for this element to work"})}function l({fallback:e=u,...n}){const[s,o]=t.useState(!1);return t.useEffect(()=>{o(!0)},[]),s?r.jsx("div",{...n}):e===null?null:e()}export{l as J};
