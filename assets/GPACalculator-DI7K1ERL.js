@@ -1,0 +1,1 @@
+import{j as r}from"./app-DSkvLqO7.js";import{P as o}from"./Logo-CHjETqsi.js";import{P as t}from"./ProjectPage-BkOf4pEK.js";import"./helpers-CjS5R6qi.js";import"./ProjectElement-Di8dJbww.js";import"./Shield-DYmqfdGx.js";function P(){return r.jsx(t,{project:o.GPACalculator})}export{P as default};
