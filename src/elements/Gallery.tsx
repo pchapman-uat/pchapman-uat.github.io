@@ -64,8 +64,8 @@ export default function Gallery({ items }: GalleryProps) {
       </div>
       <p>{items[index].DESCRIPTION}</p>
       <div>
-        <button onClick={() => navigateTo("increase", index)}>Next</button>
         <button onClick={() => navigateTo("decrease", index)}>Previous</button>
+        <button onClick={() => navigateTo("increase", index)}>Next</button>
       </div>
     </div>
   );
