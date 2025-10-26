@@ -69,19 +69,17 @@ export default function ACS() {
           </div>
           <p>{PROJECTS.RPG_Simulator.DESCRIPTIONS[0]}</p>
           <p>{PROJECTS.RPG_Simulator.DESCRIPTIONS[1]}</p>
-          <div>
-            <div className={BoardsCSS.iconsDiv}>
-              <ClickableLogo
-                type="github"
-                className={BoardsCSS.icon}
-                onClick={() =>
-                  window.open(
-                    "https://github.com/pchapman-uat/CSC263-Final",
-                    "_blank"
-                  )
-                }
-              />
-            </div>
+          <div className={BoardsCSS.iconsDiv}>
+            <ClickableLogo
+              type="github"
+              className={BoardsCSS.icon}
+              onClick={() =>
+                window.open(
+                  "https://github.com/pchapman-uat/CSC263-Final",
+                  "_blank"
+                )
+              }
+            />
           </div>
           <p>
             For more information visit the project page{" "}
@@ -110,7 +108,32 @@ export default function ACS() {
           </p>
         </div>
       </>
-      <></>
+      <>
+        <div>
+          <h4>
+            {PROJECTS.RPG_Simulator.NAME} | {PROJECTS.RPG_Simulator.CLASS.id}
+          </h4>
+          <p>{PROJECTS.RPG_Simulator.DESCRIPTIONS[0]}</p>
+          <p>{PROJECTS.RPG_Simulator.DESCRIPTIONS[2]}</p>
+
+          <div className={BoardsCSS.iconsDiv}>
+            <ClickableLogo
+              type="github"
+              className={BoardsCSS.icon}
+              onClick={() =>
+                window.open(
+                  "https://github.com/pchapman-uat/CSC263-Final",
+                  "_blank"
+                )
+              }
+            />
+          </div>
+          <p>
+            For more information visit the project page{" "}
+            <Link href="/Projects/RPG_Simulator/">here</Link>
+          </p>
+        </div>
+      </>
       <></>
     </BoardsPage>
   );

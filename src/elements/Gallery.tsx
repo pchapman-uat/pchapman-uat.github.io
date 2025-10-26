@@ -71,9 +71,9 @@ export default function Gallery({ items }: GalleryProps) {
   );
 }
 
-function GalleryItemElement(item: GalleryItem) {
+function GalleryItemElement(item: GalleryItem, index: number) {
   return (
-    <div className={GalleryCSS.galleryItem}>
+    <div className={GalleryCSS.galleryItem} key={index}>
       <img className={GalleryCSS.galleryImage} src={item.IMAGE} />
     </div>
   );

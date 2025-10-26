@@ -158,6 +158,7 @@ const PROJECTS = defineProjects({
     [
       "This project is a standard Role Playing Game (RPG) simulator. The user will be able to choose their name, color, and difficulty, then they will fight a variety of enemies. The more waves you complete the higher your score will be. All scores are added to a local database, allowing you to see your ranking.",
       "This project uses SQLite 3 to store the high-score data. This allows for a large amount of data to be stored, and quickly retrieved by using a local SQL based Database.",
+      "Object Oriented Programming (OOP) principles were used throughout this project, ranging from Abstract Character classes, interfaces for formatting and gradients, and custom Panels and Frames from Java Swing.",
     ],
     "application",
     "GUI"
