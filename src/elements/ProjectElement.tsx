@@ -42,20 +42,12 @@ export default function ProjectElement({ project }: ProjectElementParams) {
       <p>
         {project.CLASS.id} - {project.ASSIGNMENT.name}
       </p>
-      <div className={ProjectCSS.tagContainer}>
-        {project.TAGS.map((item) => (
-          <TagElement tag={item} key={item} />
-        ))}
-      </div>
+      <ProjectTags project={project} />
       <JSDiv fallback={() => <Divider />}>
         {languages && <LanguageBar languages={languages} />}
       </JSDiv>
-      <div className={ProjectCSS.tagContainer}>
-        {languages &&
-          Object.entries(languages).map(([lang]) => (
-            <LanguageTagElement tag={lang as LanguageTag} key={lang} />
-          ))}
-      </div>
+
+      <ProjectLanguages languages={languages} />
 
       <div className={ProjectCSS.projectLogosContainer}>
         {project.LINKS.map((item, i) => (
@@ -92,6 +84,32 @@ function TagElementBase<T extends Tags>({ tag, obj }: BaseTagElementParams<T>) {
   );
 }
 
+type ProjectLanguagesProps = {
+  languages: Record<LanguageTag, number> | undefined;
+};
+export function ProjectLanguages({ languages }: ProjectLanguagesProps) {
+  return (
+    <div className={ProjectCSS.tagContainer}>
+      {languages &&
+        Object.entries(languages).map(([lang]) => (
+          <LanguageTagElement tag={lang as LanguageTag} key={lang} />
+        ))}
+    </div>
+  );
+}
+
+type ProjectTagsProps = {
+  project: ProjectObj;
+};
+export function ProjectTags({ project }: ProjectTagsProps) {
+  return (
+    <div className={ProjectCSS.tagContainer}>
+      {project.TAGS.map((item) => (
+        <TagElement tag={item} key={item} />
+      ))}
+    </div>
+  );
+}
 function TagElement({ tag }: TagElementParams<ProjectTag>) {
   return <TagElementBase tag={tag} obj={TAGS} />;
 }
