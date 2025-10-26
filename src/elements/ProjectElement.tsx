@@ -12,6 +12,8 @@ import {
 } from "@/constants";
 import "@/style/projects.css";
 import Divider from "./Divider";
+import JSDiv from "./JSDiv";
+import LanguageBar from "./LanguageBar";
 import Link from "./Link";
 import Logo from "./Logo";
 export type ProjectElementParams = {
@@ -28,7 +30,7 @@ export function ProjectLinkElement({ type, url }: ProjectLink) {
   );
 }
 export default function ProjectElement({ project }: ProjectElementParams) {
-  const [languages, setLanguages] = useState<Record<string, number>>();
+  const [languages, setLanguages] = useState<Record<LanguageTag, number>>();
   useEffect(() => {
     project.repoLanguages().then(setLanguages);
   }, []);
@@ -45,7 +47,9 @@ export default function ProjectElement({ project }: ProjectElementParams) {
           <TagElement tag={item} key={item} />
         ))}
       </div>
-      <Divider />
+      <JSDiv fallback={() => <Divider />}>
+        {languages && <LanguageBar languages={languages} />}
+      </JSDiv>
       <div className={ProjectCSS.tagContainer}>
         {languages &&
           Object.entries(languages).map(([lang]) => (
@@ -83,7 +87,7 @@ function TagElementBase<T extends Tags>({ tag, obj }: BaseTagElementParams<T>) {
       style={{ backgroundColor: props.color }}
     >
       {props.icon && <props.icon className={ProjectCSS.tagIcon} />}
-      <p>{props.name}</p>
+      <p>{props.name === "Unknown" ? (tag as string) : props.name}</p>
     </div>
   );
 }

@@ -27,7 +27,9 @@ export default function ProjectsHome() {
         )}
       </div>
       <JSDiv>
-        <GithubTable user="pchapman-uat" />
+        <section>
+          <GithubTable user="pchapman-uat" />
+        </section>
       </JSDiv>
     </>
   );

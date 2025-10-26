@@ -1,5 +1,5 @@
+import { ProjectTag } from "@/constants/index";
 import { ValidLinkHref } from "@/elements/Link";
-import { ProjectTag } from "@/elements/ProjectElement";
 import { extractGitHubUserRepo } from "@/helpers/helpers";
 import projectRoutes from "@/projectRoutes";
 import { RouteRecord } from "vite-react-ssg";
@@ -65,7 +65,6 @@ export class ProjectObj {
     console.log(json);
     this.languages = this.sortLanguages(json);
     this.filters.push(...Object.keys(this.languages));
-    console.warn("Done");
     return this.languages;
   }
 
