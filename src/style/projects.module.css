@@ -51,54 +51,9 @@
   margin: 0;
   vertical-align: middle;
 }
-.website {
-  background-color: lightseagreen;
-}
-.node {
-  background-color: lightgreen;
-}
-.application {
-  background-color: lightcoral;
-}
-.GUI {
-  background-color: lightskyblue;
-}
-.CLI {
-  background-color: lightslategray;
-}
-.mobile {
-  background-color: lightpink;
-}
-.arduino {
-  background-color: lightblue;
-}
+
 .tagIcon {
   width: 1rem;
   height: 1rem;
   margin-right: 0.5rem;
-}
-
-.langHTML {
-  background-color: lightsalmon;
-}
-.langJS {
-  background-color: lightgreen;
-}
-.langCSS {
-  background-color: plum;
-}
-.langTS {
-  background-color: lightskyblue;
-}
-.langKT {
-  background-color: rgb(184, 94, 229);
-}
-.langJava {
-  background-color: lightcoral;
-}
-.langCPP {
-  background-color: lightsteelblue;
-}
-.langPY {
-  background-color: lightblue;
 }

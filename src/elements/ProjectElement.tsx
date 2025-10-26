@@ -1,8 +1,15 @@
 import { ProjectLink, ProjectObj } from "@/classes/Projects";
 import ProjectCSS from "@/style/projects.module.css";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
-import InternetSVG from "@/assets/logos/internet.svg?react";
+import {
+  LANGUAGES,
+  LanguageTag,
+  ProjectTag,
+  TagProps,
+  TAGS,
+  Tags,
+} from "@/constants";
 import "@/style/projects.css";
 import Divider from "./Divider";
 import Link from "./Link";
@@ -59,115 +66,22 @@ export default function ProjectElement({ project }: ProjectElementParams) {
   );
 }
 
-const TAGS = {
-  website: {
-    name: "Website",
-    className: ProjectCSS.website,
-    icon: InternetSVG,
-  },
-  node: {
-    name: "Node",
-    className: ProjectCSS.node,
-    icon: undefined,
-  },
-  application: {
-    name: "Application",
-    className: ProjectCSS.application,
-    icon: undefined,
-  },
-  GUI: {
-    name: "GUI",
-    className: ProjectCSS.GUI,
-    icon: undefined,
-  },
-  CLI: {
-    name: "CLI",
-    className: ProjectCSS.CLI,
-    icon: undefined,
-  },
-  mobile: {
-    name: "Mobile",
-    className: ProjectCSS.mobile,
-    icon: undefined,
-  },
-  arduino: {
-    name: "Arduino",
-    className: ProjectCSS.arduino,
-    icon: undefined,
-  },
-} as const satisfies Record<string, TagProps>;
-
-const LANGUAGE_TAGS = {
-  HTML: {
-    name: "HTML",
-    className: ProjectCSS.langHTML,
-    icon: undefined,
-  },
-  JavaScript: {
-    name: "JavaScript",
-    className: ProjectCSS.langJS,
-    icon: undefined,
-  },
-  CSS: {
-    name: "CSS",
-    className: ProjectCSS.langCSS,
-    icon: undefined,
-  },
-  TypeScript: {
-    name: "TypeScript",
-    className: ProjectCSS.langTS,
-    icon: undefined,
-  },
-  Kotlin: {
-    name: "Kotlin",
-    className: ProjectCSS.langKT,
-    icon: undefined,
-  },
-  Java: {
-    name: "Java",
-    className: ProjectCSS.langJava,
-    icon: undefined,
-  },
-  "C++": {
-    name: "C++",
-    className: ProjectCSS.langCPP,
-    icon: undefined,
-  },
-  Python: {
-    name: "Python",
-    className: ProjectCSS.langPY,
-    icon: undefined,
-  },
-} as const satisfies Record<string, TagProps>;
-
-export type ProjectTag = keyof typeof TAGS;
-export type LanguageTag = keyof typeof LANGUAGE_TAGS;
-interface TagProps {
-  name: string;
-  className: string;
-  icon: React.FC<React.SVGProps<SVGSVGElement>> | undefined;
-}
-type TagType = Record<string, TagProps>;
-type BaseTagElementParams<T extends TagType> = {
+type BaseTagElementParams<T extends Tags> = {
   tag: keyof T | string;
   obj: T;
 };
 
-type TagElementParams<T extends keyof TagType> = {
+type TagElementParams<T extends keyof Tags> = {
   tag: T;
 };
-function TagElementBase<T extends TagType>({
-  tag,
-  obj,
-}: BaseTagElementParams<T>) {
-  const props: TagProps = obj[tag as keyof T] ?? {
-    name: tag,
-    className: undefined,
-    icon: undefined,
-  };
+function TagElementBase<T extends Tags>({ tag, obj }: BaseTagElementParams<T>) {
+  const props: TagProps = obj[tag as keyof T] ?? obj["unknown"];
 
   return (
-    <div className={[ProjectCSS.projectTag, props.className].join(" ")}>
+    <div
+      className={ProjectCSS.projectTag}
+      style={{ backgroundColor: props.color }}
+    >
       {props.icon && <props.icon className={ProjectCSS.tagIcon} />}
       <p>{props.name}</p>
     </div>
@@ -178,5 +92,5 @@ function TagElement({ tag }: TagElementParams<ProjectTag>) {
   return <TagElementBase tag={tag} obj={TAGS} />;
 }
 function LanguageTagElement({ tag }: TagElementParams<LanguageTag>) {
-  return <TagElementBase tag={tag} obj={LANGUAGE_TAGS} />;
+  return <TagElementBase tag={tag} obj={LANGUAGES} />;
 }
