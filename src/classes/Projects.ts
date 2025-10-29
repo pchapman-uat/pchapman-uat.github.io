@@ -7,9 +7,11 @@ interface ProjectClass {
   id: string;
   name: string;
 }
+
+type ClassID = `${number}.${number}`;
 interface Assignment {
   name: string;
-  id: `${number}.${number}` | "Final";
+  id: ClassID | `${ClassID}/${ClassID}` | "Final";
 }
 export class ProjectObj {
   readonly NAME: string;
@@ -17,7 +19,7 @@ export class ProjectObj {
   readonly CLASS: ProjectClass;
   readonly ASSIGNMENT: Assignment;
   readonly LINKS: ProjectLink[];
-  readonly ROUTE: RouteRecord | string;
+  readonly ROUTE: RouteRecord | ValidLinkHref;
   readonly GITHUB: { user: string; repo: string } | null;
   readonly TAGS: ProjectTag[];
   readonly DESCRIPTIONS: string[];
@@ -45,8 +47,9 @@ export class ProjectObj {
     this.filters.push(name, _class.id, assignment.name);
     this.DESCRIPTIONS = descriptions;
   }
-  get href() {
-    if (typeof this.ROUTE === "string") return this.ROUTE as ValidLinkHref;
+  get href(): ValidLinkHref {
+    if (this.ROUTE == null) return;
+    else if (typeof this.ROUTE === "string") return this.ROUTE as ValidLinkHref;
     else return this.ROUTE.path as ValidLinkHref;
   }
   private get githubAPI() {
@@ -174,6 +177,28 @@ const PROJECTS = defineProjects({
     ],
     projectRoutes.MartianSafari,
     [],
+    "website"
+  ),
+  Checkers: new ProjectObj(
+    "Checkers",
+    { id: "CSC256", name: "Designing Website Interfaces" },
+    { id: "8.1/9.1", name: "8.1: Chessboard & 9.1: Chess to Checkers" },
+    [
+      {
+        type: "github",
+        url: "https://github.com/pchapman-uat/CSC256-8.1-9.1",
+      },
+      {
+        type: "website",
+        url: "https://pchapman-uat.github.io/CSC256-8.1-9.1",
+      },
+    ],
+    null,
+    [
+      "This project is JavaScript based, the checkers board will be generated using JS, and the colors for each piece can be changed for both players. This website will check if the move is valid, and will also allow for promotion, indicated by a yellow outline.",
+      "This game will allow players to take other pieces, change their team color, have player names, and have a win screen. However it will not handle player turns, so any player can move at any time.",
+      "This website had multiple releases, which allowed for it to improve over time, this project also heavily used Git, with over 50 commits, allowing for version history and progress tracking.",
+    ],
     "website"
   ),
   SIP: new ProjectObj(

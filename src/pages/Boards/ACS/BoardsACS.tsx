@@ -12,7 +12,48 @@ export default function ACS() {
       major="Advancing Computer Science"
       objectives={boards.objectives.ACS}
     >
-      <></>
+      <>
+        <div>
+          <h4>
+            {PROJECTS.Checkers.NAME} | {PROJECTS.Checkers.CLASS.id}
+          </h4>
+          <div className={BoardsCSS.shieldsDiv}>
+            <Shield
+              type="github/release"
+              param={{ user: "pchapman-uat", repo: "CSC256-8.1-9.1" }}
+            />
+            <Shield
+              type="github/languages/top"
+              param={{ user: "pchapman-uat", repo: "CSC256-8.1-9.1" }}
+            />
+          </div>
+          <div className={BoardsCSS.iconsDiv}>
+            <ClickableLogo
+              type="github"
+              className={BoardsCSS.icon}
+              onClick={() =>
+                window.open(
+                  "https://github.com/pchapman-uat/CSC263-Final",
+                  "_blank"
+                )
+              }
+            />
+            <ClickableLogo
+              type="website"
+              className={BoardsCSS.icon}
+              onClick={() =>
+                window.open(
+                  "https://github.com/pchapman-uat/CSC263-Final",
+                  "_blank"
+                )
+              }
+            />
+          </div>
+          <p>{PROJECTS.Checkers.DESCRIPTIONS[0]}</p>
+          <p>{PROJECTS.Checkers.DESCRIPTIONS[1]}</p>
+          <p>{PROJECTS.Checkers.DESCRIPTIONS[2]}</p>
+        </div>
+      </>
       <>
         <p>
           {"I have worked in a multitude of different languages, ranging from "}

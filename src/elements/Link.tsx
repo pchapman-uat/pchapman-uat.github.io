@@ -13,7 +13,9 @@ export type ValidLinkHref =
   | OptionalQueryOrHash<`./${BoardsPaths | ProjectPaths}`>
   | OptionalQueryOrHash<`https://${string}`>
   | OptionalQueryOrHash<`http://${string}`>
-  | OptionalQueryOrHash<`#${string}`>;
+  | OptionalQueryOrHash<`#${string}`>
+  | null
+  | undefined;
 type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   href: ValidLinkHref;
 };
