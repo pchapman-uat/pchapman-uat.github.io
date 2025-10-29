@@ -154,6 +154,16 @@ export default function ACS() {
           <h4>
             {PROJECTS.RPG_Simulator.NAME} | {PROJECTS.RPG_Simulator.CLASS.id}
           </h4>
+          <div className={BoardsCSS.shieldsDiv}>
+            <Shield
+              type="github/release"
+              param={{ user: "pchapman-uat", repo: "CSC263-Final" }}
+            />
+            <Shield
+              type="github/languages/top"
+              param={{ user: "pchapman-uat", repo: "CSC263-Final" }}
+            />
+          </div>
           <p>{PROJECTS.RPG_Simulator.DESCRIPTIONS[0]}</p>
           <p>{PROJECTS.RPG_Simulator.DESCRIPTIONS[2]}</p>
 
@@ -175,7 +185,32 @@ export default function ACS() {
           </p>
         </div>
       </>
-      <></>
+      <>
+        <div>
+          <h4>
+            {PROJECTS.TimingGame.NAME} | {PROJECTS.TimingGame.CLASS.id}
+          </h4>
+          <div className={BoardsCSS.shieldsDiv}>
+            <Shield
+              type="github/languages/top"
+              param={{ user: "pchapman-uat", repo: "CSC235-8.1" }}
+            />
+          </div>
+
+          <div className={BoardsCSS.iconsDiv}>
+            <ClickableLogo
+              type="github"
+              className={BoardsCSS.icon}
+              onClick={() =>
+                window.open(
+                  "https://github.com/pchapman-uat/CSC235-8.1",
+                  "_blank"
+                )
+              }
+            />
+          </div>
+        </div>
+      </>
     </BoardsPage>
   );
 }

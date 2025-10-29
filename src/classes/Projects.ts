@@ -201,6 +201,16 @@ const PROJECTS = defineProjects({
     ],
     "website"
   ),
+  TimingGame: new ProjectObj(
+    "Timing Game",
+    { id: "CSC235", name: "Python Programming I" },
+    { id: "8.1", name: "Package World" },
+    [{ type: "github", url: "https://github.com/pchapman-uat/CSC235-8.1" }],
+    null,
+    [],
+    "GUI",
+    "application"
+  ),
   SIP: new ProjectObj(
     "Foobar Controller Mobile",
     { id: "SIP311/405", name: "Student Innovation Project" },
