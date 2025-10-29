@@ -1,24 +1,24 @@
 import { lazy } from "react";
-import { RouteRecord } from "vite-react-ssg";
+import type { RouteRecord } from "vite-react-ssg";
 import App from "./App";
 import ProjectsRoot from "./pages/Projects/ProjectsRoot";
 import projectRoutes, { ProjectRoutesArr } from "./projectRoutes";
 
 const Home = lazy(() => import("@/pages/Home"));
 const Boards = lazy(() => import("@/pages/Boards/Boards"));
-const Boards_ACS = lazy(() => import("@/pages/Boards/ACS/BoardsACS"));
-const Boards_NE = lazy(() => import("@/pages/Boards/NE/BoardsNE"));
+const BoardsACS = lazy(() => import("@/pages/Boards/ACS/BoardsACS"));
+const BoardsNE = lazy(() => import("@/pages/Boards/NE/BoardsNE"));
 const SIP = lazy(() => import("@/pages/SIP/SIP"));
 const ProjectsHome = lazy(() => import("@/pages/Projects/ProjectsHome"));
 
-const routes = {
+export const routes = {
   root: {
     home: "/",
     sip: "SIP/",
     boards: {
       root: "Boards/",
-      acs: "Boards/ACS/",
-      ne: "Boards/NE/",
+      acs: "ACS/",
+      ne: "NE/",
     },
     projects: {
       root: "Projects/",
@@ -26,17 +26,15 @@ const routes = {
   },
 } as const;
 
-export default routes;
-
 export const boardsRoutes = {
-  ACS: { path: "ACS/", Component: Boards_ACS },
-  NE: { path: "NE/", Component: Boards_NE },
-} as const;
+  ACS: { path: routes.root.boards.acs, Component: BoardsACS },
+  NE: { path: routes.root.boards.ne, Component: BoardsNE },
+} as const satisfies Record<string, { path: string; Component: React.FC }>;
 
 export const rootRoutes = {
-  Home: { path: "/", Component: Home },
-  SIP: { path: "SIP/", Component: SIP },
-} as const;
+  Home: { path: routes.root.home, Component: Home },
+  SIP: { path: routes.root.sip, Component: SIP },
+} as const satisfies Record<string, { path: string; Component: React.FC }>;
 
 export const literalRoutes = [
   {
@@ -49,14 +47,8 @@ export const literalRoutes = [
         path: routes.root.boards.root,
         children: [
           { path: "", Component: Boards },
-          {
-            path: routes.root.boards.acs.replace(routes.root.boards.root, ""),
-            Component: Boards_ACS,
-          },
-          {
-            path: routes.root.boards.ne.replace(routes.root.boards.root, ""),
-            Component: Boards_NE,
-          },
+          { path: routes.root.boards.acs, Component: BoardsACS },
+          { path: routes.root.boards.ne, Component: BoardsNE },
         ],
       },
       {
@@ -66,15 +58,16 @@ export const literalRoutes = [
       },
     ],
   },
-] as const;
+] as const satisfies readonly RouteRecord[];
 
-export const routesArr = literalRoutes as unknown as RouteRecord[];
+export const routesArr: RouteRecord[] = [...literalRoutes];
+
 type JoinPaths<Parent extends string, Child extends string> = Parent extends
   | ""
   | "/"
-  ? `${Child}`
+  ? Child
   : Child extends ""
-  ? `${Parent}`
+  ? Parent
   : `${Parent}${Child}`;
 
 type ExtractRoutePaths<
@@ -89,9 +82,10 @@ type ExtractRoutePaths<
             : never)
     : never
   : never;
-type ExtractPaths<T> = {
-  [K in keyof T]: T[K] extends { path: infer P } ? P : never;
-}[keyof T];
+
+type ExtractPaths<T> = T[keyof T] extends { path: infer P extends string }
+  ? P
+  : never;
 
 export type AllPaths =
   | Exclude<ExtractRoutePaths<typeof literalRoutes>, "/">
@@ -100,4 +94,3 @@ export type BoardsPaths = Exclude<ExtractPaths<typeof boardsRoutes>, "/"> | "";
 export type ProjectPaths =
   | Exclude<ExtractPaths<typeof projectRoutes>, "/">
   | "";
-export type RootPaths = Exclude<ExtractPaths<typeof rootRoutes>, "/"> | "";

@@ -67,7 +67,6 @@ a {
 }
 
 table {
-  background-color: var(--section-color);
   padding: 10px;
 }
 td,

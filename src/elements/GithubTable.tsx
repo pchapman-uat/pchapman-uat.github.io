@@ -23,10 +23,12 @@ export default function GithubTable({}: GithubTableProps) {
   return (
     <table>
       <thead>
-        {Object.values(rows).map((item, i) => (
-          <th key={item + i}>{item}</th>
-        ))}
-        <th>Link</th>
+        <tr>
+          {Object.values(rows).map((item, i) => (
+            <td key={item + i}>{item}</td>
+          ))}
+          <td>Link</td>
+        </tr>
       </thead>
       <tbody>
         {repos?.map((item, i) => (

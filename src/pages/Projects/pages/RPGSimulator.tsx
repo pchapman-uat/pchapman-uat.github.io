@@ -50,13 +50,17 @@ export default function RPG_Simulator() {
         <Gallery items={galleryItems} />
       </section>
       <section>
-        <h3>Objective: {boards.objectives.ACS[2]}</h3>
+        <h3>
+          <Link href="/Boards/ACS/#objective3">
+            Objective: {boards.objectives.ACS[2]}
+          </Link>
+        </h3>
         <p>
           This project uses SQLite 3 as a database to store data. This results
           in the application showing different information based on previous
           attempts from other users. By changing the SQLite to be a server based
           SQL server, the leaderboard can be public, with entries shared between
-          devices.{" "}
+          devices.
         </p>
         <div>
           <h4>Get User Placement</h4>

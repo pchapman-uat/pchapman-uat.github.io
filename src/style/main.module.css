@@ -59,6 +59,7 @@ section#links > div {
   background-color: var(--background-dark);
   margin-top: 10px;
   margin-bottom: 10px;
+  overflow: hidden;
 }
 
 .clickable {

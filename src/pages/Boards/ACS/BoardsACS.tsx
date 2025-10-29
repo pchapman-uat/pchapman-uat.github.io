@@ -12,7 +12,48 @@ export default function ACS() {
       major="Advancing Computer Science"
       objectives={boards.objectives.ACS}
     >
-      <></>
+      <>
+        <div>
+          <h4>
+            {PROJECTS.Checkers.NAME} | {PROJECTS.Checkers.CLASS.id}
+          </h4>
+          <div className={BoardsCSS.shieldsDiv}>
+            <Shield
+              type="github/release"
+              param={{ user: "pchapman-uat", repo: "CSC256-8.1-9.1" }}
+            />
+            <Shield
+              type="github/languages/top"
+              param={{ user: "pchapman-uat", repo: "CSC256-8.1-9.1" }}
+            />
+          </div>
+          <div className={BoardsCSS.iconsDiv}>
+            <ClickableLogo
+              type="github"
+              className={BoardsCSS.icon}
+              onClick={() =>
+                window.open(
+                  "https://github.com/pchapman-uat/CSC263-Final",
+                  "_blank"
+                )
+              }
+            />
+            <ClickableLogo
+              type="website"
+              className={BoardsCSS.icon}
+              onClick={() =>
+                window.open(
+                  "https://github.com/pchapman-uat/CSC263-Final",
+                  "_blank"
+                )
+              }
+            />
+          </div>
+          <p>{PROJECTS.Checkers.DESCRIPTIONS[0]}</p>
+          <p>{PROJECTS.Checkers.DESCRIPTIONS[1]}</p>
+          <p>{PROJECTS.Checkers.DESCRIPTIONS[2]}</p>
+        </div>
+      </>
       <>
         <p>
           {"I have worked in a multitude of different languages, ranging from "}
@@ -69,19 +110,17 @@ export default function ACS() {
           </div>
           <p>{PROJECTS.RPG_Simulator.DESCRIPTIONS[0]}</p>
           <p>{PROJECTS.RPG_Simulator.DESCRIPTIONS[1]}</p>
-          <div>
-            <div className={BoardsCSS.iconsDiv}>
-              <ClickableLogo
-                type="github"
-                className={BoardsCSS.icon}
-                onClick={() =>
-                  window.open(
-                    "https://github.com/pchapman-uat/CSC263-Final",
-                    "_blank"
-                  )
-                }
-              />
-            </div>
+          <div className={BoardsCSS.iconsDiv}>
+            <ClickableLogo
+              type="github"
+              className={BoardsCSS.icon}
+              onClick={() =>
+                window.open(
+                  "https://github.com/pchapman-uat/CSC263-Final",
+                  "_blank"
+                )
+              }
+            />
           </div>
           <p>
             For more information visit the project page{" "}
@@ -110,8 +149,68 @@ export default function ACS() {
           </p>
         </div>
       </>
-      <></>
-      <></>
+      <>
+        <div>
+          <h4>
+            {PROJECTS.RPG_Simulator.NAME} | {PROJECTS.RPG_Simulator.CLASS.id}
+          </h4>
+          <div className={BoardsCSS.shieldsDiv}>
+            <Shield
+              type="github/release"
+              param={{ user: "pchapman-uat", repo: "CSC263-Final" }}
+            />
+            <Shield
+              type="github/languages/top"
+              param={{ user: "pchapman-uat", repo: "CSC263-Final" }}
+            />
+          </div>
+          <p>{PROJECTS.RPG_Simulator.DESCRIPTIONS[0]}</p>
+          <p>{PROJECTS.RPG_Simulator.DESCRIPTIONS[2]}</p>
+
+          <div className={BoardsCSS.iconsDiv}>
+            <ClickableLogo
+              type="github"
+              className={BoardsCSS.icon}
+              onClick={() =>
+                window.open(
+                  "https://github.com/pchapman-uat/CSC263-Final",
+                  "_blank"
+                )
+              }
+            />
+          </div>
+          <p>
+            For more information visit the project page{" "}
+            <Link href="/Projects/RPG_Simulator/">here</Link>
+          </p>
+        </div>
+      </>
+      <>
+        <div>
+          <h4>
+            {PROJECTS.TimingGame.NAME} | {PROJECTS.TimingGame.CLASS.id}
+          </h4>
+          <div className={BoardsCSS.shieldsDiv}>
+            <Shield
+              type="github/languages/top"
+              param={{ user: "pchapman-uat", repo: "CSC235-8.1" }}
+            />
+          </div>
+
+          <div className={BoardsCSS.iconsDiv}>
+            <ClickableLogo
+              type="github"
+              className={BoardsCSS.icon}
+              onClick={() =>
+                window.open(
+                  "https://github.com/pchapman-uat/CSC235-8.1",
+                  "_blank"
+                )
+              }
+            />
+          </div>
+        </div>
+      </>
     </BoardsPage>
   );
 }

@@ -1,12 +1,21 @@
 /* eslint-disable react/forbid-elements */
 import { AllPaths, BoardsPaths, ProjectPaths } from "@/routes";
 import React from "react";
+type OptionalQueryOrHash<T extends string> =
+  | T
+  | `${T}?${string}`
+  | `${T}#${string}`
+  | `${T}?${string}#${string}`
+  | `${T}#${string}?${string}`;
+
 export type ValidLinkHref =
-  | `/${AllPaths}`
-  | `https://${string}`
-  | `http://${string}`
-  | `#${string}`
-  | `./${BoardsPaths | ProjectPaths}`;
+  | OptionalQueryOrHash<`/${AllPaths}`>
+  | OptionalQueryOrHash<`./${BoardsPaths | ProjectPaths}`>
+  | OptionalQueryOrHash<`https://${string}`>
+  | OptionalQueryOrHash<`http://${string}`>
+  | OptionalQueryOrHash<`#${string}`>
+  | null
+  | undefined;
 type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   href: ValidLinkHref;
 };
