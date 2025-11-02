@@ -1,1 +1,0 @@
-import{j as o}from"./app-C65Fx9UJ.js";import{P as r}from"./Logo-CFn8ScwE.js";import{P as t}from"./ProjectPage-BZ6VKkWI.js";import"./helpers-CjS5R6qi.js";import"./index-ZZ0bdX_3.js";import"./ProjectElement-CpwdwzoD.js";import"./JSDiv-D2bV6MFd.js";import"./Shield-BgZPbHv5.js";const i=r.ClockingManager;function P(){return o.jsx(t,{project:i})}export{P as default};

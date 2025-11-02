@@ -1,0 +1,1 @@
+import{j as r}from"./app-BLVv1xZb.js";import{b as s}from"./index-BQMVEAoV.js";import{B as e}from"./BoardsPage-V9rELdrw.js";function m(){return r.jsxs(e,{objectives:s.objectives.NE,major:"Network Engineering",children:[r.jsx(r.Fragment,{}),r.jsx(r.Fragment,{}),r.jsx(r.Fragment,{}),r.jsx(r.Fragment,{}),r.jsx(r.Fragment,{}),r.jsx(r.Fragment,{})]})}export{m as default};
