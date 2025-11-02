@@ -73,3 +73,18 @@ td,
 th {
   outline: 1px solid white;
 }
+
+h1 {
+  font-family: "Seaweed Script";
+  font-size: 3rem;
+}
+
+@font-face {
+  font-family: "Seaweed Script";
+  src: url("/fonts/SeaweedScript-Regular.woff2") format("woff2"),
+    url("/fonts/SeaweedScript-Regular.woff") format("woff"),
+    url("/fonts/SeaweedScript-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
