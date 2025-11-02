@@ -16,4 +16,5 @@
     "editor.codeActionsOnSave": {
         "source.organizeImports": "always"
     },
+    "liveServer.settings.root": "/dist"
 }
