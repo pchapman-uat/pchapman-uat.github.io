@@ -17,7 +17,7 @@ export type ValidLinkHref =
   | null
   | undefined;
 type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
-  href: ValidLinkHref;
+  href?: ValidLinkHref;
 };
 export default function Link({ ...props }: LinkProps) {
   return <a {...props}>{props.children}</a>;

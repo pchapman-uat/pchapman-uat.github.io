@@ -31,22 +31,12 @@ export default function ACS() {
             <ClickableLogo
               type="github"
               className={BoardsCSS.icon}
-              onClick={() =>
-                window.open(
-                  "https://github.com/pchapman-uat/CSC263-Final",
-                  "_blank"
-                )
-              }
+              href={"https://github.com/pchapman-uat/CSC263-Final"}
             />
             <ClickableLogo
               type="website"
               className={BoardsCSS.icon}
-              onClick={() =>
-                window.open(
-                  "https://github.com/pchapman-uat/CSC263-Final",
-                  "_blank"
-                )
-              }
+              href={"https://github.com/pchapman-uat/CSC263-Final"}
             />
           </div>
           <p>{PROJECTS.Checkers.DESCRIPTIONS[0]}</p>
@@ -114,12 +104,7 @@ export default function ACS() {
             <ClickableLogo
               type="github"
               className={BoardsCSS.icon}
-              onClick={() =>
-                window.open(
-                  "https://github.com/pchapman-uat/CSC263-Final",
-                  "_blank"
-                )
-              }
+              href="https://github.com/pchapman-uat/CSC263-Final"
             />
           </div>
           <p>
@@ -171,12 +156,7 @@ export default function ACS() {
             <ClickableLogo
               type="github"
               className={BoardsCSS.icon}
-              onClick={() =>
-                window.open(
-                  "https://github.com/pchapman-uat/CSC263-Final",
-                  "_blank"
-                )
-              }
+              href="https://github.com/pchapman-uat/CSC263-Final"
             />
           </div>
           <p>
@@ -201,12 +181,7 @@ export default function ACS() {
             <ClickableLogo
               type="github"
               className={BoardsCSS.icon}
-              onClick={() =>
-                window.open(
-                  "https://github.com/pchapman-uat/CSC235-8.1",
-                  "_blank"
-                )
-              }
+              href="https://github.com/pchapman-uat/CSC235-8.1"
             />
           </div>
         </div>
