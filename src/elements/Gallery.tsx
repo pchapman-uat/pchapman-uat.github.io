@@ -1,5 +1,5 @@
 import GalleryItem from "@/classes/GalleryItem";
-import { indexToRange, rangeToIndex } from "@/helpers/helpers";
+import { indexToRange, rangeToIndex } from "@/helpers";
 import GalleryCSS from "@/style/gallery.module.css";
 import { useRef, useState } from "react";
 

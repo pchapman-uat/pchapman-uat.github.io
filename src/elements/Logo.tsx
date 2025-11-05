@@ -3,7 +3,7 @@ import React, { JSX, MouseEventHandler } from "react";
 import GithubSVG from "@/assets/logos/github/github-mark.svg?react";
 import InternetSVG from "@/assets/logos/internet.svg?react";
 import { ProjectLinkType } from "@/classes/Projects";
-import { RequireAtLeastOne } from "@/helpers/helpers";
+import { RequireAtLeastOne } from "@/helpers";
 import MainCSS from "@/style/main.module.css";
 import Link, { ValidLinkHref } from "./Link";
 type LogoProps = {
