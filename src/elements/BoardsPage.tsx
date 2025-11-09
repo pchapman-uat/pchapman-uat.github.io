@@ -4,12 +4,14 @@ type BoardsPageProps<T extends readonly string[]> = {
   objectives: T;
   major: string;
   children: { [K in keyof T]: React.ReactNode };
+  descriptions: { [K in keyof T]: string };
 };
 
 export default function BoardsPag<T extends readonly string[]>({
   major,
   objectives,
   children,
+  descriptions,
 }: BoardsPageProps<T>) {
   return (
     <div>
@@ -29,6 +31,7 @@ export default function BoardsPag<T extends readonly string[]>({
           key={"section-objective-" + (index + 1)}
         >
           <h3>{objectives[index]}</h3>
+          <p>{descriptions[index]}</p>
           {child}
         </section>
       ))}

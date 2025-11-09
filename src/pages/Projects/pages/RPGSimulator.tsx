@@ -1,6 +1,6 @@
 import GalleryItem from "@/classes/GalleryItem";
 import Projects from "@/classes/Projects";
-import { boards } from "@/constants";
+import { BOARDS } from "@/constants";
 import CodeBlock from "@/elements/CodeBlock";
 import Gallery from "@/elements/Gallery";
 import Link from "@/elements/Link";
@@ -52,7 +52,7 @@ export default function RPG_Simulator() {
       <section>
         <h3>
           <Link href="/Boards/ACS/#objective3">
-            Objective: {boards.objectives.ACS[2]}
+            Objective: {BOARDS.objectives.ACS[2]}
           </Link>
         </h3>
         <p>

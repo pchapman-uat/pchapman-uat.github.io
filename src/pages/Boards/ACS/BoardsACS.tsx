@@ -1,5 +1,5 @@
 import PROJECTS from "@/classes/Projects";
-import { boards } from "@/constants";
+import { BOARDS } from "@/constants";
 import BoardsPage from "@/elements/BoardsPage";
 import Link from "@/elements/Link";
 import { ClickableLogo } from "@/elements/Logo";
@@ -10,7 +10,8 @@ export default function ACS() {
   return (
     <BoardsPage
       major="Advancing Computer Science"
-      objectives={boards.objectives.ACS}
+      objectives={BOARDS.objectives.ACS}
+      descriptions={BOARDS.descriptions.ACS}
     >
       <>
         <div>

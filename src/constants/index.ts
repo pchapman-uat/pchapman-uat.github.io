@@ -1,5 +1,5 @@
 import InternetSVG from "@/assets/logos/internet.svg?react";
-export const boards = {
+export const BOARDS = {
   objectives: {
     NE: [
       "Analyze personal and organizational requirements and design an appropriate networking architecture.",
@@ -10,7 +10,7 @@ export const boards = {
       "Demonstrate security principles within networking solutions based on industry standards.",
     ],
     ACS: [
-      "Document the software development process to analyze a problem and to design, build, and test software solutions",
+      "Document the software development process to analyze a problem and to design, build, and test software solutions.",
       "Demonstrate software development skills using more than one programming language and development environment.",
       "Implement data-driven solutions.",
       "Design and implement software solutions for multiple platforms including mobile devices.",
@@ -18,7 +18,19 @@ export const boards = {
       "Within software solutions, describe, implement, and analyze data structure techniques.",
     ],
   },
+  descriptions: {
+    NE: ["", "", "", "", "", ""],
+    ACS: [
+      "Document the process of creating a software solutions. This includes reports or documentation, release or building notes, testing plans, and other resources that show an understanding of the full development process.",
+      "",
+      "Create projects that rely on data to function, this can be through reading/writing files, databases, or APIs, where the data is either stored in a separate file, or remotely. This data can be static or dynamic.",
+      "Create projects that can run on multiple platforms, this can include mobile, web, desktop, or other environments. The project should demonstrate an understanding of the constraints and features of each platform.",
+      "Create projects that utilize object-oriented programming principles (OOP), showing not just how the solution uses OOP, but how it was designed with OOP in mind.",
+      "Create projects that utilize various data structures (such as arrays, linked lists, trees, graphs, hash tables, etc.) and demonstrate an understanding of their implementation and use cases within the software solution.",
+    ],
+  },
 } as const;
+
 export interface TagProps {
   name: string;
 
