@@ -10,12 +10,12 @@ import WavePath from "./elements/Wave";
 
 const NavigationItems: NavItem[] = [
   new NavItem("Home", ""),
+  new NavItem("Projects", "Projects/"),
+  new NavItem("SIP", "SIP/"),
   new NavItem("Boards", "Boards/", [
     new NavItem("ACS", "Boards/ACS/"),
     new NavItem("NE", "Boards/NE/"),
   ]),
-  new NavItem("SIP", "SIP/"),
-  new NavItem("Projects", "Projects/"),
 ];
 
 export default function App() {
