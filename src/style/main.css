@@ -7,6 +7,10 @@
   --section-padding: 20px;
   --section-margin: 15px;
   --section-radius: 20px;
+
+  --nav-item-background: rgb(138, 82, 179);
+  --outline-color: white;
+  --outline: 2px solid var(--outline-color);
 }
 
 html {
@@ -48,6 +52,13 @@ h3 {
   text-align: center;
 }
 
+h4 {
+  font-size: 1.1rem;
+}
+h5 {
+  font-size: 1rem;
+}
+
 section,
 nav,
 footer {
@@ -55,7 +66,7 @@ footer {
   padding: var(--section-padding);
   margin: var(--section-margin);
   border-radius: var(--section-radius);
-  outline: 2px solid white;
+  outline: var(--outline);
 }
 
 a {

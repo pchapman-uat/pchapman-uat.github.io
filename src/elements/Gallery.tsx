@@ -1,7 +1,9 @@
 import GalleryItem from "@/classes/GalleryItem";
-import { indexToRange, rangeToIndex } from "@/helpers/helpers";
+import { indexToRange, rangeToIndex } from "@/helpers";
 import GalleryCSS from "@/style/gallery.module.css";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import Button from "./Button";
+import JSDiv from "./JSDiv";
 
 export interface GalleryProps {
   items: GalleryItem[];
@@ -9,6 +11,11 @@ export interface GalleryProps {
 export default function Gallery({ items }: GalleryProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [index, setIndex] = useState(0);
+  const [jsEnabled, setJsEnabled] = useState(false);
+
+  useEffect(() => {
+    setJsEnabled(true);
+  }, []);
 
   const handleScroll = () => {
     if (containerRef.current) {
@@ -59,13 +66,17 @@ export default function Gallery({ items }: GalleryProps) {
         // eslint-disable-next-line react/no-unknown-property
         onScrollEnd={handleScroll}
         className={GalleryCSS.galleryContainer}
+        style={{ scrollbarWidth: jsEnabled ? "none" : "auto" }}
       >
         {items.map(GalleryItemElement)}
       </div>
       <p>{items[index].DESCRIPTION}</p>
-      <div>
-        <button onClick={() => navigateTo("decrease", index)}>Previous</button>
-        <button onClick={() => navigateTo("increase", index)}>Next</button>
+      <div className={GalleryCSS.galleryNavigation}>
+        <Button onClick={() => navigateTo("decrease", index)}>Previous</Button>
+        <JSDiv>
+          {index + 1}/{items.length}
+        </JSDiv>
+        <Button onClick={() => navigateTo("increase", index)}>Next</Button>
       </div>
     </div>
   );

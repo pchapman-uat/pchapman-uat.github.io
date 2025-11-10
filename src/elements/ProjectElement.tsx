@@ -15,7 +15,7 @@ import Divider from "./Divider";
 import JSDiv from "./JSDiv";
 import LanguageBar from "./LanguageBar";
 import Link from "./Link";
-import Logo from "./Logo";
+import { ClickableLogo } from "./Logo";
 export type ProjectElementParams = {
   project: ProjectObj;
 };
@@ -23,9 +23,11 @@ export type ProjectElementParams = {
 export function ProjectLinkElement({ type, url }: ProjectLink) {
   return (
     <div>
-      <Link href={url}>
-        <Logo type={type} className={ProjectCSS.projectLogo} />
-      </Link>
+      <ClickableLogo
+        href={url}
+        type={type}
+        className={ProjectCSS.projectLogo}
+      />
     </div>
   );
 }
@@ -50,7 +52,7 @@ export default function ProjectElement({ project }: ProjectElementParams) {
       <ProjectLanguages languages={languages} />
 
       <div className={ProjectCSS.projectLogosContainer}>
-        {project.LINKS.map((item, i) => (
+        {project.ALL_LINKS.map((item, i) => (
           <ProjectLinkElement
             type={item.type}
             url={item.url}

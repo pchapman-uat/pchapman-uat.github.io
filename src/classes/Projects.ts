@@ -1,8 +1,9 @@
 import { ProjectTag } from "@/constants/index";
 import { ValidLinkHref } from "@/elements/Link";
-import { extractGitHubUserRepo } from "@/helpers/helpers";
+import { extractGitHubUserRepo } from "@/helpers";
 import projectRoutes from "@/projectRoutes";
 import { RouteRecord } from "vite-react-ssg";
+import GalleryItem, { ImageAsset } from "./GalleryItem";
 interface ProjectClass {
   id: string;
   name: string;
@@ -18,13 +19,16 @@ export class ProjectObj {
 
   readonly CLASS: ProjectClass;
   readonly ASSIGNMENT: Assignment;
-  readonly LINKS: ProjectLink[];
+  readonly ALL_LINKS: ProjectLink[];
   readonly ROUTE: RouteRecord | ValidLinkHref;
   readonly GITHUB: { user: string; repo: string } | null;
   readonly TAGS: ProjectTag[];
   readonly DESCRIPTIONS: string[];
   languages: Record<string, number> | undefined;
   filters: string[] = [];
+
+  private validSourceLinkTypes: ProjectLinkType[] = ["github", "website"];
+  private embedSourceLinkTypes: ProjectLinkType[] = ["video", "image"];
   constructor(
     name: string,
     _class: ProjectClass,
@@ -37,15 +41,32 @@ export class ProjectObj {
     this.NAME = name;
     this.CLASS = _class;
     this.ASSIGNMENT = assignment;
-    this.LINKS = links;
+    this.ALL_LINKS = links;
     this.ROUTE = route;
     this.GITHUB = extractGitHubUserRepo(
-      this.LINKS.filter((item) => item.type === "github")[0].url
+      links.filter((item) => item.type === "github")[0].url
     );
     this.TAGS = tags;
     this.filters.push(...tags);
     this.filters.push(name, _class.id, assignment.name);
     this.DESCRIPTIONS = descriptions;
+  }
+
+  get SOURCE_LINKS(): ProjectLink[] {
+    return this.ALL_LINKS.filter((item) =>
+      this.validSourceLinkTypes.includes(item.type)
+    );
+  }
+  get EMBED_LINKS(): MediaProjectLink[] {
+    return this.ALL_LINKS.filter((item) =>
+      this.embedSourceLinkTypes.includes(item.type)
+    ) as MediaProjectLink[];
+  }
+
+  get IMAGE_LINKS(): ImageAsset[] {
+    return this.ALL_LINKS.filter((item) => item.type === "image").map(
+      (item) => item.url as ImageAsset
+    );
   }
   get href(): ValidLinkHref {
     if (this.ROUTE == null) return;
@@ -86,14 +107,38 @@ export class ProjectObj {
     }
     return false;
   }
+  galleryItems(): GalleryItem[] {
+    return this.EMBED_LINKS.map(
+      (link) =>
+        new GalleryItem(
+          link.name ?? "",
+          link.url as ImageAsset,
+          link.description
+        )
+    );
+  }
 }
 
-export type ProjectLinkType = "github" | "website" | "video" | "other";
+export type ProjectLinkType =
+  | "github"
+  | "website"
+  | "video"
+  | "image"
+  | "other";
 
-export interface ProjectLink {
-  type: ProjectLinkType;
+interface BaseProjectLink {
+  type: Exclude<ProjectLinkType, "video" | "image">;
   url: `https://${string}`;
 }
+
+interface MediaProjectLink {
+  type: Extract<ProjectLinkType, "video" | "image">;
+  url: `https://${string}`;
+  name?: string;
+  description?: string;
+}
+
+export type ProjectLink = BaseProjectLink | MediaProjectLink;
 
 const defineProjects = <T extends Record<string, ProjectObj>>(p: T) => p;
 
@@ -155,7 +200,51 @@ const PROJECTS = defineProjects({
     "RPG Simulator",
     { id: "CSC263", name: "Java Programming II" },
     { id: "Final", name: "Final Project" },
-    [{ type: "github", url: "https://github.com/pchapman-uat/CSC263-Final" }],
+    [
+      { type: "github", url: "https://github.com/pchapman-uat/CSC263-Final" },
+      {
+        type: "image",
+        name: "Register Screen",
+        url: "https://github.com/pchapman-uat/CSC263-Final/blob/main/demo/8.19.24/register.webp?raw=true",
+        description:
+          "The user is able to register an account to save their progress to the SQL Database, the use can choose a name, difficulty, and color",
+      },
+      {
+        type: "image",
+        name: "Battle Screen #1",
+        url: "https://github.com/pchapman-uat/CSC263-Final/blob/main/demo/8.19.24/game1.webp?raw=true",
+        description:
+          "The user has options to attack, defend, and heal, you will see your health, and the enemy's health",
+      },
+      {
+        type: "image",
+        name: "Battle Screen #2",
+        url: "https://github.com/pchapman-uat/CSC263-Final/blob/main/demo/8.19.24/game2.webp?raw=true",
+        description:
+          "There are a total 9 basic enemies, each with their own stats. The background changes color based on the enemy, with interpolation on the health and heal bars.",
+      },
+      {
+        type: "image",
+        name: "Battle Screen #3",
+        url: "https://github.com/pchapman-uat/CSC263-Final/blob/main/demo/8.19.24/game3.webp?raw=true",
+        description:
+          "Once the user defeats 10 waves there will be a boss fight, there is only one boss, but the stats are much higher",
+      },
+      {
+        type: "image",
+        name: "Results Screen",
+        url: "https://github.com/pchapman-uat/CSC263-Final/blob/main/demo/8.19.24/results.webp?raw=true",
+        description:
+          "Once the user is defeated they will see there stats, showing their name, score, and placement compared to other players. There is a unique leaderboard for each difficulty, and the user can change to see any of them, or all of them at once.",
+      },
+      {
+        type: "image",
+        name: "SQL Database",
+        url: "https://github.com/pchapman-uat/CSC263-Final/blob/main/demo/8.19.24/data.webp?raw=true",
+        description:
+          "There is one table which stores the following: id, name, date, score, difficulty, this allows for quick retrieval of leaderboard data based on difficulty.",
+      },
+    ],
     projectRoutes.RPG_Simulator,
     [
       "This project is a standard Role Playing Game (RPG) simulator. The user will be able to choose their name, color, and difficulty, then they will fight a variety of enemies. The more waves you complete the higher your score will be. All scores are added to a local database, allowing you to see your ranking.",
@@ -192,6 +281,18 @@ const PROJECTS = defineProjects({
         type: "website",
         url: "https://pchapman-uat.github.io/CSC256-8.1-9.1",
       },
+      {
+        type: "image",
+        url: "https://github.com/pchapman-uat/CSC256-8.1-9.1/raw/main/demo/9.1/image1.webp?raw=true",
+      },
+      {
+        type: "image",
+        url: "https://github.com/pchapman-uat/CSC256-8.1-9.1/raw/main/demo/9.1/image2.webp?raw=true",
+      },
+      {
+        type: "image",
+        url: "https://github.com/pchapman-uat/CSC256-8.1-9.1/raw/main/demo/9.1/image3.webp?raw=true",
+      },
     ],
     null,
     [
@@ -207,7 +308,9 @@ const PROJECTS = defineProjects({
     { id: "8.1", name: "Package World" },
     [{ type: "github", url: "https://github.com/pchapman-uat/CSC235-8.1" }],
     null,
-    [],
+    [
+      "This project stores user data in an SQLite database, by using PyGame it display a user interface to allow users to compete with others to see who can wait the longest. Arrays are used in multiple locations, allowing for storing different valid keys, the results from the database such as the users or scores, as well as multiple for loops to mange this data.",
+    ],
     "GUI",
     "application"
   ),

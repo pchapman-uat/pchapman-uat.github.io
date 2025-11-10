@@ -10,16 +10,38 @@
 }
 .navigationItem {
   position: relative;
+  background-color: var(--nav-item-background);
+  min-width: 75px;
+  justify-self: center;
+  padding: 5px;
+  border-radius: 1rem;
+  outline: 1.5px solid var(--outline-color);
+  z-index: 1;
+  transition: border-radius 0.3s ease-in-out;
+}
+
+.navigationItem[data-has-sub-pages="true"]:hover {
+  border-radius: 1rem 1rem 0 0;
 }
 
 .navigationSubPages {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: inherit;
+  border-radius: 0 0 1rem 1rem;
+  overflow: hidden;
   max-height: 0;
   opacity: 0;
-  overflow: hidden;
-  transition: all 0.3s ease-in-out;
+  transition-delay: 0.4s;
+  transition: opacity 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  z-index: 0;
+  outline: inherit;
 }
 
-.navigationItem:hover > .navigationSubPages {
+.navigationItem[data-has-sub-pages="true"]:hover > .navigationSubPages {
   max-height: 500px;
   opacity: 1;
 }
@@ -28,4 +50,6 @@
   display: flex;
   justify-content: space-around;
   padding: 5px;
+  position: relative;
+  overflow: visible;
 }
