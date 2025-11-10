@@ -52,7 +52,7 @@ export default function ProjectElement({ project }: ProjectElementParams) {
       <ProjectLanguages languages={languages} />
 
       <div className={ProjectCSS.projectLogosContainer}>
-        {project.LINKS.map((item, i) => (
+        {project.ALL_LINKS.map((item, i) => (
           <ProjectLinkElement
             type={item.type}
             url={item.url}

@@ -28,7 +28,7 @@ export default function ProjectPage({ project, children }: ProjectPageParams) {
       <section>
         <h3>{project.NAME}</h3>
         <div className={ProjectCSS.shields}>
-          {project.LINKS.map((item, i) => (
+          {project.ALL_LINKS.map((item, i) => (
             <ProjectLinkElement
               type={item.type}
               url={item.url}

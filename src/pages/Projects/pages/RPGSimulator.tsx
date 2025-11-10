@@ -1,4 +1,3 @@
-import GalleryItem from "@/classes/GalleryItem";
 import Projects from "@/classes/Projects";
 import { BOARDS } from "@/constants";
 import CodeBlock from "@/elements/CodeBlock";
@@ -7,38 +6,7 @@ import Link from "@/elements/Link";
 import ProjectPage from "@/elements/ProjectPage";
 export default function RPG_Simulator() {
   const project = Projects.RPG_Simulator;
-  const galleryItems = [
-    new GalleryItem(
-      "Register Screen",
-      "https://github.com/pchapman-uat/CSC263-Final/blob/main/demo/8.19.24/register.webp?raw=true",
-      "The user is able to register an account to save their progress to the SQL Database, the use can choose a name, difficulty, and color"
-    ),
-    new GalleryItem(
-      "Battle Screen #1",
-      "https://github.com/pchapman-uat/CSC263-Final/blob/main/demo/8.19.24/game1.webp?raw=true",
-      "The user has options to attack, defend, and heal, you will see your health, and the enemy's health"
-    ),
-    new GalleryItem(
-      "Battle Screen #2",
-      "https://github.com/pchapman-uat/CSC263-Final/blob/main/demo/8.19.24/game2.webp?raw=true",
-      "There are a total 9 basic enemies, each with their own stats. The background changes color based on the enemy, with interpolation on the health and heal bars."
-    ),
-    new GalleryItem(
-      "Battle Screen #3",
-      "https://github.com/pchapman-uat/CSC263-Final/blob/main/demo/8.19.24/game3.webp?raw=true",
-      "Once the user defeats 10 waves there will be a boss fight, there is only one boss, but the stats are much higher"
-    ),
-    new GalleryItem(
-      "Results Screen",
-      "https://github.com/pchapman-uat/CSC263-Final/blob/main/demo/8.19.24/results.webp?raw=true",
-      "Once the user is defeated they will see there stats, showing their name, score, and placement compared to other players. There is a unique leaderboard for each difficulty, and the user can change to see any of them, or all of them at once."
-    ),
-    new GalleryItem(
-      "SQL Database",
-      "https://github.com/pchapman-uat/CSC263-Final/blob/main/demo/8.19.24/data.webp?raw=true",
-      "There is one table which stores the following: id, name, date, score, difficulty, this allows for quick retrieval of leaderboard data based on difficulty."
-    ),
-  ];
+  const galleryItems = project.galleryItems();
   return (
     <ProjectPage project={project}>
       <section>
