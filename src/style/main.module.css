@@ -79,4 +79,5 @@ section#links > div {
   border-radius: 10px;
   cursor: pointer;
   outline: var(--outline);
+  text-decoration: underline;
 }

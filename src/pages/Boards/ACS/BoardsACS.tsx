@@ -123,10 +123,11 @@ export default function ACS() {
           <p>{PROJECTS.RPG_Simulator.DESCRIPTIONS[1]}</p>
           <div className={BoardsCSS.iconsDiv}></div>
           <ProjectGallery items={PROJECTS.RPG_Simulator.galleryItems()} />
-          <p>
-            For more information visit the project page{" "}
-            <Link href="/Projects/RPG_Simulator/">here</Link>
-          </p>
+          <div className={BoardsCSS.iconsDiv}>
+            <Link type="button" href="/Projects/RPG_Simulator/">
+              Read more
+            </Link>
+          </div>
         </div>
       </>
       <>
@@ -169,10 +170,11 @@ export default function ACS() {
           <p>{PROJECTS.RPG_Simulator.DESCRIPTIONS[0]}</p>
           <p>{PROJECTS.RPG_Simulator.DESCRIPTIONS[2]}</p>
           <ProjectGallery items={PROJECTS.RPG_Simulator.galleryItems()} />
-          <p>
-            For more information visit the project page{" "}
-            <Link href="/Projects/RPG_Simulator/">here</Link>
-          </p>
+          <div className={BoardsCSS.iconsDiv}>
+            <Link type="button" href="/Projects/RPG_Simulator/">
+              Read more
+            </Link>
+          </div>
         </div>
       </>
       <>

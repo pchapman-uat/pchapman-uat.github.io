@@ -1,5 +1,6 @@
 /* eslint-disable react/forbid-elements */
 import { AllPaths, BoardsPaths, ProjectPaths } from "@/routes";
+import MainCSS from "@/style/main.module.css";
 import React from "react";
 type OptionalQueryOrHash<T extends string> =
   | T
@@ -18,7 +19,15 @@ export type ValidLinkHref =
   | undefined;
 type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   href?: ValidLinkHref;
+  type?: "normal" | "button";
 };
-export default function Link({ ...props }: LinkProps) {
-  return <a {...props}>{props.children}</a>;
+export default function Link({ type, className, ...props }: LinkProps) {
+  return (
+    <a
+      className={className + " " + (type == "button" && MainCSS.button)}
+      {...props}
+    >
+      {props.children}
+    </a>
+  );
 }
