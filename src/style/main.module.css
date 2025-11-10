@@ -69,3 +69,14 @@ section#links > div {
 .codeBlockContainer {
   font-family: Consolas;
 }
+
+.button {
+  background-color: var(--nav-item-background);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: var(--outline);
+}
