@@ -7,6 +7,7 @@ import Gallery from "@/elements/Gallery";
 import Link, { ValidLinkHref } from "@/elements/Link";
 import { ClickableLogo } from "@/elements/Logo";
 import Shield from "@/elements/Shield";
+import { ClockingManagerAssets } from "@/pages/Projects/pages/ClockingManager";
 import { ProjectProposal } from "@/pages/SIP/SIP.assets";
 import "@/style/boards.css";
 import BoardsCSS from "@/style/boards.module.css";
@@ -366,6 +367,47 @@ export default function ACS() {
               Read more
             </Link>
           </div>
+        </div>
+        <Divider />
+        <div>
+          <h4>
+            {PROJECTS.ClockingManager.NAME} |{" "}
+            {PROJECTS.ClockingManager.CLASS.id}
+          </h4>
+          <h5>{PROJECTS.ClockingManager.CLASS.name}</h5>
+          <div className={BoardsCSS.shieldsDiv}>
+            <Shield
+              type="github/release"
+              param={{
+                user: "pchapman-uat",
+                repo: PROJECTS.ClockingManager.GITHUB?.repo ?? "",
+              }}
+            />
+            <Shield
+              type="github/languages/top"
+              param={{
+                user: "pchapman-uat",
+                repo: PROJECTS.ClockingManager.GITHUB?.repo ?? "",
+              }}
+            />
+          </div>
+          <LogoList links={PROJECTS.ClockingManager.SOURCE_LINKS} />
+          <p>{PROJECTS.ClockingManager.DESCRIPTIONS[0]}</p>
+          <p>{PROJECTS.ClockingManager.DESCRIPTIONS[1]}</p>
+          <Gallery
+            items={[
+              new GalleryItem(
+                "M5Stick Device",
+                ClockingManagerAssets.M5StickImage,
+                "This is an image that shows the GUI on the M5Stick C Plus, it will show the HTTP Mode, the Last Clock in time, the ID , and the current time. The user can clock in/out using the button on the device."
+              ),
+              new GalleryItem(
+                "Microsoft Lists Data",
+                "https://github.com/pchapman-uat/CSC230-Final/blob/553376d19cb47fa493829af4eb2733555c634e60/media/ac8e3cf508a53feab38dbc7e3fc94401.png?raw=true",
+                "Microsoft Lists allows for storing data in a table like format, that is more accessible compare to that of excel. It was chosen for this project to hold the sessions, since it can easily communicate with Microsoft Power Automate."
+              ),
+            ]}
+          />
         </div>
       </>
       <>

@@ -205,7 +205,10 @@ const PROJECTS = defineProjects({
       },
     ],
     projectRoutes.ClockingManager,
-    [],
+    [
+      "In this project we were tasked with creating an application of our choice for the M5StickC plus, I decided to create a clocking application that will track when I clock in and out of tutoring. The M5Stick is a small ESP32 device that uses C++ and the arduino framework, this allows for many different libraries, and functionality, along with its on board interfaces such as buttons, LCD display, and connections!",
+      "By taking advantage of Webhooks with Microsoft Power Automate we are able to send and retrieve information from Microsoft Lists. With the M5Stick we can use the real time clock and webhooks to keep track of the clock in and out times. ",
+    ],
     "arduino"
   ),
   OBSFoobarFusion: new ProjectObj(
