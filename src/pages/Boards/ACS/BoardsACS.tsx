@@ -4,7 +4,7 @@ import { BOARDS } from "@/constants";
 import BoardsPage from "@/elements/BoardsPage";
 import Divider from "@/elements/Divider";
 import Gallery from "@/elements/Gallery";
-import Link from "@/elements/Link";
+import Link, { ValidLinkHref } from "@/elements/Link";
 import { ClickableLogo } from "@/elements/Logo";
 import Shield from "@/elements/Shield";
 import { ProjectProposal } from "@/pages/SIP/SIP.assets";
@@ -74,7 +74,11 @@ export default function ACS() {
             project, this includes information about the application, version
             support, FAQ, Setup, and Usage Instructions. You can visit the Wik
             here:{" "}
-            <Link href={PROJECTS.SIP.getLinkByType("wiki")?.url}>
+            <Link
+              href={
+                (PROJECTS.SIP.getLinkByType("wiki")?.url as ValidLinkHref) || ""
+              }
+            >
               Foobar Controller Mobile Wiki
             </Link>
           </p>
@@ -108,42 +112,177 @@ export default function ACS() {
         </div>
       </>
       <>
-        <p>
-          {"I have worked in a multitude of different languages, ranging from "}
-          <Link
-            target="_blank"
-            href="https://github.com/pchapman-uat?tab=repositories&q=&type=&language=javascript&sort="
-            rel="noreferrer"
-          >
-            JavaScript
-          </Link>
-          {", "}
-          <Link
-            target="_blank"
-            href="https://github.com/pchapman-uat?tab=repositories&q=&type=&language=java&sort="
-            rel="noreferrer"
-          >
-            Java
-          </Link>
-          {", "}
-          <Link
-            target="_blank"
-            href="https://github.com/pchapman-uat?tab=repositories&q=&type=&language=c%2B%2B&sort="
-            rel="noreferrer"
-          >
-            C++
-          </Link>
-          {", "}
-          <Link
-            target="_blank"
-            href="https://github.com/pchapman-uat?tab=repositories&q=&type=&language=python&sort="
-            rel="noreferrer"
-          >
-            Python
-          </Link>
-          {" and more!"}
-        </p>
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=pchapman-uat&theme=vue-dark&show_icons=true&hide_border=true&layout=compact" />
+        <p></p>
+        <div className={BoardsCSS.githubStatsContainer}>
+          <img src="https://github-readme-stats.vercel.app/api?username=pchapman-uat&theme=vue-dark&show_icons=true&hide_border=true&count_private=true" />
+          <img src="https://github-readme-streak-stats.herokuapp.com/?user=pchapman-uat&theme=vue-dark&hide_border=true" />
+          <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=pchapman-uat&theme=vue-dark&show_icons=true&hide_border=true&layout=compact" />
+        </div>
+        <div className={BoardsCSS.horizontalItemsContainer}>
+          <div className={BoardsCSS.horizontalItem}>
+            <h5>
+              <Link
+                target="_blank"
+                href="https://github.com/pchapman-uat?tab=repositories&q=&type=&language=typescript&sort="
+              >
+                TypeScript
+              </Link>
+            </h5>
+            <div className={BoardsCSS.horizontalLinksDiv}>
+              <Link
+                type="button"
+                href={
+                  (PROJECTS.SIP.getLinkByType("github")
+                    ?.url as ValidLinkHref) || ""
+                }
+              >
+                {PROJECTS.SIP.NAME}
+              </Link>
+              <Link
+                type="button"
+                href="https://github.com/pchapman-uat/pchapman-uat.github.io"
+              >
+                Personal Website
+              </Link>
+            </div>
+          </div>
+          <div className={BoardsCSS.horizontalItem}>
+            <h5>
+              <Link
+                target="_blank"
+                href="https://github.com/pchapman-uat?tab=repositories&q=&type=&language=javascript&sort="
+                rel="noreferrer"
+              >
+                JavaScript
+              </Link>
+            </h5>
+            <div className={BoardsCSS.horizontalLinksDiv}>
+              <Link
+                type="button"
+                href={
+                  (PROJECTS.Checkers.getLinkByType("github")
+                    ?.url as ValidLinkHref) || ""
+                }
+              >
+                {PROJECTS.Checkers.NAME}
+              </Link>
+              <Link
+                type="button"
+                href="https://github.com/pchapman-uat/CSC256-FooArtNode"
+              >
+                FooArtNode
+              </Link>
+              <Link
+                type="button"
+                href="https://github.com/pchapman-uat/CSC256-10.1"
+              >
+                Whack a Mole
+              </Link>
+            </div>
+          </div>
+          <div className={BoardsCSS.horizontalItem}>
+            <h5>
+              <Link
+                target="_blank"
+                href="https://github.com/pchapman-uat?tab=repositories&q=&type=&language=java&sort="
+                rel="noreferrer"
+              >
+                Java
+              </Link>
+            </h5>
+            <div className={BoardsCSS.horizontalLinksDiv}>
+              <Link
+                type="button"
+                href={
+                  (PROJECTS.RPG_Simulator.getLinkByType("github")
+                    ?.url as ValidLinkHref) || ""
+                }
+              >
+                {PROJECTS.RPG_Simulator.NAME}
+              </Link>
+              <Link
+                type="button"
+                href={
+                  (PROJECTS.JavaReminders.getLinkByType("github")
+                    ?.url as ValidLinkHref) || ""
+                }
+              >
+                {PROJECTS.JavaReminders.NAME}
+              </Link>
+            </div>
+          </div>
+          <div className={BoardsCSS.horizontalItem}>
+            <h5>
+              <Link
+                target="_blank"
+                href="https://github.com/pchapman-uat?tab=repositories&q=&type=&language=c%2B%2B&sort="
+                rel="noreferrer"
+              >
+                C++
+              </Link>
+            </h5>
+            <div className={BoardsCSS.horizontalLinksDiv}>
+              <Link
+                type="button"
+                href={
+                  (PROJECTS.ClockingManager.getLinkByType("github")
+                    ?.url as ValidLinkHref) || ""
+                }
+              >
+                {PROJECTS.ClockingManager.NAME}
+              </Link>
+              <Link
+                type="button"
+                href="https://github.com/pchapman-uat/CSC230-Lab-5.1"
+              >
+                ThingSpeak
+              </Link>
+              <Link
+                type="button"
+                href="https://github.com/pchapman-uat/CSC230-Lab-9.1"
+              >
+                ESP32 and Soft access Point
+              </Link>
+            </div>
+          </div>
+          <div className={BoardsCSS.horizontalItem}>
+            <h5>
+              <Link
+                target="_blank"
+                href="https://github.com/pchapman-uat?tab=repositories&q=&type=&language=python&sort="
+                rel="noreferrer"
+              >
+                Python
+              </Link>
+            </h5>
+            <div className={BoardsCSS.horizontalLinksDiv}>
+              <Link
+                type="button"
+                href={
+                  (PROJECTS.TimingGame.getLinkByType("github")
+                    ?.url as ValidLinkHref) || ""
+                }
+              >
+                {PROJECTS.TimingGame.NAME}
+              </Link>
+              <Link
+                type="button"
+                href={
+                  (PROJECTS.GPACalculator.getLinkByType("github")
+                    ?.url as ValidLinkHref) || ""
+                }
+              >
+                {PROJECTS.GPACalculator.NAME}
+              </Link>
+              <Link
+                type="button"
+                href="https://github.com/pchapman-uat/CSC235-11.1"
+              >
+                RPG Store
+              </Link>
+            </div>
+          </div>
+        </div>
       </>
       <>
         <div>

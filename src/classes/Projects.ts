@@ -147,7 +147,7 @@ interface BaseProjectLink {
 
 interface MediaProjectLink {
   type: Extract<ProjectLinkType, "video" | "image">;
-  url: `https://${string}` | ImageAsset;
+  url: `https://${string}` | string;
   name?: string;
   description?: string;
 }

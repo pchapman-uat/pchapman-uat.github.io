@@ -15,6 +15,7 @@ export type ValidLinkHref =
   | OptionalQueryOrHash<`https://${string}`>
   | OptionalQueryOrHash<`http://${string}`>
   | OptionalQueryOrHash<`#${string}`>
+  | ""
   | null
   | undefined;
 type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {

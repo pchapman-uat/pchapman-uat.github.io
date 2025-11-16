@@ -16,3 +16,40 @@
   width: 40px;
   height: 40px;
 }
+
+.horizontalItemsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.horizontalItem {
+  padding: 10px;
+  height: 100%;
+  margin: 5px;
+  text-align: center;
+  background-color: var(--background-light);
+  border-radius: var(--section-radius);
+}
+
+.horizontalLinksDiv {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.horizontalLinksDiv a {
+  text-decoration: none;
+}
+
+.githubStatsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.githubStatsContainer img {
+  margin: 10px;
+  height: 150px;
+}
