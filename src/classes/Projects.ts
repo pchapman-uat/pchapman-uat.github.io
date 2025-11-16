@@ -380,18 +380,23 @@ const PROJECTS = defineProjects({
       {
         type: "image",
         url: "https://github.com/pchapman-uat/CSC235-11.1/raw/main/ExampleImages/buy.webp?raw=true",
-      },
-      {
-        type: "image",
-        url: "https://github.com/pchapman-uat/CSC235-11.1/raw/main/ExampleImages/inv.webp?raw=true",
+        name: "Buying Item",
       },
       {
         type: "image",
         url: "https://github.com/pchapman-uat/CSC235-11.1/raw/main/ExampleImages/sell.webp?raw=true",
+        name: "Selling Item",
+      },
+      {
+        type: "image",
+        url: "https://github.com/pchapman-uat/CSC235-11.1/raw/main/ExampleImages/inv.webp?raw=true",
+        name: "Viewing Inventory",
       },
     ],
     null,
-    [],
+    [
+      "This command line application is a rough representation of a RPG store, allowing users to buy, sell, and view their inventory. The player starts with $500, and can buy 3 different items, those being a Shovel, Rope and Sword, all having their own price. Although not needed for this project, I also decided to create custom functions that will allowed for colored printing of text, taking advantage of ANSI color codes.",
+    ],
     "CLI",
     "application"
   ),

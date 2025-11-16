@@ -575,6 +575,24 @@ export default function ACS() {
       <>
         <div>
           <h4>
+            {PROJECTS.RPGShop.NAME} | {PROJECTS.RPGShop.CLASS.id}
+          </h4>
+          <div className={BoardsCSS.shieldsDiv}>
+            <Shield
+              type="github/languages/top"
+              param={{
+                user: PROJECTS.RPGShop.GITHUB?.user || "",
+                repo: PROJECTS.RPGShop.GITHUB?.repo || "",
+              }}
+            />
+          </div>
+          <LogoList links={PROJECTS.RPGShop.SOURCE_LINKS} />
+          <p>{PROJECTS.RPGShop.DESCRIPTIONS[0]}</p>
+          <Gallery items={PROJECTS.RPGShop.galleryItems()} />
+        </div>
+        <Divider />
+        <div>
+          <h4>
             {PROJECTS.TimingGame.NAME} | {PROJECTS.TimingGame.CLASS.id}
           </h4>
           <div className={BoardsCSS.shieldsDiv}>
@@ -584,11 +602,10 @@ export default function ACS() {
             />
           </div>
 
-          <div className={BoardsCSS.iconsDiv}>
-            <LogoList links={PROJECTS.TimingGame.SOURCE_LINKS} />
-          </div>
+          <LogoList links={PROJECTS.TimingGame.SOURCE_LINKS} />
           <p>{PROJECTS.TimingGame.DESCRIPTIONS[0]}</p>
         </div>
+        <Divider />
         <div>
           <h4>
             CSC265 Java: Sorting, Sets, Queues, Binary Tree and Java Collections
@@ -598,79 +615,80 @@ export default function ACS() {
             data, different ways to modify, store and retrieve the data. In this
             case the data is stored statically within the code.{" "}
           </p>
-          <div>
-            <h5>
-              Sorting -{" "}
-              <Link href="https://github.com/pchapman-uat/CSC263-Sorting">
-                GitHub
-              </Link>
-            </h5>
-            <p>
-              In this project code was not specifically required, however I
-              decided to go ahead and create the code for a 4 different sorting
-              algorithms, those being; Selection Sort, Insertion Sort, Merge
-              Sort, and Quick Sort, also known as Smart Sort
-            </p>
-          </div>
-          <div>
-            <h5>
-              Sets -{" "}
-              <Link href="https://github.com/pchapman-uat/CSC263-Sets">
-                GitHub
-              </Link>
-            </h5>
-            <p>
-              This project demonstrations understanding for creating and
-              manipulating sets, allowing the users to create a set, check if a
-              value is in the set, remove a value from the set, and converting
-              an array to a set.
-            </p>
-          </div>
-          <div>
-            <h5>
-              Queues -{" "}
-              <Link href="https://github.com/pchapman-uat/CSC263-Queues">
-                GitHub
-              </Link>
-            </h5>
-            <p>
-              This assignment did not require any code, however I decided to
-              practice by creating code for it. This project uses OOP to be able
-              to create a Stack and a Queue that builds on top of a LinkedList,
-              the classes are also generic to allow for multiple datatypes. The
-              application will first create a integer stack, and adding and
-              removing items. THen it will do the same with the Queue stack.
-              Lastly it will ask the user if they want to do their own list,
-              letting them choose if its a stack or queue.
-            </p>
-          </div>
-          <div>
-            <h5>
-              Binary Tree -{" "}
-              <Link href="https://github.com/pchapman-uat/CSC263-BinaryTree">
-                GitHub
-              </Link>
-            </h5>
+          <div className={BoardsCSS.horizontalItemsContainer}>
+            <div className={BoardsCSS.horizontalItem}>
+              <h5>
+                Sorting -{" "}
+                <Link href="https://github.com/pchapman-uat/CSC263-Sorting">
+                  GitHub
+                </Link>
+              </h5>
+              <p>
+                In this project code was not specifically required, however I
+                decided to go ahead and create the code for a 4 different
+                sorting algorithms, those being; Selection Sort, Insertion Sort,
+                Merge Sort, and Quick Sort, also known as Smart Sort
+              </p>
+            </div>
+            <div className={BoardsCSS.horizontalItem}>
+              <h5>
+                Sets -{" "}
+                <Link href="https://github.com/pchapman-uat/CSC263-Sets">
+                  GitHub
+                </Link>
+              </h5>
+              <p>
+                This project demonstrations understanding for creating and
+                manipulating sets, allowing the users to create a set, check if
+                a value is in the set, remove a value from the set, and
+                converting an array to a set.
+              </p>
+            </div>
+            <div className={BoardsCSS.horizontalItem}>
+              <h5>
+                Queues -{" "}
+                <Link href="https://github.com/pchapman-uat/CSC263-Queues">
+                  GitHub
+                </Link>
+              </h5>
+              <p>
+                This assignment did not require any code, however I decided to
+                practice by creating code for it. This project uses OOP to be
+                able to create a Stack and a Queue that builds on top of a
+                LinkedList, the classes are also generic to allow for multiple
+                datatypes. The application will first create a integer stack,
+                and adding and removing items. THen it will do the same with the
+                Queue stack. Lastly it will ask the user if they want to do
+                their own list, letting them choose if its a stack or queue.
+              </p>
+            </div>
+            <div className={BoardsCSS.horizontalItem}>
+              <h5>
+                Binary Tree -{" "}
+                <Link href="https://github.com/pchapman-uat/CSC263-BinaryTree">
+                  GitHub
+                </Link>
+              </h5>
 
-            <p>
-              This assignment did not require any code, however it was created
-              to demonstrate my skills with Binary Trees. In this project I
-              created a node class, and a Binary Search Treen class, this allows
-              for recursions in a tree format.
-            </p>
-          </div>
-          <div>
-            <h5>
-              Java Collections -{" "}
-              <Link href="https://github.com/pchapman-uat/CSC263-JavaColections">
-                GitHub
-              </Link>
-            </h5>
-
-            <p>
-              This project shows the usage of stacks, queue, HasTables, and
-              ArrayLits using the built-in Java Collections.
-            </p>
+              <p>
+                This assignment did not require any code, however it was created
+                to demonstrate my skills with Binary Trees. In this project I
+                created a node class, and a Binary Search Treen class, this
+                allows for recursions in a tree format.
+              </p>
+            </div>
+            <div className={BoardsCSS.horizontalItem}>
+              <h5>
+                Java Collections -{" "}
+                <Link href="https://github.com/pchapman-uat/CSC263-JavaColections">
+                  GitHub
+                </Link>
+              </h5>
+              <p>
+                This project shows the usage of stacks, queue, HasTables, and
+                ArrayLits using the built-in Java Collections.
+              </p>
+            </div>
           </div>
         </div>
       </>

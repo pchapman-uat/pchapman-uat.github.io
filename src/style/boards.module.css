@@ -31,12 +31,14 @@
   text-align: center;
   background-color: var(--background-light);
   border-radius: var(--section-radius);
+  max-width: 400px;
 }
 
 .horizontalLinksDiv {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .horizontalLinksDiv a {
