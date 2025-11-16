@@ -1,7 +1,7 @@
 import { ProjectTag } from "@/constants/index";
 import { ValidLinkHref } from "@/elements/Link";
 import { extractGitHubUserRepo } from "@/helpers";
-import projectRoutes from "@/projectRoutes";
+import projectRoutes from "@/project.routes";
 import { RouteRecord } from "vite-react-ssg";
 import GalleryItem, { ImageAsset } from "./GalleryItem";
 interface ProjectClass {
