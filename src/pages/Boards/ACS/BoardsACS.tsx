@@ -112,175 +112,231 @@ export default function ACS() {
         </div>
       </>
       <>
-        <p></p>
-        <div className={BoardsCSS.githubStatsContainer}>
-          <img src="https://github-readme-stats.vercel.app/api?username=pchapman-uat&theme=vue-dark&show_icons=true&hide_border=true&count_private=true" />
-          <img src="https://github-readme-streak-stats.herokuapp.com/?user=pchapman-uat&theme=vue-dark&hide_border=true" />
-          <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=pchapman-uat&theme=vue-dark&show_icons=true&hide_border=true&layout=compact" />
+        <div>
+          <h4>Projects</h4>
+          <p>
+            I have worked on many different projects in a multitude of different
+            languages, ranging from web development, desktop applications,
+            mobile apps, CLI, and GUI platforms. All of my projects are stored
+            on my{" "}
+            <Link target="_blank" href="https://github.com/pchapman-uat">
+              GitHub
+            </Link>
+            . As of november 2025 I have made around 1.5k commits, to a total of
+            68 public repositories.
+          </p>
+          <div className={BoardsCSS.githubStatsContainer}>
+            <img src="https://github-readme-stats.vercel.app/api?username=pchapman-uat&theme=vue-dark&show_icons=true&hide_border=true&count_private=true" />
+            <img src="https://github-readme-streak-stats.herokuapp.com/?user=pchapman-uat&theme=vue-dark&hide_border=true" />
+          </div>
         </div>
-        <div className={BoardsCSS.horizontalItemsContainer}>
-          <div className={BoardsCSS.horizontalItem}>
-            <h5>
-              <Link
-                target="_blank"
-                href="https://github.com/pchapman-uat?tab=repositories&q=&type=&language=typescript&sort="
-              >
-                TypeScript
-              </Link>
-            </h5>
-            <div className={BoardsCSS.horizontalLinksDiv}>
-              <Link
-                type="button"
-                href={
-                  (PROJECTS.SIP.getLinkByType("github")
-                    ?.url as ValidLinkHref) || ""
-                }
-              >
-                {PROJECTS.SIP.NAME}
-              </Link>
-              <Link
-                type="button"
-                href="https://github.com/pchapman-uat/pchapman-uat.github.io"
-              >
-                Personal Website
-              </Link>
+        <Divider />
+        <div>
+          <h4>Languages</h4>
+          <p>
+            When it comes to the different languages I have worked on, the one I
+            am the most proficient in would be TypeScript, JavaScript, Python,
+            and Java in that order. I am very quick to understanding a new
+            language, and I have some experience with PHP, C++, and C#. Bellow
+            you can find some of my most common language, as well as the
+            projects that used that language.
+          </p>
+          <div className={BoardsCSS.githubStatsContainer}>
+            <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=pchapman-uat&theme=vue-dark&show_icons=true&hide_border=true&layout=compact" />
+          </div>
+          <div className={BoardsCSS.horizontalItemsContainer}>
+            <div className={BoardsCSS.horizontalItem}>
+              <h5>
+                <Link
+                  target="_blank"
+                  href="https://github.com/pchapman-uat?tab=repositories&q=&type=&language=typescript&sort="
+                >
+                  TypeScript
+                </Link>
+              </h5>
+              <div className={BoardsCSS.horizontalLinksDiv}>
+                <Link
+                  type="button"
+                  href={
+                    (PROJECTS.SIP.getLinkByType("github")
+                      ?.url as ValidLinkHref) || ""
+                  }
+                >
+                  {PROJECTS.SIP.NAME}
+                </Link>
+                <Link
+                  type="button"
+                  href="https://github.com/pchapman-uat/pchapman-uat.github.io"
+                >
+                  Personal Website
+                </Link>
+              </div>
+            </div>
+            <div className={BoardsCSS.horizontalItem}>
+              <h5>
+                <Link
+                  target="_blank"
+                  href="https://github.com/pchapman-uat?tab=repositories&q=&type=&language=javascript&sort="
+                  rel="noreferrer"
+                >
+                  JavaScript
+                </Link>
+              </h5>
+              <div className={BoardsCSS.horizontalLinksDiv}>
+                <Link
+                  type="button"
+                  href={
+                    (PROJECTS.Checkers.getLinkByType("github")
+                      ?.url as ValidLinkHref) || ""
+                  }
+                >
+                  {PROJECTS.Checkers.NAME}
+                </Link>
+                <Link
+                  type="button"
+                  href="https://github.com/pchapman-uat/CSC256-FooArtNode"
+                >
+                  FooArtNode
+                </Link>
+                <Link
+                  type="button"
+                  href="https://github.com/pchapman-uat/CSC256-10.1"
+                >
+                  Whack a Mole
+                </Link>
+              </div>
+            </div>
+            <div className={BoardsCSS.horizontalItem}>
+              <h5>
+                <Link
+                  target="_blank"
+                  href="https://github.com/pchapman-uat?tab=repositories&q=&type=&language=java&sort="
+                  rel="noreferrer"
+                >
+                  Java
+                </Link>
+              </h5>
+              <div className={BoardsCSS.horizontalLinksDiv}>
+                <Link
+                  type="button"
+                  href={
+                    (PROJECTS.RPG_Simulator.getLinkByType("github")
+                      ?.url as ValidLinkHref) || ""
+                  }
+                >
+                  {PROJECTS.RPG_Simulator.NAME}
+                </Link>
+                <Link
+                  type="button"
+                  href={
+                    (PROJECTS.JavaReminders.getLinkByType("github")
+                      ?.url as ValidLinkHref) || ""
+                  }
+                >
+                  {PROJECTS.JavaReminders.NAME}
+                </Link>
+              </div>
+            </div>
+            <div className={BoardsCSS.horizontalItem}>
+              <h5>
+                <Link
+                  target="_blank"
+                  href="https://github.com/pchapman-uat?tab=repositories&q=&type=&language=python&sort="
+                  rel="noreferrer"
+                >
+                  Python
+                </Link>
+              </h5>
+              <div className={BoardsCSS.horizontalLinksDiv}>
+                <Link
+                  type="button"
+                  href={
+                    (PROJECTS.TimingGame.getLinkByType("github")
+                      ?.url as ValidLinkHref) || ""
+                  }
+                >
+                  {PROJECTS.TimingGame.NAME}
+                </Link>
+                <Link
+                  type="button"
+                  href={
+                    (PROJECTS.GPACalculator.getLinkByType("github")
+                      ?.url as ValidLinkHref) || ""
+                  }
+                >
+                  {PROJECTS.GPACalculator.NAME}
+                </Link>
+                <Link
+                  type="button"
+                  href="https://github.com/pchapman-uat/CSC235-11.1"
+                >
+                  RPG Store
+                </Link>
+              </div>
+            </div>
+            <div className={BoardsCSS.horizontalItem}>
+              <h5>
+                <Link
+                  target="_blank"
+                  href="https://github.com/pchapman-uat?tab=repositories&q=&type=&language=c%2B%2B&sort="
+                  rel="noreferrer"
+                >
+                  C++
+                </Link>
+              </h5>
+              <div className={BoardsCSS.horizontalLinksDiv}>
+                <Link
+                  type="button"
+                  href={
+                    (PROJECTS.ClockingManager.getLinkByType("github")
+                      ?.url as ValidLinkHref) || ""
+                  }
+                >
+                  {PROJECTS.ClockingManager.NAME}
+                </Link>
+                <Link
+                  type="button"
+                  href="https://github.com/pchapman-uat/CSC230-Lab-5.1"
+                >
+                  ThingSpeak
+                </Link>
+                <Link
+                  type="button"
+                  href="https://github.com/pchapman-uat/CSC230-Lab-9.1"
+                >
+                  ESP32 and Soft access Point
+                </Link>
+              </div>
             </div>
           </div>
-          <div className={BoardsCSS.horizontalItem}>
-            <h5>
-              <Link
-                target="_blank"
-                href="https://github.com/pchapman-uat?tab=repositories&q=&type=&language=javascript&sort="
-                rel="noreferrer"
-              >
-                JavaScript
+          <Divider />
+          <div>
+            <h4>Development Environments</h4>
+            <p>
+              The main IDE that I use will be{" "}
+              <Link href="https://code.visualstudio.com" target="_blank">
+                Visual Studio Code
               </Link>
-            </h5>
-            <div className={BoardsCSS.horizontalLinksDiv}>
-              <Link
-                type="button"
-                href={
-                  (PROJECTS.Checkers.getLinkByType("github")
-                    ?.url as ValidLinkHref) || ""
-                }
-              >
-                {PROJECTS.Checkers.NAME}
+              , this is my go to when it comes to projects in JS, TS, Python and
+              sometimes Java. I have also worked in other environments such as{" "}
+              <Link href="https://visualstudio.microsoft.com" target="_blank">
+                Visual Studio
               </Link>
-              <Link
-                type="button"
-                href="https://github.com/pchapman-uat/CSC256-FooArtNode"
-              >
-                FooArtNode
+              ,{" "}
+              <Link href="https://www.jetbrains.com/idea" target="_blank">
+                IntelliJ IDEA
               </Link>
-              <Link
-                type="button"
-                href="https://github.com/pchapman-uat/CSC256-10.1"
-              >
-                Whack a Mole
-              </Link>
-            </div>
+              , and{" "}
+              <Link href="https://www.arduino.cc/en/software">Arduino IDE</Link>
+              . I have also worked in different frameworks such as React, React
+              Native, Expo, Electron, in addition to things like Linux, WSL,
+              Android Debug Bridge, and Power Automate.
+            </p>
           </div>
-          <div className={BoardsCSS.horizontalItem}>
-            <h5>
-              <Link
-                target="_blank"
-                href="https://github.com/pchapman-uat?tab=repositories&q=&type=&language=java&sort="
-                rel="noreferrer"
-              >
-                Java
-              </Link>
-            </h5>
-            <div className={BoardsCSS.horizontalLinksDiv}>
-              <Link
-                type="button"
-                href={
-                  (PROJECTS.RPG_Simulator.getLinkByType("github")
-                    ?.url as ValidLinkHref) || ""
-                }
-              >
-                {PROJECTS.RPG_Simulator.NAME}
-              </Link>
-              <Link
-                type="button"
-                href={
-                  (PROJECTS.JavaReminders.getLinkByType("github")
-                    ?.url as ValidLinkHref) || ""
-                }
-              >
-                {PROJECTS.JavaReminders.NAME}
-              </Link>
-            </div>
-          </div>
-          <div className={BoardsCSS.horizontalItem}>
-            <h5>
-              <Link
-                target="_blank"
-                href="https://github.com/pchapman-uat?tab=repositories&q=&type=&language=c%2B%2B&sort="
-                rel="noreferrer"
-              >
-                C++
-              </Link>
-            </h5>
-            <div className={BoardsCSS.horizontalLinksDiv}>
-              <Link
-                type="button"
-                href={
-                  (PROJECTS.ClockingManager.getLinkByType("github")
-                    ?.url as ValidLinkHref) || ""
-                }
-              >
-                {PROJECTS.ClockingManager.NAME}
-              </Link>
-              <Link
-                type="button"
-                href="https://github.com/pchapman-uat/CSC230-Lab-5.1"
-              >
-                ThingSpeak
-              </Link>
-              <Link
-                type="button"
-                href="https://github.com/pchapman-uat/CSC230-Lab-9.1"
-              >
-                ESP32 and Soft access Point
-              </Link>
-            </div>
-          </div>
-          <div className={BoardsCSS.horizontalItem}>
-            <h5>
-              <Link
-                target="_blank"
-                href="https://github.com/pchapman-uat?tab=repositories&q=&type=&language=python&sort="
-                rel="noreferrer"
-              >
-                Python
-              </Link>
-            </h5>
-            <div className={BoardsCSS.horizontalLinksDiv}>
-              <Link
-                type="button"
-                href={
-                  (PROJECTS.TimingGame.getLinkByType("github")
-                    ?.url as ValidLinkHref) || ""
-                }
-              >
-                {PROJECTS.TimingGame.NAME}
-              </Link>
-              <Link
-                type="button"
-                href={
-                  (PROJECTS.GPACalculator.getLinkByType("github")
-                    ?.url as ValidLinkHref) || ""
-                }
-              >
-                {PROJECTS.GPACalculator.NAME}
-              </Link>
-              <Link
-                type="button"
-                href="https://github.com/pchapman-uat/CSC235-11.1"
-              >
-                RPG Store
-              </Link>
-            </div>
+          <div className={BoardsCSS.iconsDiv}>
+            <Link type="button" href="/Projects/">
+              View all Projects
+            </Link>
           </div>
         </div>
       </>
