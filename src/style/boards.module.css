@@ -53,3 +53,8 @@
   margin: 10px;
   height: 150px;
 }
+
+.boardsObjectiveSubtitle {
+  text-align: center;
+  font-weight: bold;
+}

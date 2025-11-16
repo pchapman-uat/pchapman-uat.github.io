@@ -1,5 +1,5 @@
+import BoardsCSS from "@/style/boards.module.css";
 import Link from "./Link";
-
 type BoardsPageProps<T extends readonly string[]> = {
   objectives: T;
   major: string;
@@ -31,6 +31,9 @@ export default function BoardsPag<T extends readonly string[]>({
           key={"section-objective-" + (index + 1)}
         >
           <h3>{objectives[index]}</h3>
+          <p className={BoardsCSS.boardsObjectiveSubtitle}>
+            Objective {index + 1}
+          </p>
           <p>{descriptions[index]}</p>
           {child}
         </section>
