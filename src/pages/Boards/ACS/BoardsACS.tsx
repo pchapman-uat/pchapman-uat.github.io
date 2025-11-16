@@ -604,6 +604,7 @@ export default function ACS() {
 
           <LogoList links={PROJECTS.TimingGame.SOURCE_LINKS} />
           <p>{PROJECTS.TimingGame.DESCRIPTIONS[0]}</p>
+          <Gallery items={PROJECTS.TimingGame.galleryItems()} />
         </div>
         <Divider />
         <div>

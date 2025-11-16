@@ -356,6 +356,26 @@ const PROJECTS = defineProjects({
         url: "https://github.com/pchapman-uat/CSC235-8.1",
         name: "Source",
       },
+      {
+        type: "image",
+        url: "https://github.com/pchapman-uat/CSC235-8.1/raw/main/Images/NewUser.webp?raw=true",
+        name: "Starting Screen",
+      },
+      {
+        type: "image",
+        url: "https://github.com/pchapman-uat/CSC235-8.1/raw/main/Images/Playing.webp?raw=true",
+        name: "Playing",
+      },
+      {
+        type: "image",
+        url: "https://github.com/pchapman-uat/CSC235-8.1/raw/main/Images/NewUserResult.webp?raw=true",
+        name: "New User Result",
+      },
+      {
+        type: "image",
+        url: "https://github.com/pchapman-uat/CSC235-8.1/raw/main/Images/ReturningUserResult.webp?raw=true",
+        name: "Returning User Result",
+      },
     ],
     null,
     [
