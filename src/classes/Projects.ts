@@ -1,6 +1,7 @@
 import { ProjectTag } from "@/constants/index";
 import { ValidLinkHref } from "@/elements/Link";
 import { extractGitHubUserRepo } from "@/helpers";
+import { LibraryImage, NowPlayingImage } from "@/pages/SIP/SIP.assets";
 import projectRoutes from "@/project.routes";
 import { RouteRecord } from "vite-react-ssg";
 import GalleryItem, { ImageAsset } from "./GalleryItem";
@@ -27,7 +28,11 @@ export class ProjectObj {
   languages: Record<string, number> | undefined;
   filters: string[] = [];
 
-  private validSourceLinkTypes: ProjectLinkType[] = ["github", "website"];
+  private validSourceLinkTypes: ProjectLinkType[] = [
+    "github",
+    "website",
+    "wiki",
+  ];
   private embedSourceLinkTypes: ProjectLinkType[] = ["video", "image"];
   constructor(
     name: string,
@@ -68,6 +73,7 @@ export class ProjectObj {
       (item) => item.url as ImageAsset
     );
   }
+
   get href(): ValidLinkHref {
     if (this.ROUTE == null) return;
     else if (typeof this.ROUTE === "string") return this.ROUTE as ValidLinkHref;
@@ -117,11 +123,18 @@ export class ProjectObj {
         )
     );
   }
+  public getLinkByType(type: ProjectLinkType): ProjectLink | null {
+    for (const link of this.ALL_LINKS) {
+      if (link.type === type) return link;
+    }
+    return null;
+  }
 }
 
 export type ProjectLinkType =
   | "github"
   | "website"
+  | "wiki"
   | "video"
   | "image"
   | "other";
@@ -129,11 +142,12 @@ export type ProjectLinkType =
 interface BaseProjectLink {
   type: Exclude<ProjectLinkType, "video" | "image">;
   url: `https://${string}`;
+  name?: string;
 }
 
 interface MediaProjectLink {
   type: Extract<ProjectLinkType, "video" | "image">;
-  url: `https://${string}`;
+  url: `https://${string}` | ImageAsset;
   name?: string;
   description?: string;
 }
@@ -147,7 +161,13 @@ const PROJECTS = defineProjects({
     "Java Reminders",
     { id: "CSC203", name: "Java Programming I" },
     { id: "Final", name: "Final Project Deliverable" },
-    [{ type: "github", url: "https://github.com/pchapman-uat/CSC203-Final" }],
+    [
+      {
+        type: "github",
+        url: "https://github.com/pchapman-uat/CSC203-Final",
+        name: "Source",
+      },
+    ],
     projectRoutes.JavaReminders,
     [],
     "application",
@@ -157,7 +177,13 @@ const PROJECTS = defineProjects({
     "GPA Calculator",
     { id: "CSC235", name: "Python Programming 1" },
     { id: "Final", name: "Final Project: Code Deliverable" },
-    [{ type: "github", url: "https://github.com/pchapman-uat/CSC235-Final" }],
+    [
+      {
+        type: "github",
+        url: "https://github.com/pchapman-uat/CSC235-Final",
+        name: "Source",
+      },
+    ],
     projectRoutes.GPACalculator,
     [],
     "application",
@@ -172,7 +198,11 @@ const PROJECTS = defineProjects({
         type: "video",
         url: "https://uatedu-my.sharepoint.com/:v:/g/personal/pchapman82070_uat_edu/EV1M4MnhJTlDkuFOoiJ6EsgBIuyrKzCndt91L5ze3jlnkg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=E4GkZ5",
       },
-      { type: "github", url: "https://github.com/pchapman-uat/CSC230-Final" },
+      {
+        type: "github",
+        url: "https://github.com/pchapman-uat/CSC230-Final",
+        name: "Source",
+      },
     ],
     projectRoutes.ClockingManager,
     [],
@@ -183,7 +213,11 @@ const PROJECTS = defineProjects({
     { id: "CSC256", name: "Designing Website Interfaces " },
     { id: "Final", name: "Final Project Code Deliverable" },
     [
-      { type: "github", url: "https://github.com/pchapman-uat/CSC256-Final" },
+      {
+        type: "github",
+        url: "https://github.com/pchapman-uat/CSC256-Final",
+        name: "Source",
+      },
       {
         type: "website",
         url: "https://pchapman-uat.github.io/CSC256-Final/home.html",
@@ -201,7 +235,11 @@ const PROJECTS = defineProjects({
     { id: "CSC263", name: "Java Programming II" },
     { id: "Final", name: "Final Project" },
     [
-      { type: "github", url: "https://github.com/pchapman-uat/CSC263-Final" },
+      {
+        type: "github",
+        url: "https://github.com/pchapman-uat/CSC263-Final",
+        name: "Source",
+      },
       {
         type: "image",
         name: "Register Screen",
@@ -262,6 +300,7 @@ const PROJECTS = defineProjects({
       {
         type: "github",
         url: "https://github.com/pchapman-uat/CSC356-Martian-Safari",
+        name: "Source",
       },
     ],
     projectRoutes.MartianSafari,
@@ -276,10 +315,12 @@ const PROJECTS = defineProjects({
       {
         type: "github",
         url: "https://github.com/pchapman-uat/CSC256-8.1-9.1",
+        name: "Source",
       },
       {
         type: "website",
         url: "https://pchapman-uat.github.io/CSC256-8.1-9.1",
+        name: "Demo",
       },
       {
         type: "image",
@@ -306,7 +347,13 @@ const PROJECTS = defineProjects({
     "Timing Game",
     { id: "CSC235", name: "Python Programming I" },
     { id: "8.1", name: "Package World" },
-    [{ type: "github", url: "https://github.com/pchapman-uat/CSC235-8.1" }],
+    [
+      {
+        type: "github",
+        url: "https://github.com/pchapman-uat/CSC235-8.1",
+        name: "Source",
+      },
+    ],
     null,
     [
       "This project stores user data in an SQLite database, by using PyGame it display a user interface to allow users to compete with others to see who can wait the longest. Arrays are used in multiple locations, allowing for storing different valid keys, the results from the database such as the users or scores, as well as multiple for loops to mange this data.",
@@ -322,14 +369,28 @@ const PROJECTS = defineProjects({
       {
         type: "github",
         url: "https://github.com/pchapman-uat/Foobar-Controler-Mobile",
+        name: "Source",
       },
       {
-        type: "other",
+        type: "wiki",
         url: "https://github.com/pchapman-uat/Foobar-Controler-Mobile/wiki",
+        name: "Wiki",
+      },
+      {
+        type: "image",
+        url: NowPlayingImage,
+        name: "Now Playing",
+      },
+      {
+        type: "image",
+        url: LibraryImage,
+        name: "Library",
       },
     ],
     "/SIP/",
-    [],
+    [
+      "This is a mobile app for the existing software Foobar2000, that will allow you to control your desktop music player, remotely using your phone, tablet, or other smart device. The goal is to provide a great user interface (UI) and user experience (UX), while still maintaining the abundant number of features that foobar2000 offers. The features would include Playlist, Library, Playback Queue, Album Art, LocalLibrary, Lightweight, Customizable, and more. Although foobar2000 is a great freeware application, it is on the older side, but it still has updates to this date, it is also highly customizable with skins and plugins. The goal is to use an open-sourced plugin called “Beefweb”which allows for communication over HTTP to control Foobar2000remotely. I will not be creating the music player (Foobar2000) or theAPI (Beefweb), I will be creating a mobile app that uses Beefweb to control Foobar, while having an easy-to-use UI.",
+    ],
     "node",
     "mobile",
     "GUI"

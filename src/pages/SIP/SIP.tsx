@@ -1,4 +1,4 @@
-import GalleryItem from "@/classes/GalleryItem";
+import PROJECTS from "@/classes/Projects";
 import Gallery from "@/elements/Gallery";
 import JSDiv from "@/elements/JSDiv";
 import Link from "@/elements/Link";
@@ -8,11 +8,7 @@ import SIPCss from "@/style/sip.module.css";
 import { FC, useEffect, useState } from "react";
 import { RepoCardProps } from "react-repo-card";
 import { Head } from "vite-react-ssg";
-import MobSFReport from "./assets/documents/MobSF-0.2.0-alpha.1.pdf";
-import ProjectProposal from "./assets/documents/SIP311-Project_Proposal-PChapman-(Version_2).pdf";
-import LibraryImage from "./assets/images/demo/v0.3.0/Library.jpg";
-import NowPlayingImage from "./assets/images/demo/v0.3.0/NowPlaying.jpg";
-import MobSFReportBanner from "./assets/images/mobSF-0.2.0-alpha.1.png";
+import { MobSFReport, MobSFReportBanner, ProjectProposal } from "./SIP.assets";
 
 export default function SIP() {
   const [RepoCard, setRepoCard] = useState<FC<RepoCardProps> | null>(null);
@@ -40,7 +36,7 @@ export default function SIP() {
         )}
       </JSDiv>
       <section id="links">
-        <div>
+        <div className={SIPCss.linkContainer}>
           <Link href="https://github.com/pchapman-uat/Foobar-Controler-Mobile">
             GitHub
           </Link>
@@ -101,12 +97,7 @@ export default function SIP() {
       </section>
       <section id="gallery">
         <h3>Gallery</h3>
-        <Gallery
-          items={[
-            new GalleryItem("Now Playing", NowPlayingImage),
-            new GalleryItem("Library", LibraryImage),
-          ]}
-        />
+        <Gallery items={PROJECTS.SIP.galleryItems()} />
       </section>
       <section id="statistics">
         <h3>Statistics</h3>

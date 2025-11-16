@@ -68,7 +68,10 @@ footer {
   border-radius: var(--section-radius);
   outline: var(--outline);
 }
-
+section {
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
 a {
   color: rgb(0, 78, 204);
 }
