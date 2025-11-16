@@ -2,13 +2,15 @@ import GalleryItem from "@/classes/GalleryItem";
 import PROJECTS, { ProjectLink } from "@/classes/Projects";
 import { BOARDS } from "@/constants";
 import BoardsPage from "@/elements/BoardsPage";
+import Divider from "@/elements/Divider";
 import Gallery from "@/elements/Gallery";
 import Link from "@/elements/Link";
 import { ClickableLogo } from "@/elements/Logo";
 import Shield from "@/elements/Shield";
+import { ProjectProposal } from "@/pages/SIP/SIP.assets";
 import "@/style/boards.css";
 import BoardsCSS from "@/style/boards.module.css";
-
+import MainCSS from "@/style/main.module.css";
 type LogoProps = {
   link: ProjectLink;
 };
@@ -17,6 +19,7 @@ function Logo({ link }: LogoProps) {
     <ClickableLogo
       type={link.type}
       href={link.url}
+      name={link.name}
       className={BoardsCSS.icon}
     />
   );
@@ -43,6 +46,46 @@ export default function ACS() {
       descriptions={BOARDS.descriptions.ACS}
     >
       <>
+        <div>
+          <h4>{PROJECTS.SIP.NAME}</h4>
+          <div className={BoardsCSS.shieldsDiv}>
+            <Shield
+              type="github/release"
+              param={{
+                user: "pchapman-uat",
+                repo: "Foobar-Controler-Mobile",
+                include_prereleases: true,
+              }}
+            />
+            <Shield
+              type="github/languages/top"
+              param={{ user: "pchapman-uat", repo: "Foobar-Controler-Mobile" }}
+            />
+          </div>
+          <LogoList links={PROJECTS.SIP.SOURCE_LINKS} />
+          <p>{PROJECTS.SIP.DESCRIPTIONS[0]}</p>
+          <div className={MainCSS.pdfContainer}>
+            <iframe src={ProjectProposal} />
+          </div>
+          <p>
+            This project also has over 151 commits, and 7 releases. Each release
+            is well documented with changes and additions, to both the front end
+            and back end. In addition to this there is also a Wiki for the
+            project, this includes information about the application, version
+            support, FAQ, Setup, and Usage Instructions. You can visit the Wik
+            here:{" "}
+            <Link href={PROJECTS.SIP.getLinkByType("wiki")?.url}>
+              Foobar Controller Mobile Wiki
+            </Link>
+          </p>
+          <ProjectGallery items={PROJECTS.SIP.galleryItems()} />
+          <div className={BoardsCSS.iconsDiv}>
+            <Link type="button" href="/SIP/">
+              Read More
+            </Link>
+          </div>
+        </div>
+        <Divider />
         <div>
           <h4>
             {PROJECTS.Checkers.NAME} | {PROJECTS.Checkers.CLASS.id}
