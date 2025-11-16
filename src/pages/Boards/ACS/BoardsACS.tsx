@@ -430,6 +430,44 @@ export default function ACS() {
             on the Google Play Store.
           </p>
         </div>
+        <Divider />
+        <div>
+          <h4>{PROJECTS.SIP.NAME}</h4>
+          <div className={BoardsCSS.shieldsDiv}>
+            <Shield
+              type="github/stars"
+              param={{ user: "pchapman-uat", repo: "Foobar-Controler-Mobile" }}
+            />
+            <Shield
+              type="github/release"
+              param={{
+                user: "pchapman-uat",
+                repo: "Foobar-Controler-Mobile",
+                include_prereleases: true,
+              }}
+            />
+            <Shield
+              type="github/languages/top"
+              param={{ user: "pchapman-uat", repo: "Foobar-Controler-Mobile" }}
+            />
+          </div>
+          <LogoList links={PROJECTS.SIP.SOURCE_LINKS} />
+          <p>{PROJECTS.SIP.DESCRIPTIONS[0]}</p>
+          <p>
+            This application is made for Android Mobile devices, using the
+            framework of React Native, as mentioned above, this application is
+            meant to be a bridge between the computer running Foobar2000, to the
+            users mobile device. Due to this being in React Native, it can be
+            built to iOS, or even a fully web interface, however the application
+            is not set up to do so at the moment.
+          </p>
+          <Gallery items={PROJECTS.SIP.galleryItems()} />
+          <div className={BoardsCSS.iconsDiv}>
+            <Link type="button" href="/SIP/">
+              Read More
+            </Link>
+          </div>
+        </div>
       </>
       <>
         <div>
