@@ -364,6 +364,37 @@ const PROJECTS = defineProjects({
     "GUI",
     "application"
   ),
+  RPGShop: new ProjectObj(
+    "RPG Shop",
+    { id: "CSC235", name: "Python Programming I" },
+    {
+      id: "11.1",
+      name: "Lists, Dictionaries, Tuples, and Sets, these are the 4 collections in Python",
+    },
+    [
+      {
+        type: "github",
+        url: "https://github.com/pchapman-uat/CSC235-11.1",
+        name: "Source",
+      },
+      {
+        type: "image",
+        url: "https://github.com/pchapman-uat/CSC235-11.1/raw/main/ExampleImages/buy.webp?raw=true",
+      },
+      {
+        type: "image",
+        url: "https://github.com/pchapman-uat/CSC235-11.1/raw/main/ExampleImages/inv.webp?raw=true",
+      },
+      {
+        type: "image",
+        url: "https://github.com/pchapman-uat/CSC235-11.1/raw/main/ExampleImages/sell.webp?raw=true",
+      },
+    ],
+    null,
+    [],
+    "CLI",
+    "application"
+  ),
   SIP: new ProjectObj(
     "Foobar Controller Mobile",
     { id: "SIP311/405", name: "Student Innovation Project" },
