@@ -2,6 +2,7 @@ import GalleryItem from "@/classes/GalleryItem";
 import PROJECTS, { ProjectLink } from "@/classes/Projects";
 import { BOARDS } from "@/constants";
 import BoardsPage from "@/elements/BoardsPage";
+import CodeBlock from "@/elements/CodeBlock";
 import Divider from "@/elements/Divider";
 import Gallery from "@/elements/Gallery";
 import Link, { ValidLinkHref } from "@/elements/Link";
@@ -50,6 +51,10 @@ export default function ACS() {
         <div>
           <h4>{PROJECTS.SIP.NAME}</h4>
           <div className={BoardsCSS.shieldsDiv}>
+            <Shield
+              type="github/stars"
+              param={{ user: "pchapman-uat", repo: "Foobar-Controler-Mobile" }}
+            />
             <Shield
               type="github/release"
               param={{
@@ -494,6 +499,78 @@ export default function ACS() {
             </Link>
           </div>
         </div>
+        <Divider />
+        <div>
+          {" "}
+          <h4>{PROJECTS.SIP.NAME}</h4>
+          <div className={BoardsCSS.shieldsDiv}>
+            <Shield
+              type="github/stars"
+              param={{ user: "pchapman-uat", repo: "Foobar-Controler-Mobile" }}
+            />
+            <Shield
+              type="github/release"
+              param={{
+                user: "pchapman-uat",
+                repo: "Foobar-Controler-Mobile",
+                include_prereleases: true,
+              }}
+            />
+            <Shield
+              type="github/languages/top"
+              param={{ user: "pchapman-uat", repo: "Foobar-Controler-Mobile" }}
+            />
+          </div>
+          <LogoList links={PROJECTS.SIP.SOURCE_LINKS} />
+          <p>{PROJECTS.SIP.DESCRIPTIONS[0]}</p>
+          <p>
+            When working on this project I wanted to use TypeScript because I
+            want to focus on having Type Safety, OOP, and Optimization. Within
+            this project there are over 15 different class files, some of them
+            with multiple classes within them. Some examples of OOP would be:
+            Inheritance with{" "}
+            <Link
+              href="https://github.com/pchapman-uat/Foobar-Controler-Mobile/blob/main/src/classes/Settings.ts"
+              target="_blank"
+            >
+              Settings
+            </Link>
+            , Encapsulation with{" "}
+            <Link
+              target="_blank"
+              href="https://github.com/pchapman-uat/Foobar-Controler-Mobile/blob/main/src/classes/BeefWeb.ts"
+            >
+              BeefWeb
+            </Link>
+            , Polymorphism with{" "}
+            <Link
+              target="_blank"
+              href="https://github.com/pchapman-uat/Foobar-Controler-Mobile/blob/main/src/classes/Listener.ts"
+            >
+              Listeners
+            </Link>
+            , and Abstraction with{" "}
+            <Link
+              href="https://github.com/pchapman-uat/Foobar-Controler-Mobile/blob/main/src/classes/Themes.ts"
+              target="_blank"
+            >
+              Themes
+            </Link>
+            <br />
+            <br />
+            <CodeBlock
+              text={codeSnippets.SIP.Listener}
+              language="typescript"
+              showLineNumbers={true}
+            />
+          </p>
+          <Link
+            href="https://github.com/pchapman-uat/Foobar-Controler-Mobile/blob/main/src/classes/Listener.ts"
+            target="_blank"
+          >
+            main/src/classes/Listener.ts
+          </Link>
+        </div>
       </>
       <>
         <div>
@@ -600,3 +677,45 @@ export default function ACS() {
     </BoardsPage>
   );
 }
+const codeSnippets = {
+  SIP: {
+    Listener: `export type EventHandler<T = unknown> = (data: T) => void;
+
+export default class Listener<E extends Record<string, unknown>> {
+	protected listeners: {
+		[K in keyof E]?: Array<EventHandler<E[K]>>;
+	} = {};
+
+	public addEventListener<K extends keyof E>(
+		event: K,
+		handler: EventHandler<E[K]>,
+	): void {
+		if (!this.listeners[event]) {
+			this.listeners[event] = [];
+		}
+		this.listeners[event]!.push(handler);
+	}
+
+	public removeEventListener<K extends keyof E>(
+		event: K,
+		handler: EventHandler<E[K]>,
+	): void {
+		const list = this.listeners[event];
+		if (!list) return;
+
+		const updated = list.filter((h): h is EventHandler<E[K]> => h !== handler);
+
+		if (updated.length === 0) {
+			delete this.listeners[event];
+		} else {
+			this.listeners[event] = updated as (typeof this.listeners)[typeof event];
+		}
+	}
+
+	protected dispatchEvent<K extends keyof E>(event: K, data: E[K]): void {
+		if (!this.listeners[event]) return;
+		this.listeners[event]!.forEach((handler) => handler(data));
+	}
+}`,
+  },
+};
