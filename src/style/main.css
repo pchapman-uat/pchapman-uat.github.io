@@ -38,7 +38,9 @@ header {
   flex-direction: row;
   justify-content: space-around;
   padding: 3%;
+  flex-wrap: wrap;
 }
+
 header > img {
   height: 100px;
   width: 100px;

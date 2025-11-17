@@ -19,6 +19,7 @@
   z-index: 1;
   transition: border-radius 0.3s ease-in-out, var(--button-transition);
   filter: var(--button-shadow);
+  margin: 5px;
 }
 .navigationItem:hover {
   scale: 1.1;
@@ -57,4 +58,5 @@
   padding: 5px;
   position: relative;
   overflow: visible;
+  flex-wrap: wrap;
 }

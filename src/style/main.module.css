@@ -26,10 +26,15 @@ section#links > div {
 }
 
 .content {
-  margin: 2rem;
+  margin: 2rem 4rem 2rem 4rem;
   z-index: 1;
 }
 
+@media only screen and (max-device-width: 1000px) {
+  .content {
+    margin: 0.5rem 1rem 0.5rem 1rem;
+  }
+}
 .parallax {
   position: fixed;
   top: 0;
@@ -101,8 +106,8 @@ section#links > div {
 
 .returnButton {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 1rem;
+  right: 1rem;
   z-index: 9999;
   background-color: rgba(255, 255, 255, 0.5);
   height: 50px;
