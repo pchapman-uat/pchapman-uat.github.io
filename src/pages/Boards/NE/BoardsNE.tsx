@@ -1,14 +1,19 @@
 import GalleryItem from "@/classes/GalleryItem";
+import PROJECTS from "@/classes/Projects";
 import { BOARDS } from "@/constants";
 import BoardsPage from "@/elements/BoardsPage";
 import Divider from "@/elements/Divider";
 import Gallery from "@/elements/Gallery";
 import Link from "@/elements/Link";
+import LogoList from "@/elements/LogoList";
+import Shield from "@/elements/Shield";
+import { MobSFReport, MobSFReportBanner } from "@/pages/SIP/SIP.assets";
 import BoardsCSS from "@/style/boards.module.css";
 import MainCSS from "@/style/main.module.css";
 import { useRef } from "react";
 import {
   AWSCloudArchitecture,
+  GoatDroid,
   IoTSecurityReport,
   LogicalAndPhysicalMap,
   LogicalMap,
@@ -439,7 +444,70 @@ export default function Boards_NE() {
           </div>
         </div>
       </>
-      <></>
+      <>
+        <div>
+          <h4>{PROJECTS.SIP.NAME}</h4>
+          <div className={BoardsCSS.shieldsDiv}>
+            <Shield
+              type="github/stars"
+              param={{ user: "pchapman-uat", repo: "Foobar-Controler-Mobile" }}
+            />
+            <Shield
+              type="github/release"
+              param={{
+                user: "pchapman-uat",
+                repo: "Foobar-Controler-Mobile",
+                include_prereleases: true,
+              }}
+            />
+            <Shield
+              type="github/languages/top"
+              param={{ user: "pchapman-uat", repo: "Foobar-Controler-Mobile" }}
+            />
+          </div>
+          <LogoList links={PROJECTS.SIP.SOURCE_LINKS} />
+          <p>{PROJECTS.SIP.DESCRIPTIONS[0]}</p>
+          <p>
+            Since this is a mobile application made for Android, we are able to
+            do a security analysis on the app, using MobSF we can validate the
+            security of the application, and apply industry standards and
+            security principles.
+          </p>
+          <img src={MobSFReportBanner} className={MainCSS.fullImg} />
+          <div className={MainCSS.pdfContainer}>
+            <iframe src={MobSFReport} />
+          </div>
+          <p>
+            In addition to the MobSF report, the application uses HTTP to handle
+            traffic, although it does not use HTTPS, this is because of
+            limitations with the API. However, the application is meant to only
+            be used locally, and if needed remotely, it works with a VPN.
+            Lastly, the application has multiple validation steps, including
+            ESLint and Dependabot.
+          </p>
+          <div className={BoardsCSS.iconsDiv}>
+            <Link type="button" href="/SIP/">
+              Read More
+            </Link>
+          </div>
+        </div>
+        <Divider />
+        <div>
+          <h4>GoatDroid | NTW233</h4>
+          <p>
+            In this assignment we were tasked with reverse engineering an IoT
+            application, instead of working with our existing device we were
+            tasked with using Goat Droid. This report gives us information
+            regarding the application, such as warnings about Logging being
+            used, JS enabled in Webview, and more. This information can be
+            critical to understanding the security of your application, or of an
+            application you are using.
+          </p>
+          <div className={MainCSS.pdfContainer}>
+            <iframe src={GoatDroid} />
+          </div>
+        </div>
+      </>
     </BoardsPage>
   );
 }
