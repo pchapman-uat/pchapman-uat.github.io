@@ -9,6 +9,7 @@ import MainCSS from "@/style/main.module.css";
 import { useRef } from "react";
 import {
   AWSCloudArchitecture,
+  IoTSecurityReport,
   LogicalAndPhysicalMap,
   LogicalMap,
   NTW216Documentation,
@@ -26,6 +27,19 @@ export default function Boards_NE() {
 
     iframe.src = newSrc;
   };
+
+  const TopologiesGalleryItems = [
+    new GalleryItem(
+      "Physical Map",
+      PhysicalMap,
+      "When designing the physical map I had to understand where reach room would be, and how they would be accessed. Also understanding how to keep critical devices secure, and having user devices accessible. "
+    ),
+    new GalleryItem(
+      "Logical Map",
+      LogicalMap,
+      "Although simpler, I had to manage the different devices, and assign them proper IP addresses and VLANs. I decided that to better orginize each VLAN, having a swich with even subnet would allow for more management and control. This also allows for a more streamlined plan for expanding."
+    ),
+  ];
   return (
     <BoardsPage
       objectives={BOARDS.objectives.NE}
@@ -52,20 +66,7 @@ export default function Boards_NE() {
             knowledge requirement low, so anyone regardless of experience should
             be able to understand it to some extent.
           </p>
-          <Gallery
-            items={[
-              new GalleryItem(
-                "Physical Map",
-                PhysicalMap,
-                "When designing the physical map I had to understand where reach room would be, and how they would be accessed. Also understanding how to keep critical devices secure, and having user devices accessible. "
-              ),
-              new GalleryItem(
-                "Logical Map",
-                LogicalMap,
-                "Although simpler, I had to manage the different devices, and assign them proper IP addresses and VLANs. I decided that to better orginize each VLAN, having a swich with even subnet would allow for more management and control. This also allows for a more streamlined plan for expanding."
-              ),
-            ]}
-          />
+          <Gallery items={TopologiesGalleryItems} />
           <div className={MainCSS.pdfContainer}>
             <iframe src={LogicalAndPhysicalMap} />
           </div>
@@ -395,7 +396,49 @@ export default function Boards_NE() {
           </div>
         </div>
       </>
-      <></>
+      <>
+        <div>
+          <h4>IoT Device Security Analysis Report | NTW233</h4>
+          <p>This was a group project with: Keven Baquerizo</p>
+          <p>
+            During this class we did in depth research over an IoT device
+            &quot;KSIZPE LED Strip Light&quot;, we analyzed the mobile
+            application, and did a hardware analysis of the device to determine
+            how secure it is. We looked into the issues regarding to the
+            connection from the phone to the device, as anyone could control it
+            with no authentication. We also looked into the security risks of
+            the app itself, and looked into the issues with the hardware. In
+            addition to all of these we looked at multiple documents, including
+            the FCC report of the device.
+          </p>
+          <div className={MainCSS.pdfContainer} id="NTW216Documentation2">
+            <iframe ref={documentation} src={IoTSecurityReport} />
+          </div>
+        </div>
+        <Divider />
+        <div>
+          <h4>Logical and Physical Topologies | NTW275</h4>
+          <p>
+            In this assignment we were tasked with changing a logical network
+            map to a physical network map, and a physical map to a logical map.
+            For each of these we had to account for different IP addresses,
+            devices, VLANs, subnetting, and room placement. We had to take into
+            consideration of the company that we are design the maps for, to
+            understand the layout, requirements, devices, cables and more.
+          </p>
+          <p>
+            For this specific objective these maps had to include IoT devices,
+            this meant I had to consider the many security risks that come with
+            adding IoT to your network. In both of these diagrams they are
+            heavily segmented, so that if any of them where to get comprised,
+            the rest of the network would not be at risk.
+          </p>
+          <Gallery items={TopologiesGalleryItems} />
+          <div className={MainCSS.pdfContainer}>
+            <iframe src={LogicalAndPhysicalMap} />
+          </div>
+        </div>
+      </>
       <></>
     </BoardsPage>
   );
