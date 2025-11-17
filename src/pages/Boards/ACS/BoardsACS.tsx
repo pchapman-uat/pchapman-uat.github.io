@@ -1,41 +1,18 @@
 import GalleryItem from "@/classes/GalleryItem";
-import PROJECTS, { ProjectLink } from "@/classes/Projects";
+import PROJECTS from "@/classes/Projects";
 import { BOARDS } from "@/constants";
 import BoardsPage from "@/elements/BoardsPage";
 import CodeBlock from "@/elements/CodeBlock";
 import Divider from "@/elements/Divider";
 import Gallery from "@/elements/Gallery";
 import Link, { ValidLinkHref } from "@/elements/Link";
-import { ClickableLogo } from "@/elements/Logo";
+import LogoList from "@/elements/LogoList";
 import Shield from "@/elements/Shield";
 import { ClockingManagerAssets } from "@/pages/Projects/pages/ClockingManager";
 import { ProjectProposal } from "@/pages/SIP/SIP.assets";
 import "@/style/boards.css";
 import BoardsCSS from "@/style/boards.module.css";
 import MainCSS from "@/style/main.module.css";
-type LogoProps = {
-  link: ProjectLink;
-};
-function Logo({ link }: LogoProps) {
-  return (
-    <ClickableLogo
-      type={link.type}
-      href={link.url}
-      name={link.name}
-      className={BoardsCSS.icon}
-    />
-  );
-}
-
-function LogoList({ links }: { links: ProjectLink[] }) {
-  return (
-    <div className={BoardsCSS.iconsDiv}>
-      {links.map((link, i) => (
-        <Logo key={"logo-" + i} link={link} />
-      ))}
-    </div>
-  );
-}
 
 function ProjectGallery({ items }: { items: GalleryItem[] }) {
   return items.length > 0 && <Gallery items={items} />;
