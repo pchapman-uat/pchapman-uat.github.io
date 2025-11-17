@@ -13,7 +13,7 @@
   background-color: var(--nav-item-background);
   min-width: 75px;
   justify-self: center;
-  padding: 5px;
+  padding: 10px;
   border-radius: 1rem;
   outline: 1.5px solid var(--outline-color);
   z-index: 1;

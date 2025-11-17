@@ -10,10 +10,14 @@ export default function Boards() {
       </Head>
       <h2>Boards</h2>
       <nav className={NavigationCSS.navigationContainer}>
-        <Link type="button" href="./ACS/">
+        <Link
+          type="button"
+          href="./ACS/"
+          style={{ flex: "0", minWidth: "20%" }}
+        >
           Advancing Computer Science
         </Link>
-        <Link type="button" href="./NE/">
+        <Link type="button" href="./NE/" style={{ flex: "0", minWidth: "20%" }}>
           Network Engineering
         </Link>
       </nav>
