@@ -1,0 +1,1 @@
+import{u as s,j as a,a as r,M as u}from"./app-DxAy2kpM.js";function p(){const{scrollY:o}=s(),e=n=>({opacity:n.to(t=>t>=100?1:0),pointerEvents:n.to(t=>t>=50?"auto":"none")});return a.jsx(r.a,{className:u.returnButton,style:e(o),href:"#top",children:"↑"})}export{p as U};
