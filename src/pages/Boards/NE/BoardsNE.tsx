@@ -6,10 +6,13 @@ import Gallery from "@/elements/Gallery";
 import Link from "@/elements/Link";
 import BoardsCSS from "@/style/boards.module.css";
 import MainCSS from "@/style/main.module.css";
-import LogicalAndPhysicalMap from "./assets/documents/NTW275-8.1-Logical_and_Physical_Topologies-PChapman.pdf";
-import OrganizationalDesign from "./assets/images/NTW275-5.1.svg?react";
-import LogicalMap from "./assets/images/NTW275-8.1-Logical_Map-PChapman.svg?react";
-import PhysicalMap from "./assets/images/NTW275-8.1-Physical_Map-PChapman.svg?react";
+import {
+  AWSCloudArchitecture,
+  LogicalAndPhysicalMap,
+  LogicalMap,
+  OrganizationalDesign,
+  PhysicalMap,
+} from "./BoardsNE.assets";
 export default function Boards_NE() {
   return (
     <BoardsPage
@@ -201,7 +204,41 @@ export default function Boards_NE() {
           </div>
         </div>
       </>
-      <></>
+      <>
+        <div>
+          <h4>AWS Cloud Architecture | NTS336</h4>
+          <p>
+            Amazon Web Services (AWS) provides all-in-one experience for your
+            company when working in the cloud. With services ranging from access
+            control, storage, security, virtual machines, and more, it can be an
+            excellent opportunity for companies. During this assignment I went
+            over a multitude of different services that AWS provides, and
+            explain how each one is used and is important. This document went
+            over the following services:
+          </p>
+          <ul>
+            <li>Architecture</li>
+            <li>IAM</li>
+            <li>EC2</li>
+            <li>S3</li>
+            <li>RDS</li>
+            <li>DynamoDB</li>
+            <li>VPC Networking</li>
+            <li>Security</li>
+            <li>Lambda</li>
+            <li>CloudWatch</li>
+            <li>CloudFormation</li>
+            <li>High Availability</li>
+            <li>Scaling</li>
+            <li>DevOps</li>
+            <li>Deployment</li>
+            <li>Advanced Management</li>
+          </ul>
+          <div className={MainCSS.pdfContainer}>
+            <iframe src={AWSCloudArchitecture} />
+          </div>
+        </div>
+      </>
       <></>
       <></>
       <></>
