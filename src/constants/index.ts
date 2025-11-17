@@ -22,7 +22,7 @@ export const BOARDS = {
     NE: ["", "", "", "", "", ""],
     ACS: [
       "Document the process of creating a software solutions. This includes reports or documentation, release or building notes, testing plans, and other resources that show an understanding of the full development process.",
-      "",
+      "Demonstrate proficiency in multiple programming languages and development environments. This can include using different languages for different parts of the project, or showing how the project was developed in different IDEs or toolchains.",
       "Create projects that rely on data to function, this can be through reading/writing files, databases, or APIs, where the data is either stored in a separate file, or remotely. This data can be static or dynamic.",
       "Create projects that can run on multiple platforms, this can include mobile, web, desktop, or other environments. The project should demonstrate an understanding of the constraints and features of each platform.",
       "Create projects that utilize object-oriented programming principles (OOP), showing not just how the solution uses OOP, but how it was designed with OOP in mind.",

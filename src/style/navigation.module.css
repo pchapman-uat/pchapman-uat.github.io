@@ -13,13 +13,19 @@
   background-color: var(--nav-item-background);
   min-width: 75px;
   justify-self: center;
-  padding: 5px;
+  padding: 10px;
   border-radius: 1rem;
   outline: 1.5px solid var(--outline-color);
   z-index: 1;
-  transition: border-radius 0.3s ease-in-out;
+  transition: border-radius 0.3s ease-in-out, var(--button-transition);
+  filter: var(--button-shadow);
+  margin: 5px;
 }
-
+.navigationItem:hover {
+  scale: 1.1;
+  background-color: var(--nav-item-hover-background);
+  filter: var(--button-hover-shadow);
+}
 .navigationItem[data-has-sub-pages="true"]:hover {
   border-radius: 1rem 1rem 0 0;
 }
@@ -52,4 +58,5 @@
   padding: 5px;
   position: relative;
   overflow: visible;
+  flex-wrap: wrap;
 }

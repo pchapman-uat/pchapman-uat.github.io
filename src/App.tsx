@@ -22,6 +22,7 @@ export default function App() {
   const { scrollY } = useScroll();
   return (
     <>
+      <div id="top" className={MainCSS.anchor} />
       <div className={MainCSS.parallax}>
         <WavePath
           time={scrollY}

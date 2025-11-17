@@ -1,12 +1,13 @@
-/* Move to module.css */
-
 .pdfContainer {
   width: 100%;
   height: 75vh;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 .pdfContainer iframe {
-  width: 100%;
+  width: inherit;
+  max-width: 75%;
   height: 100%;
   border: none;
 }
@@ -25,10 +26,15 @@ section#links > div {
 }
 
 .content {
-  margin: 2rem;
+  margin: 2rem 4rem 2rem 4rem;
   z-index: 1;
 }
 
+@media only screen and (max-device-width: 1000px) {
+  .content {
+    margin: 0.5rem 1rem 0.5rem 1rem;
+  }
+}
 .parallax {
   position: fixed;
   top: 0;
@@ -75,9 +81,55 @@ section#links > div {
   color: white;
   border: none;
   padding: 10px 20px;
-  margin: 5px;
-  border-radius: 10px;
+  margin: 10px;
+  border-radius: 1rem;
   cursor: pointer;
   outline: var(--outline);
   text-decoration: underline;
+  transition: var(--button-transition);
+  filter: var(--button-shadow);
+}
+
+.button:hover {
+  scale: 1.1;
+  background-color: var(--nav-item-hover-background);
+  filter: var(--button-hover-shadow);
+}
+.largeSVGContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.largeSVGContainer > svg {
+  max-width: 75%;
+}
+
+.returnButton {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 9999;
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+
+  font-size: xx-large;
+
+  transition: opacity 200ms;
+}
+.anchor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
 }
