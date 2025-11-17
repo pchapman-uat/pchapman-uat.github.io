@@ -9,8 +9,13 @@
   --section-radius: 20px;
 
   --nav-item-background: rgb(138, 82, 179);
+  --nav-item-hover-background: rgb(164, 98, 212);
   --outline-color: white;
   --outline: 2px solid var(--outline-color);
+
+  --button-transition: scale 200ms, background-color 200ms, filter 200ms;
+  --button-shadow: drop-shadow(3px 3px 1px rgba(0, 0, 0, 0.25));
+  --button-hover-shadow: drop-shadow(6px 6px 1px rgba(0, 0, 0, 0.25));
 }
 
 html {
@@ -33,7 +38,9 @@ header {
   flex-direction: row;
   justify-content: space-around;
   padding: 3%;
+  flex-wrap: wrap;
 }
+
 header > img {
   height: 100px;
   width: 100px;
@@ -68,7 +75,10 @@ footer {
   border-radius: var(--section-radius);
   outline: var(--outline);
 }
-
+section {
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
 a {
   color: rgb(0, 78, 204);
 }
@@ -83,6 +93,7 @@ table {
 td,
 th {
   outline: 1px solid white;
+  padding: 5px;
 }
 
 h1 {

@@ -10,7 +10,7 @@ export default function LanguageBar({ languages }: LanguageBarProps) {
   return (
     <div
       className={MainCSS.divider}
-      style={{ display: "flex", width: "100%", height: "20px" }}
+      style={{ display: "flex", width: "100%", height: "10px" }}
     >
       {entries.map(([lang, value]) => (
         <div

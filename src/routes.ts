@@ -2,7 +2,7 @@ import { lazy } from "react";
 import type { RouteRecord } from "vite-react-ssg";
 import App from "./App";
 import ProjectsRoot from "./pages/Projects/ProjectsRoot";
-import projectRoutes, { ProjectRoutesArr } from "./projectRoutes";
+import projectRoutes, { ProjectRoutesArr } from "./project.routes";
 
 const Home = lazy(() => import("@/pages/Home"));
 const Boards = lazy(() => import("@/pages/Boards/Boards"));

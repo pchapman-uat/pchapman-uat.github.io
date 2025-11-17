@@ -83,9 +83,16 @@ export default function Gallery({ items }: GalleryProps) {
 }
 
 function GalleryItemElement(item: GalleryItem, index: number) {
-  return (
-    <div className={GalleryCSS.galleryItem} key={index}>
-      <img className={GalleryCSS.galleryImage} src={item.IMAGE} />
-    </div>
-  );
+  if (typeof item.IMAGE === "string")
+    return (
+      <div className={GalleryCSS.galleryItem} key={index}>
+        <img className={GalleryCSS.galleryImage} src={item.IMAGE} />
+      </div>
+    );
+  else
+    return (
+      <div className={GalleryCSS.galleryItem} key={index}>
+        <item.IMAGE />
+      </div>
+    );
 }
