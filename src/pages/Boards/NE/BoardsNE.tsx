@@ -6,14 +6,26 @@ import Gallery from "@/elements/Gallery";
 import Link from "@/elements/Link";
 import BoardsCSS from "@/style/boards.module.css";
 import MainCSS from "@/style/main.module.css";
+import { useRef } from "react";
 import {
   AWSCloudArchitecture,
   LogicalAndPhysicalMap,
   LogicalMap,
+  NTW216Documentation,
   OrganizationalDesign,
   PhysicalMap,
 } from "./BoardsNE.assets";
 export default function Boards_NE() {
+  const documentation = useRef<HTMLIFrameElement | null>(null);
+  const goToDocumentationPage = (page: number) => {
+    const iframe = documentation.current;
+    if (!iframe) return;
+
+    const baseUrl = iframe.src.split("#")[0].split("?")[0];
+    const newSrc = `${baseUrl}?page=${page}&_=${Date.now()}#page=${page}`;
+
+    iframe.src = newSrc;
+  };
   return (
     <BoardsPage
       objectives={BOARDS.objectives.NE}
@@ -239,7 +251,65 @@ export default function Boards_NE() {
           </div>
         </div>
       </>
-      <></>
+      <>
+        <div>
+          <h4>Final Project 2.0 (Documentation) | NTW216</h4>
+          <p>
+            This was a group project with: Keven Baquerizo; Giani Saldana;
+            Rashalee Thompson
+          </p>
+          <p>
+            <strong>Roles: Team Leader and Configuration Manager</strong>
+          </p>
+          <p>
+            During the entirety of this class we where setting up a Windows
+            Server, we had to configure services such as Active Directory,
+            Samba, Devices, Users, and troubleshoot issues that our professor
+            did to our servers. For this objective I will be going over specific
+            troubleshooting tasks.
+          </p>
+          <h4>
+            <Link
+              href="#NTW216Documentation"
+              onClick={() => {
+                goToDocumentationPage(26);
+              }}
+            >
+              No Internet
+            </Link>
+          </h4>
+          <p>
+            On this day we discovered that our account was missing from the sign
+            in screen, this was one of the tasks that we had to resolve. We
+            first went to the other user section, and inputted the username and
+            password for our account, logging us in. Next we noticed that the
+            computer was not connected to internet, when going to the ethernet
+            settings in windows it showed that the adapter was disabled. By
+            going to &apos;Control Panel\Network and Internet\Network
+            Connections&apos; we could then enable the adapter, resolving both
+            of the issues we had.
+          </p>
+          <h4>
+            <Link
+              href="#NTW216Documentation"
+              onClick={() => {
+                goToDocumentationPage(16);
+              }}
+            >
+              System Sate Backup
+            </Link>
+          </h4>
+          <p>
+            In this case we where tasked with setting up a system backup. Before
+            we did this we had added a secondary drive, meant for backups, then
+            we configured this drive using &apos;Windows Server Backup&apos; and
+            &apos;Local Backup&apos;
+          </p>
+          <div className={MainCSS.pdfContainer} id="NTW216Documentation">
+            <iframe ref={documentation} src={NTW216Documentation} />
+          </div>
+        </div>
+      </>
       <></>
       <></>
       <></>
