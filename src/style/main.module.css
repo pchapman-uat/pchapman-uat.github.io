@@ -1,5 +1,3 @@
-/* Move to module.css */
-
 .pdfContainer {
   width: 100%;
   height: 75vh;
@@ -83,4 +81,13 @@ section#links > div {
   cursor: pointer;
   outline: var(--outline);
   text-decoration: underline;
+}
+
+.largeSVGContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.largeSVGContainer > svg {
+  max-width: 75%;
 }
