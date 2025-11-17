@@ -76,13 +76,20 @@ section#links > div {
   color: white;
   border: none;
   padding: 10px 20px;
-  margin: 5px;
+  margin: 10px;
   border-radius: 10px;
   cursor: pointer;
   outline: var(--outline);
   text-decoration: underline;
+  transition: var(--button-transition);
+  filter: var(--button-shadow);
 }
 
+.button:hover {
+  scale: 1.1;
+  background-color: var(--nav-item-hover-background);
+  filter: var(--button-hover-shadow);
+}
 .largeSVGContainer {
   width: 100%;
   display: flex;
