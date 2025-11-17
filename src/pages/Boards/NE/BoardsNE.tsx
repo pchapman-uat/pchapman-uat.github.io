@@ -275,7 +275,7 @@ export default function Boards_NE() {
                 goToDocumentationPage(26);
               }}
             >
-              No Internet
+              No Internet (26)
             </Link>
           </h4>
           <p>
@@ -296,7 +296,7 @@ export default function Boards_NE() {
                 goToDocumentationPage(16);
               }}
             >
-              System Sate Backup
+              System Sate Backup (16)
             </Link>
           </h4>
           <p>
@@ -310,7 +310,91 @@ export default function Boards_NE() {
           </div>
         </div>
       </>
-      <></>
+      <>
+        <div>
+          <h4>Final Project 2.0 (Documentation) | NTW216</h4>
+          <p>
+            This was a group project with: Keven Baquerizo; Giani Saldana;
+            Rashalee Thompson
+          </p>
+          <p>
+            <strong>Roles: Team Leader and Configuration Manager</strong>
+          </p>
+          <p>
+            During the entirety of this class we where setting up a Windows
+            Server, we had to configure services such as Active Directory,
+            Samba, Devices, Users, and troubleshoot issues that our professor
+            did to our servers. For this objective I will be going over specific
+            administrative tasks.
+          </p>
+          <h4>
+            <Link
+              href="#NTW216Documentation2"
+              onClick={() => goToDocumentationPage(56)}
+            >
+              Active Directory (56)
+            </Link>
+          </h4>
+          <p>
+            Active directory is a critical part of Windows Server, this works by
+            having a domain, and then adding users to this domain. Each user can
+            be assigned to a group, or have permission set directly. These
+            permissions could be things like elevated privileges, configuration
+            settings, password resets, and more. Active Directory works in
+            tandem with Group Polices, with these two making the baseline of
+            Access Controls.
+          </p>
+          <h4>
+            <Link
+              href="#NTW216Documentation2"
+              onClick={() => goToDocumentationPage(54)}
+            >
+              Group Policy Management (54)
+            </Link>
+          </h4>
+          <p>
+            Just like Active Directory, Group Policy allow for in depth and
+            advance permissions with Active Directory. With these policies you
+            can create templates, and even automation. The polices we changed
+            where regarding the windows security, specifically auditing, this is
+            just one of the many things you can control using Group Polices.
+          </p>
+          <h4>
+            <Link
+              href="#NTW216Documentation2"
+              onClick={() => goToDocumentationPage(28)}
+            >
+              Shares (28)
+            </Link>
+          </h4>
+          <p>
+            Windows Server is able to host shares, this allows users to open and
+            view files remotely, either wirelessly on the same network, or with
+            a VPN. Windows Shares is native to all windows versions, including
+            home, and they work excellently with Active Directory and Group
+            Policies.
+          </p>
+          <h4>
+            <Link
+              href="#NTW216Documentation2"
+              onClick={() => {
+                goToDocumentationPage(16);
+              }}
+            >
+              System Sate Backup (16)
+            </Link>
+          </h4>
+          <p>
+            In this case we where tasked with setting up a system backup. Before
+            we did this we had added a secondary drive, meant for backups, then
+            we configured this drive using &apos;Windows Server Backup&apos; and
+            &apos;Local Backup&apos;
+          </p>
+          <div className={MainCSS.pdfContainer} id="NTW216Documentation2">
+            <iframe ref={documentation} src={NTW216Documentation} />
+          </div>
+        </div>
+      </>
       <></>
       <></>
     </BoardsPage>
